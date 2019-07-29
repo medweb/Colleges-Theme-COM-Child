@@ -17,6 +17,17 @@
 		"oAP": "/functions.php",
 		"oF": 0
 		},
+	"/images/backgrounds/com-med-bg.jpg": {
+		"ft": 16384,
+		"iS": 975570,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/backgrounds/com-med-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/images/backgrounds/pegasus-bg.jpg": {
 		"ft": 16384,
 		"iS": 509191,
@@ -38,6 +49,14 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/includes/news-module.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/news-module.php",
+		"oF": 0
 		},
 	"/includes/permalinks.php": {
 		"cB": 0,
