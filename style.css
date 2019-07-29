@@ -11,5 +11,31 @@
  Tags:         ucf
  Text Domain:  Colleges-Theme-COM-Child
 */
-body {
-  color: red; }
+/* Colors */
+/* Font Vars */
+/* Image Vars */
+.chevron-wrapper {
+  display: none; }
+
+.social-icons {
+  list-style-type: none;
+  padding: 0; }
+  .social-icons li {
+    padding: 0px 10px 10px 0px; }
+    .social-icons li a {
+      display: block;
+      line-height: 18px;
+      text-indent: 25px;
+      background: url(images/sprites/social-sprite.png) no-repeat; }
+    .social-icons li .facebook {
+      background-position: 0px 0px; }
+    .social-icons li .twitter {
+      background-position: 0px -28px; }
+    .social-icons li .flickr {
+      background-position: 0px -59px; }
+    .social-icons li .youtube {
+      background-position: 0px -86px; }
+    .social-icons li .instagram {
+      background-position: 0px -112px; }
+    .social-icons li .google {
+      background-position: 0 -137px; }

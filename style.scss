@@ -12,6 +12,64 @@
  Text Domain:  Colleges-Theme-COM-Child
 */
 
-body {
-	color: red;
+/* Colors */
+$grey: #cccccc;
+$lightgrey: #ececec;
+$mediumgrey: #999999;
+$darkgrey: #2e2e2e;
+$white: #ffffff;
+$black: #222222;
+$yellow: #f7c100;
+$yellow-hover: #ffe47c;
+$linkblue: #587de8;
+$notification: #aa2016;
+
+/* Font Vars */
+$std-fonts: "Gotham A", "Gotham B", Arial, Helvetica, sans-serif;
+
+/* Image Vars */
+$sprite-path: 'images/sprites';
+
+.chevron-wrapper {
+	display: none;
+}
+
+.social-icons {
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		padding: 0px 10px 10px 0px;
+
+		a {
+			display: block;
+			line-height: 18px;
+			text-indent: 25px;
+			background: url(#{$sprite-path}/social-sprite.png) no-repeat;
+		}
+
+		.facebook {
+			background-position: 0px 0px;
+		}
+
+		.twitter {
+			background-position: 0px -28px;
+		}
+
+		.flickr {
+			background-position: 0px -59px;
+		}
+
+		.youtube {
+			background-position: 0px -86px;
+		}
+
+		.instagram {
+			background-position: 0px -112px;
+		}
+
+		.google {
+			background-position: 0 -137px;
+		}
+	}
 }

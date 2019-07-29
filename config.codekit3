@@ -9,6 +9,84 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/functions.php",
+		"oF": 0
+		},
+	"/images/sprites/social-sprite.png": {
+		"ft": 32768,
+		"iS": 20084,
+		"oA": 0,
+		"oAP": "/images/sprites/social-sprite.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/includes/permalinks.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/permalinks.php",
+		"oF": 0
+		},
+	"/includes/post-types.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/post-types.php",
+		"oF": 0
+		},
+	"/includes/taxonomies.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/taxonomies.php",
+		"oF": 0
+		},
+	"/js/engine.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/engine-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/New COM 2020.sublime-project": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/New COM 2020.sublime-project",
+		"oF": 0
+		},
+	"/New COM 2020.sublime-workspace": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/New COM 2020.sublime-workspace",
+		"oF": 0
+		},
+	"/page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page.php",
+		"oF": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -28,6 +106,16 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/style.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -40,6 +128,22 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/template-basic.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-basic.php",
+		"oF": 0
+		},
+	"/template-fullscreen.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-fullscreen.php",
+		"oF": 0
 		}
 	},
 "hooks": [
