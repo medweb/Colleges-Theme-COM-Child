@@ -17,6 +17,17 @@
 		"oAP": "/functions.php",
 		"oF": 0
 		},
+	"/images/backgrounds/pegasus-bg.jpg": {
+		"ft": 16384,
+		"iS": 509191,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/backgrounds/pegasus-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/sprites/social-sprite.png": {
 		"ft": 32768,
 		"iS": 20084,
