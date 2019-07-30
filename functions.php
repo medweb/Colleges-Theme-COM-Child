@@ -26,6 +26,14 @@ function com_child_theme_scripts() {
         true // load in footer
     );
 
+    // masonry javascript for grid layouts
+    wp_enqueue_script(
+        'masonry',
+        'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js',
+        array(),
+        null,
+        true
+    );
 
     $parent_style = 'parent-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' ); // using get_TEMPLATE_directory_uri to force loading parent theme styles

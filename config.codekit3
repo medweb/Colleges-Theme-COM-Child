@@ -50,6 +50,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/includes/instagram-feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/instagram-feed.php",
+		"oF": 0
+		},
 	"/includes/news-module.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -74,12 +82,36 @@
 		"oAP": "/includes/post-types.php",
 		"oF": 0
 		},
+	"/includes/print-social-posts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/print-social-posts.php",
+		"oF": 0
+		},
+	"/includes/social-feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/social-feed.php",
+		"oF": 0
+		},
 	"/includes/taxonomies.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/taxonomies.php",
+		"oF": 0
+		},
+	"/includes/twitter-feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/twitter-feed.php",
 		"oF": 0
 		},
 	"/js/engine.js": {

@@ -1,0 +1,1 @@
+jQuery(document).ready(function(r){r(".grid").masonry({itemSelector:".grid-item",columnWidth:220,horizontalOrder:!0,gutter:50})});

@@ -195,6 +195,37 @@ $background-path: 'images/backgrounds';
 	}
 }
 
+.grid {
+	
+
+	.grid-item {
+		float: left;
+		background: #e7e7e7;
+		width: 20%;
+		margin-bottom: 25px;
+		font-size: .8em;
+		padding: 10px;
+		/* To change margin sides, use the 'gutter' parameter in the engine.js masonry grid declaration */
+
+		/*listing of individual postings to disregard
+		&[data-instagram-id="1672725000673921503_1190672314"]{
+			display: none;
+		}*/
+
+		> a {
+			display: inline;
+			clear: both;
+		}
+
+		img {
+			width: 92%;
+			height: inherit;
+			margin: 10px;
+			clear: both;
+		}
+	}
+}
+
 @media (min-width: 576px) {
 	.home-header-title-wrapper {
 		background-color: transparent !important;

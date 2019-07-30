@@ -173,8 +173,6 @@ class news_module {
 			<article>
 				<a target='<?php echo $post['target'] ?>'  class="photo-prev" href="<?php echo $post['permalink']; ?>" style="background: url('<?php echo $post['image']; ?>') no-repeat center center; background-size: cover;"><?php echo $post['title']; ?></a>
 
-				<?php if ($post['youtube_video_id'] ) { ?><aside class="go-to"><a href="<?php echo $post['permalink']; ?>">Go to Article</a></aside><?php } ?>
-
 				<a href="<?php echo $post['permalink']; ?>" alt="<?php echo $post['title']; ?>" title="<?php echo $post['title']; ?>"><?php echo $post['title']; ?> <small><?php if ( $post['notification_type']) { ?><span class="notification"><?php $post['notification_type']; ?></span><?php } echo $post['date']; ?></small></a>
 
 				<p><?php echo $post['piece']; ?></p>

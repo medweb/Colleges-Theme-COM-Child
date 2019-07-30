@@ -14,13 +14,20 @@
 
  	<!-- -->
 
+ 	<section class="container grid">
+
+	 	<?php get_template_part( 'includes/print-social-posts' ); ?>
+
+
+	 </section>
+
  	<section class="news">
 
 	<section class="container">
 
 		<section class="site-news">
 			
-			<?php get_template_part( 'includes/news-module' ); ?>
+			<?php //get_template_part( 'includes/news-module' ); ?>
 				
 			<a href="<?php bloginfo( 'url' ); ?>/news/" class="more">More News</a>
 
