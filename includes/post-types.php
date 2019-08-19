@@ -32,7 +32,7 @@ function register_main_site_post_types() {
                 'slug'       => 'news',
                 'with_front' => false
             ),
-            'menu_icon'   => get_bloginfo( 'template_directory' ) . '/images/admin/icon-news.png',
+            'menu_icon'   => get_stylesheet_directory_uri() . '/images/admin/icon-news.png',
             'taxonomies' => array('post_tag')
         )
 	);
@@ -54,11 +54,11 @@ function register_main_site_post_types() {
                 'slug'       => 'newsletters',
                 'with_front' => false
             ),
-            'menu_icon'   => get_bloginfo( 'template_directory' ) . '/images/admin/icon-news.png'
+            'menu_icon'   => get_stylesheet_directory_uri() . '/images/admin/icon-news.png'
         )
 	);
 
-	// profile pages for people: staff, faculty, residents, etc
+	/* profile pages for people: staff, faculty, residents, etc
 	register_post_type( 'profiles',
         array(
             'labels'      => array(
@@ -72,10 +72,10 @@ function register_main_site_post_types() {
             'public'      => true,
             'has_archive' => true,
             'rewrite'     => array(
-                'slug'       => 'directory',
+                'slug'       => 'profiles',
                 'with_front' => false
             ),
-            'menu_icon'   => get_bloginfo( 'template_directory' ) . '/images/admin/icon-profiles.png'
+            'menu_icon'   => get_stylesheet_directory_uri() . '/images/admin/icon-profiles.png'
         )
-	);
+	);*/
 }

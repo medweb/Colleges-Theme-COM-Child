@@ -62,6 +62,38 @@
       background: #f7c100;
       padding: 10px; }
 
+.news {
+  overflow: auto;
+  padding: 50px 0;
+  background: #ececec; }
+  .news .more {
+    background: #f7c100;
+    padding: 10px;
+    display: inline-block;
+    color: #000;
+    margin: 10px 0; }
+  .news .site-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    float: left; }
+    .news .site-news article {
+      width: 26%;
+      margin: 15px; }
+      .news .site-news article .photo-prev {
+        width: 100%;
+        height: 140px;
+        display: block;
+        text-indent: -9999px;
+        margin-bottom: 10px; }
+  .news .in-news {
+    width: 250px;
+    float: left; }
+    .news .in-news .innewsart {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0; }
+
 .ucf-events-classic {
   background: url(images/backgrounds/com-med-bg.jpg) center center;
   background-size: cover;

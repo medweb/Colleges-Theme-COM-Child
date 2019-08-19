@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31491",
 "files": {
+	"/archive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive.php",
+		"oF": 0
+		},
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -16,6 +24,83 @@
 		"oA": 0,
 		"oAP": "/functions.php",
 		"oF": 0
+		},
+	"/images/admin/icon-ad.png": {
+		"ft": 32768,
+		"iS": 540,
+		"oA": 0,
+		"oAP": "/images/admin/icon-ad.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/admin/icon-events.png": {
+		"ft": 32768,
+		"iS": 519,
+		"oA": 0,
+		"oAP": "/images/admin/icon-events.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/admin/icon-faq.png": {
+		"ft": 32768,
+		"iS": 734,
+		"oA": 0,
+		"oAP": "/images/admin/icon-faq.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/admin/icon-news.png": {
+		"ft": 32768,
+		"iS": 591,
+		"oA": 0,
+		"oAP": "/images/admin/icon-news.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/admin/icon-profiles.png": {
+		"ft": 32768,
+		"iS": 467,
+		"oA": 0,
+		"oAP": "/images/admin/icon-profiles.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/admin/icon-research.png": {
+		"ft": 32768,
+		"iS": 570,
+		"oA": 0,
+		"oAP": "/images/admin/icon-research.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/admin/login-ucf-com.png": {
+		"ft": 32768,
+		"iS": 46323,
+		"oA": 0,
+		"oAP": "/images/admin/login-ucf-com.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/images/backgrounds/com-med-bg.jpg": {
 		"ft": 16384,
@@ -186,6 +271,14 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/single-communique.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-communique.php",
+		"oF": 0
 		},
 	"/style.css": {
 		"aP": 1,

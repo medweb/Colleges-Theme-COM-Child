@@ -24,7 +24,7 @@ class news_module {
 	function __construct() {
 		$news_posts = array();
 
-		$max_news_articles = 5; // show max of 5 articles.
+		$max_news_articles = 6; // show max of 5 articles.
 
 		if ( get_current_blog_id() == 8 ) {
 
@@ -171,11 +171,13 @@ class news_module {
 		foreach ($news_posts as $post){
 			?>
 			<article>
-				<a target='<?php echo $post['target'] ?>'  class="photo-prev" href="<?php echo $post['permalink']; ?>" style="background: url('<?php echo $post['image']; ?>') no-repeat center center; background-size: cover;"><?php echo $post['title']; ?></a>
+				<a target='<?php echo $post['target'] ?>' class="photo-prev" href="<?php echo $post['permalink']; ?>" style="background: url('<?php echo $post['image']; ?>') no-repeat center center; background-size: cover;"><?php echo $post['title']; ?></a>
 
-				<a href="<?php echo $post['permalink']; ?>" alt="<?php echo $post['title']; ?>" title="<?php echo $post['title']; ?>"><?php echo $post['title']; ?> <small><?php if ( $post['notification_type']) { ?><span class="notification"><?php $post['notification_type']; ?></span><?php } echo $post['date']; ?></small></a>
+				<h4 href="<?php echo $post['permalink']; ?>" alt="<?php echo $post['title']; ?>" title="<?php echo $post['title']; ?>"><a target='<?php echo $post['target'] ?>' href="<?php echo $post['permalink']; ?>" ><?php echo $post['title']; ?></a></h4> 
 
-				<p><?php echo $post['piece']; ?></p>
+
+				<small><?php echo $post['date']; ?></small>
+
 			</article>
 
 			<?php
