@@ -126,6 +126,19 @@
       padding-left: 0;
       padding-top: 0; }
 
+#main .autonav {
+  width: 30%;
+  float: right;
+  background: #fff; }
+  #main .autonav li {
+    list-style: none;
+    border-bottom: 1px solid #ccc; }
+    #main .autonav li a {
+      display: block;
+      padding: 15px 15px 15px 15px; }
+      #main .autonav li a:hover {
+        background: #ececec; }
+
 .grid .grid-item {
   float: left;
   background: #e7e7e7;

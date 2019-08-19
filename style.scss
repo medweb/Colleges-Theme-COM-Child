@@ -195,8 +195,29 @@ $background-path: 'images/backgrounds';
 	}
 }
 
+#main {
+	.autonav {
+		width: 30%;
+		float: right;
+		background: #fff;
+
+		li {
+			list-style: none;
+			border-bottom: 1px solid #ccc;
+
+			a {
+				display: block;
+				padding: 15px 15px 15px 15px;
+
+				&:hover {
+					background: #ececec;
+				}
+			}
+		}
+	}
+}
+
 .grid {
-	
 
 	.grid-item {
 		float: left;
