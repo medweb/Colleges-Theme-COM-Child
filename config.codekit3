@@ -124,11 +124,33 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/instagram.png": {
+		"ft": 32768,
+		"iS": 9848,
+		"oA": 0,
+		"oAP": "/images/instagram.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/sprites/social-sprite.png": {
 		"ft": 32768,
 		"iS": 20084,
 		"oA": 0,
 		"oAP": "/images/sprites/social-sprite.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/twitter.png": {
+		"ft": 32768,
+		"iS": 9371,
+		"oA": 0,
+		"oAP": "/images/twitter.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -197,6 +219,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/taxonomies.php",
+		"oF": 0
+		},
+	"/includes/theme-options.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/theme-options.php",
 		"oF": 0
 		},
 	"/includes/twitter-feed.php": {

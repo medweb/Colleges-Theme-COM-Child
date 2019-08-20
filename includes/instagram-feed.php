@@ -8,14 +8,6 @@
  */
 class instagramfeed implements socialfeed {
 
-    const access_token = '1190672314.d90570a.8c9c2572ee10427a948eb9ad787aa69f';
-    // to regenerate the access_toke, go to https://outofthesandbox.com/pages/instagram-access-token
-    // instagram is stupid hard to get set up. you have to use a redirect and accept connections from their endpoint
-    // just to authorize a single user to get an access token. way too much work just to be able to use their
-    // api to view a user's posts. so we use a 3rd party who already has this set up and get an access code from there.
-    // The access_token *shouldn't* expire, but if it does, it must be generated again.
-    const user_id = '1190672314';
-
     public function __construct($post) {
 
     }
@@ -27,7 +19,12 @@ class instagramfeed implements socialfeed {
      * @return array Array of media objects.
      */
     public static function fetch_posts($count = 20, $min_id = null){
-        $userid_url = 'https://api.instagram.com/v1/users/'.self::user_id.'/media/recent/?access_token='.self::access_token.'&count='.$count;
+        $data = get_option('ucf-com-main-screen-options');
+
+        $user_id =      esc_attr($data['instagram_user_id']);
+        $access_token = esc_attr($data['instagram_access_token']);
+
+        $userid_url = "https://api.instagram.com/v1/users/$user_id/media/recent/?access_token=$access_token&count=$count";
         $json_posts = file_get_contents($userid_url);
         $posts = json_decode($json_posts,true)['data'];
         $instagramfeed = array();

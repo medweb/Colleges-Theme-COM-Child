@@ -2,7 +2,7 @@
 
 <?php
 
-locate_template( 'includes/simple_html_dom.php', true, true);
+//locate_template( 'includes/simple_html_dom.php', true, true);
 
 class news_module {
 	function wcs_post_thumbnails_in_feeds( $content ) {
@@ -13,13 +13,13 @@ class news_module {
 
 		return $content;
 	}
-	function wpdocs_excerpt_more( $more ) {
+	/*function wpdocs_excerpt_more( $more ) {
 		return "<span class='readmore'> [...] Read More</span>";
 	}
 	function wpdocs_custom_excerpt_length( $length ) {
 		// restrict summary to 30 words. change this in functions.php as well
 		return 30;
-	}
+	}*/
 
 	function __construct() {
 		$news_posts = array();

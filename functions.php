@@ -1,5 +1,8 @@
 <?php 
 
+// Theme options for Social Media Tokens
+require_once( get_stylesheet_directory() . '/includes/theme-options.php');
+
 // Custom taxonomies
 get_template_part( 'includes/taxonomies' );
 

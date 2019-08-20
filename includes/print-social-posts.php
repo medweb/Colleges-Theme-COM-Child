@@ -7,7 +7,7 @@
  */
 // To change the output number, either call ::output(XY) with another count, or change the class' default count and call with ::output()
 class print_social_posts{
-    const default_count = 10;
+    const default_count = 50;
     /**
      * Get all feeds, sort them all, then loop through and print them each individually.
      * @param int $count
@@ -17,8 +17,18 @@ class print_social_posts{
         locate_template( 'includes/instagram-feed.php', TRUE, TRUE );
         locate_template( 'includes/twitter-feed.php', TRUE, TRUE );
 
-        $twitter_posts = twitterfeed::fetch_posts($count);
-        $instagram_posts = instagramfeed::fetch_posts($count);
+        $twitter_posts = get_transient('ucf-com-main-screen-twitter-posts');
+        if (!$twitter_posts){
+            $twitter_posts = twitterfeed::fetch_posts($count);
+            set_transient('ucf-com-main-screen-twitter-posts', $twitter_posts, WP_FS__TIME_10_MIN_IN_SEC);
+        }
+
+        $instagram_posts = get_transient('ucf-com-main-screen-instagram_posts');
+        if (!$instagram_posts){
+            $instagram_posts = instagramfeed::fetch_posts($count);
+            set_transient('ucf-com-main-screen-instagram_posts', $instagram_posts, WP_FS__TIME_10_MIN_IN_SEC);
+        }
+
         $all_posts_sorted = self::sort_posts(array_merge($twitter_posts,$instagram_posts));
         //var_dump($all_posts_sorted);
         foreach ($all_posts_sorted as $post) {

@@ -18,7 +18,6 @@
 
 	 	<?php get_template_part( 'includes/print-social-posts' ); ?>
 
-
 	 </section>
 
 	 <section class="news">
@@ -27,7 +26,7 @@
 
 			<section class="site-news">
 				
-				<?php get_template_part( 'includes/news-module' ); ?>
+				<?php //get_template_part( 'includes/news-module' ); ?>
 
 			</section>
 

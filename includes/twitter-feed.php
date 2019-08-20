@@ -2,24 +2,27 @@
 
 class twitterfeed implements socialfeed {
     const url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-    const oauth_access_token = "110450038-zUuLBCiZYEY8ADHMgQ8gSvN5mU0Vl2G4DXvuX7pV";
-    const oauth_access_token_secret = "1d0bLDcpM2J8rmbzljoRJ3McxBuZjZKg2StFG4r6hmo";
-    const consumer_key = "BHsrTTZ1AuFHgMNiJY7qlw";
-    const consumer_secret = "qYrPJtdw0Slhs4RPZNKRpJQgkYDFJLf1w0BmOE24";
-    
+
     public static function fetch_posts($count = 20, $older_than = null){
+        $data = get_option('ucf-com-main-screen-options');
+
+        $oauth_access_token =           esc_attr($data['twitter_oauth_access_token']);
+        $oauth_access_token_secret =    esc_attr($data['twitter_oauth_access_token_secret']);
+        $oauth_consumer_key =           esc_attr($data['twitter_oauth_consumer_key']);
+        $oauth_consumer_secret =        esc_attr($data['twitter_oauth_consumer_secret']);
+
         $oauth = array( 'count' => $count,
-                        'oauth_consumer_key' => self::consumer_key,
+                        'oauth_consumer_key' => $oauth_consumer_key,
                         'oauth_nonce' => time(),
                         'oauth_signature_method' => 'HMAC-SHA1',
-                        'oauth_token' => self::oauth_access_token,
+                        'oauth_token' => $oauth_access_token,
                         'oauth_timestamp' => time(),
                         'oauth_version' => '1.0',
                         'tweet_mode' => 'extended');
         $base_params = $oauth;
         $base_params['tweet_mode'] = 'extended';
         $base_info = self::buildBaseString(self::url, 'GET', $oauth);
-        $composite_key = rawurlencode(self::consumer_secret) . '&' . rawurlencode(self::oauth_access_token_secret);
+        $composite_key = rawurlencode($oauth_consumer_secret) . '&' . rawurlencode($oauth_access_token_secret);
         $oauth_signature = base64_encode(hash_hmac('sha1', $base_info, $composite_key, true));
         $oauth['oauth_signature'] = $oauth_signature;
 
@@ -39,7 +42,7 @@ class twitterfeed implements socialfeed {
 
         $twitter_data = json_decode($json);
         $twitter_posts = array();
-        
+
         foreach ($twitter_data as $post){
             $twitter_posts[] = new twitterfeedpost($post);
         }
@@ -73,7 +76,7 @@ class twitterfeedpost implements socialfeedpost {
         $this->post_object = $post;
         $this->date = strtotime($post->created_at);
     }
-    
+
     function get_date() {
         return $this->date;
     }
@@ -86,11 +89,11 @@ class twitterfeedpost implements socialfeedpost {
     function print_date() {
         echo $this->get_date_formatted();
     }
-    
+
     function get_item() {
         return $this->post_object;
     }
-    
+
     function print_item() {
         // only show tweets by us, not any replies to our tweets. also, don't show any posts of ours that are retweets of other posts.
         if (
@@ -121,9 +124,9 @@ class twitterfeedpost implements socialfeedpost {
             }
             echo self::json_tweet_text_to_HTML( $this->post_object );
             echo "<div class='respond'>";
-                echo "<a class='reply' target='_blank' href='https://twitter.com/intent/tweet?in_reply_to={$this->post_object->id}'></a>";
-                echo "<a class='retweet' target='_blank' href='https://twitter.com/intent/retweet?in_reply_to={$this->post_object->id}'></a>";
-                echo "<a class='favorite' target='_blank' href='https://twitter.com/intent/favorite?in_reply_to={$this->post_object->id}'></a>";
+            echo "<a class='reply' target='_blank' href='https://twitter.com/intent/tweet?in_reply_to={$this->post_object->id}'></a>";
+            echo "<a class='retweet' target='_blank' href='https://twitter.com/intent/retweet?in_reply_to={$this->post_object->id}'></a>";
+            echo "<a class='favorite' target='_blank' href='https://twitter.com/intent/favorite?in_reply_to={$this->post_object->id}'></a>";
             echo "</div></div>";
         }
     }

@@ -178,11 +178,32 @@
   margin-bottom: 25px;
   font-size: .8em;
   padding: 10px;
+  position: relative;
   /* To change margin sides, use the 'gutter' parameter in the engine.js masonry grid declaration */
   /*listing of individual postings to disregard
 		&[data-instagram-id="1672725000673921503_1190672314"]{
 			display: none;
 		}*/ }
+  .grid .grid-item.instagram-post:after {
+    content: ' ';
+    position: absolute;
+    background: url("images/instagram.png") no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    top: 10px;
+    left: 10px; }
+  .grid .grid-item.index-tweet:after {
+    content: ' ';
+    position: absolute;
+    background: url("images/twitter.png") no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    top: 10px;
+    left: 10px; }
   .grid .grid-item > a {
     display: inline;
     clear: both; }
