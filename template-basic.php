@@ -10,6 +10,14 @@
 
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 
+		<!-- TODO Make Dynamic -->
+
+		<ol class="breadcrumb" role="navigation" aria-label="breadcrumb">
+		  <li class="breadcrumb-item"><a href="#">Home</a></li>
+		  <li class="breadcrumb-item"><a href="#">Library</a></li>
+		  <li class="breadcrumb-item active" aria-current="page">Data</li>
+		</ol>
+
 		<?php include('includes/side-nav.php'); 
 
 		if ( is_singular( 'news' ) ) { echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; }
