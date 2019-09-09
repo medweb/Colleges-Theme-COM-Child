@@ -35,6 +35,49 @@ $background-path: 'images/backgrounds';
 	display: none;
 }
 
+.author-meta {
+	text-transform: uppercase;
+	font-size: .8em;
+	margin: 0 0 2em 0;
+	display: block;
+}
+
+.large {
+	font-size: 1.4em;
+	color: #555;
+	font-weight: 400;
+}
+
+.wp-block-quote {
+	border-left: 6px solid #ccc;
+	padding: 10px;
+
+	cite {
+		color: #999;
+		font-size: 80%;
+		font-style: italic;
+	}
+}
+
+.gallery {
+	display: flex;
+	justify-content: space-evenly;
+
+	.gallery-item {
+		margin: 1em;
+	}
+}
+
+.float-right,
+.float-left {
+	margin: 1em;
+}
+
+.wp-block-pullquote {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
 .home-header-title-wrapper {
 
 	.home-header-title {
@@ -78,6 +121,25 @@ $background-path: 'images/backgrounds';
 
 		.google {
 			background-position: 0 -137px;
+		}
+	}
+}
+
+.related-content {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 5em 0 5em 0;
+
+	.related-content-item {
+		width: 30%;
+		margin: 0 0 1em 0;
+
+		.related-image {
+			display: block;
+			height: 160px;
+			margin: 0 0 1em 0;
+			text-indent: -9999px;
 		}
 	}
 }
@@ -317,6 +379,7 @@ $background-path: 'images/backgrounds';
 		}
 	}
 }
+
 
 @media (min-width: 576px) {
 	.home-header-title-wrapper {

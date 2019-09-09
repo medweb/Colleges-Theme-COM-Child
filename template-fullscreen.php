@@ -26,7 +26,7 @@
 
 			<section class="site-news">
 				
-				<?php //get_template_part( 'includes/news-module' ); ?>
+				<?php get_template_part( 'includes/news-module' ); ?>
 
 			</section>
 

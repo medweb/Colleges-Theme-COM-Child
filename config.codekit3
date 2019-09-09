@@ -135,6 +135,171 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/images/newsletter/communique/communique-header-events.png": {
+		"ft": 32768,
+		"iS": 2454,
+		"oA": 0,
+		"oAP": "/images/newsletter/communique/communique-header-events.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/communique/communique-header-wellness-more.png": {
+		"ft": 32768,
+		"iS": 6732,
+		"oA": 0,
+		"oAP": "/images/newsletter/communique/communique-header-wellness-more.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/communique/communique-header-wellness.png": {
+		"ft": 32768,
+		"iS": 3046,
+		"oA": 0,
+		"oAP": "/images/newsletter/communique/communique-header-wellness.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/communique/communique-logo-18.png": {
+		"ft": 32768,
+		"iS": 2965,
+		"oA": 0,
+		"oAP": "/images/newsletter/communique/communique-logo-18.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-com-logo.png": {
+		"ft": 32768,
+		"iS": 2774,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-com-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-facebook.jpg": {
+		"ft": 16384,
+		"iS": 835,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-facebook.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-flickr.jpg": {
+		"ft": 16384,
+		"iS": 513,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-flickr.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-google.jpg": {
+		"ft": 16384,
+		"iS": 634,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-google.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-instagram.jpg": {
+		"ft": 16384,
+		"iS": 621,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-instagram.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-twitter.jpg": {
+		"ft": 16384,
+		"iS": 756,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-twitter.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-ucf-logo.png": {
+		"ft": 32768,
+		"iS": 4085,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-ucf-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/newsletter-youtube.jpg": {
+		"ft": 16384,
+		"iS": 809,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/newsletter/newsletter-youtube.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/newsletter/peptalk/peptalk-header-gallery.png": {
+		"ft": 32768,
+		"iS": 519,
+		"oA": 0,
+		"oAP": "/images/newsletter/peptalk/peptalk-header-gallery.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/peptalk/peptalk-logo-18.png": {
+		"ft": 32768,
+		"iS": 5535,
+		"oA": 0,
+		"oAP": "/images/newsletter/peptalk/peptalk-logo-18.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/newsletter/ucf-tab.png": {
+		"ft": 32768,
+		"iS": 3287,
+		"oA": 0,
+		"oAP": "/images/newsletter/ucf-tab.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/sprites/social-sprite.png": {
 		"ft": 32768,
 		"iS": 20084,
@@ -157,6 +322,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/includes/communique.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/communique.php",
+		"oF": 0
+		},
 	"/includes/instagram-feed.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -171,6 +344,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/news-module.php",
+		"oF": 0
+		},
+	"/includes/peptalk.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/peptalk.php",
 		"oF": 0
 		},
 	"/includes/permalinks.php": {
@@ -308,6 +489,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/single-communique.php",
+		"oF": 0
+		},
+	"/single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single.php",
 		"oF": 0
 		},
 	"/style.css": {
