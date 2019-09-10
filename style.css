@@ -90,6 +90,47 @@
       margin: 0 0 1em 0;
       text-indent: -9999px; }
 
+.sort-nav {
+  padding: 10px 20px 0px 20px;
+  width: 100%;
+  background: #2e2e2e;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 25px;
+  overflow: auto; }
+  .sort-nav .button {
+    padding: 9px; }
+  .sort-nav h2 {
+    float: left;
+    margin-top: 15px; }
+  .sort-nav .sort-items {
+    width: 60%;
+    float: right;
+    padding: 12px 10px 0 10px; }
+    .sort-nav .sort-items button {
+      background: #f7c100;
+      border: none;
+      width: 120px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer; }
+      .sort-nav .sort-items button[type='submit'] {
+        float: right;
+        margin-right: 25px; }
+    .sort-nav .sort-items select,
+    .sort-nav .sort-items option,
+    .sort-nav .sort-items input {
+      border: 1px solid #ececec;
+      font-size: 16px;
+      margin: 0 8px 15px 0;
+      height: 38px;
+      float: left;
+      border-radius: 5px; }
+    .sort-nav .sort-items input {
+      padding: 0 0 0 15px; }
+    .sort-nav .sort-items select {
+      margin-bottom: 15px; }
+
 .extra-nav {
   float: right;
   width: 380px;
@@ -140,6 +181,16 @@
     .news .in-news .innewsart {
       border-bottom: 1px solid #ccc;
       padding: 10px 0; }
+
+.archive .archive-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .archive .archive-content article {
+    width: 30%;
+    margin-bottom: 25px;
+    border-bottom: 4px solid #ccc;
+    padding: 0 0 15px 0; }
 
 .ucf-events-classic {
   background: url(images/backgrounds/com-med-bg.jpg) center center;
