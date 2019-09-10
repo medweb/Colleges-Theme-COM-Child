@@ -67,6 +67,6 @@ class print_social_posts{
         return ($a->get_date() < $b->get_date()) ? 1 : -1;
     }
 }
-print_social_posts::output(30);
+print_social_posts::output(9);
 
 

@@ -290,8 +290,8 @@
     width: 30px;
     height: 30px;
     display: block;
-    top: 10px;
-    left: 10px; }
+    top: -10px;
+    left: -10px; }
   .grid .grid-item.index-tweet:after {
     content: ' ';
     position: absolute;
@@ -300,8 +300,8 @@
     width: 30px;
     height: 30px;
     display: block;
-    top: 10px;
-    left: 10px; }
+    top: -10px;
+    left: -10px; }
   .grid .grid-item > a {
     display: inline;
     clear: both; }
