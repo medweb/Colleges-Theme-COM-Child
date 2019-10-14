@@ -21,7 +21,7 @@ if [[ $REMOTES =~ .*/dev/.* ]]
 then
   git remote rm dev
 fi
-git remote add dev        ssh://git@vps1.med.ucf.edu:32/var/www/repositories/new/Colleges-Theme-COM-Child.git
+git remote add dev        ssh://git@vps1.med.ucf.edu:32/var/www/repositories/dev/Colleges-Theme-COM-Child.git
 
 #echo 'Adding staging remote (git push staging)'
 #if [[ $REMOTES =~ .*/staging/.* ]]
