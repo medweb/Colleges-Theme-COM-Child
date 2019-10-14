@@ -30,12 +30,12 @@ git remote add dev        ssh://git@vps1.med.ucf.edu:32/var/www/repositories/dev
 #fi
 #git remote add staging    ssh://git@vps1.med.ucf.edu:32/var/www/med.ucf.edu/staging/wp-content/themes/Colleges-Theme-COM-Child
 
-echo 'Adding production remote (git push production)'
-if [[ $REMOTES =~ .*/production/.* ]]
-then
-  git remote rm production
-fi
-git remote add production ssh://git@vps1.med.ucf.edu:32/var/www/repositories/production/Colleges-Theme-COM-Child.git
+#echo 'Adding production remote (git push production)'
+#if [[ $REMOTES =~ .*/production/.* ]]
+#then
+#  git remote rm production
+#fi
+#git remote add production ssh://git@vps1.med.ucf.edu:32/var/www/repositories/production/Colleges-Theme-COM-Child.git
 
 echo 'Linking repo hooks'
 # if .git/hooks is a directory (and also not a symlink), move it
