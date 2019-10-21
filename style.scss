@@ -85,6 +85,22 @@ $background-path: 'images/backgrounds';
 	}
 }
 
+.searchbar {
+	input {
+		padding: 10px;
+		margin: 15px 0;
+
+		&.searchbar {
+			width: 30%;
+		}
+
+		&#searchsubmit {
+			background: $yellow;
+			border-color: $yellow;
+		}
+	}
+}
+
 .social-icons {
 	list-style-type: none;
 	padding: 0;

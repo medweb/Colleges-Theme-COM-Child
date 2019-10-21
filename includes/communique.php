@@ -16,13 +16,13 @@ out: fixed;">
 										<tr>
 											<td align="center"  style="padding: 0; text-align: left; vertical-align: top;">
 		
-												<img src="<?php bloginfo('stylesheet_url'); ?>/images/newsletter/communique/communique-logo-18.png?v=2.0.0" width="400" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" border="0" class="responsiveimgh" />
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/communique/communique-logo-18.png" width="400" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" border="0" class="responsiveimgh" />
 
 											</td>
 
 											<td align="center" style="padding: 0; text-align: left; vertical-align: top;">
 
-												<img src="<?php bloginfo('template_url'); ?>/images/newsletter/ucf-tab.png" width="40" class="ucf-tab-image" />
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/ucf-tab.png" width="40" class="ucf-tab-image" />
 
 											</td>
 										</tr>
@@ -314,7 +314,7 @@ out: fixed;">
 
 												<div class="events-widget">
 												
-													<?php locate_template( 'includes/ucf-events-feed.php', true, true); ucf_events_feed::output(3); ?>
+													<?php //locate_template( 'includes/ucf-events-feed.php', true, true); ucf_events_feed::output(3); ?>
 
 												</div>
 
