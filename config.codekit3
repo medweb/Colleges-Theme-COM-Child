@@ -370,6 +370,14 @@
 		"oAP": "/includes/post-types.php",
 		"oF": 0
 		},
+	"/includes/print-social-posts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/print-social-posts.php",
+		"oF": 0
+		},
 	"/includes/side-nav.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -400,6 +408,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/theme-options.php",
+		"oF": 0
+		},
+	"/includes/twitter-feed.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/twitter-feed.php",
 		"oF": 0
 		},
 	"/js/engine-min.js": {

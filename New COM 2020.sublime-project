@@ -3,6 +3,12 @@
 	[
 		{
 			"path": "/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes"
 		}
 	]
 }
