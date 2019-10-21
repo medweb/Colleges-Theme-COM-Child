@@ -29,7 +29,7 @@ $children = wp_list_pages( $args );
 
     <?php if ( get_field( 'right_side_custom' ) ) { ?>
 
-        <aside>
+        <aside class="right-side-info">
 
             <?php the_field( 'right_side_custom' ); ?>
 

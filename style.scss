@@ -379,9 +379,11 @@ $background-path: 'images/backgrounds';
 	.side-nav {
 		width: 30%;
 		float: right;
-		background: #fff;
+		margin: 0 0 0 3em;
 
 		.autonav {
+
+			padding-inline-start: 0;
 
 			li {
 				list-style: none;
@@ -389,10 +391,10 @@ $background-path: 'images/backgrounds';
 
 				a {
 					display: block;
-					padding: 15px 15px 15px 15px;
+					padding: 15px 15px 15px 0px;
 
 					&:hover {
-						background: #ececec;
+						
 					}
 				}
 			}

@@ -118,8 +118,8 @@
         float: right;
         margin-right: 25px; }
     .sort-nav .sort-items select,
-    .sort-nav .sort-items option,
-    .sort-nav .sort-items input {
+.sort-nav .sort-items option,
+.sort-nav .sort-items input {
       border: 1px solid #ececec;
       font-size: 16px;
       margin: 0 8px 15px 0;
@@ -256,18 +256,18 @@
       padding-left: 0;
       padding-top: 0; }
 
-#main .autonav {
+#main .side-nav {
   width: 30%;
   float: right;
-  background: red; }
-  #main .autonav li {
-    list-style: none;
-    border-bottom: 1px solid #ccc; }
-    #main .autonav li a {
-      display: block;
-      padding: 15px 15px 15px 15px; }
-      #main .autonav li a:hover {
-        background: #ececec; }
+  margin: 0 0 0 3em; }
+  #main .side-nav .autonav {
+    padding-inline-start: 0; }
+    #main .side-nav .autonav li {
+      list-style: none;
+      border-bottom: 1px solid #ccc; }
+      #main .side-nav .autonav li a {
+        display: block;
+        padding: 15px 15px 15px -0px; }
 
 .grid .grid-item {
   float: left;
