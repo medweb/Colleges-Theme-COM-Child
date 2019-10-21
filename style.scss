@@ -376,21 +376,24 @@ $background-path: 'images/backgrounds';
 }
 
 #main {
-	.autonav {
+	.side-nav {
 		width: 30%;
 		float: right;
 		background: #fff;
 
-		li {
-			list-style: none;
-			border-bottom: 1px solid #ccc;
+		.autonav {
 
-			a {
-				display: block;
-				padding: 15px 15px 15px 15px;
+			li {
+				list-style: none;
+				border-bottom: 1px solid #ccc;
 
-				&:hover {
-					background: #ececec;
+				a {
+					display: block;
+					padding: 15px 15px 15px 15px;
+
+					&:hover {
+						background: #ececec;
+					}
 				}
 			}
 		}

@@ -259,7 +259,7 @@
 #main .autonav {
   width: 30%;
   float: right;
-  background: #fff; }
+  background: red; }
   #main .autonav li {
     list-style: none;
     border-bottom: 1px solid #ccc; }

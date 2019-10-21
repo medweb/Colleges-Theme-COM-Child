@@ -13,9 +13,9 @@
 		<!-- TODO Make Dynamic -->
 
 		<ol class="breadcrumb" role="navigation" aria-label="breadcrumb">
-		  <li class="breadcrumb-item"><a href="#">Home</a></li>
-		  <li class="breadcrumb-item"><a href="#">Library</a></li>
-		  <li class="breadcrumb-item active" aria-current="page">Data</li>
+		  <li class="breadcrumb-item"><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
+		  <li class="breadcrumb-item"><a href="#"><?php echo get_the_title( $post->post_parent ); ?></a></li>
+		  <li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
 		</ol>
 
 		<?php include('includes/side-nav.php'); 

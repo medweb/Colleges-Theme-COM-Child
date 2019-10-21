@@ -1,3 +1,5 @@
+<div class="side-nav">
+
 <?php
 
 $args = array (
@@ -24,3 +26,15 @@ $children = wp_list_pages( $args );
         </ul>
 
     <?php endif; ?>
+
+    <?php if ( get_field( 'right_side_custom' ) ) { ?>
+
+        <aside>
+
+            <?php the_field( 'right_side_custom' ); ?>
+
+        </aside>
+
+    <?php } ?>
+
+</div>
