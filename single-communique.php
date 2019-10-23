@@ -1,6 +1,7 @@
 <?php
 /**
  */
+$articles_per_row = 1;
 ?>
 
 <?php get_header( 'newsletters' ); the_post(); ?>
@@ -256,16 +257,18 @@
 
 
 																<?php
-															foreach ($news_posts as $post){
+															foreach ($news_posts as $post){ 
 																$article_count++;
 																if ($article_count == 1){
 																	echo "<tr>";
 																	output_news_post($post, ' colspan="' . $articles_per_row . '" ', 600);
 																	// don't print an ending table row. a function later will print it out for the next or last story
 																} else {
+																
 																	if (($article_count - 2) % $articles_per_row == 0){ // subtract 2, since we ignore the first article (-1) , and we need 0-based (-1). this allows for any number of articles per row without changing code.
 																		echo "</tr><tr>";
 																	}
+																	
 																	output_news_post($post);
 																}
 																if ($article_count == sizeof($news_posts)){ // end tag for the last story. keep this outside the if/else loop, in case we only have a single story.

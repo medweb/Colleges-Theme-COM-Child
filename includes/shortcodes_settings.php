@@ -9,17 +9,6 @@ Author URI: https://www.schrauger.com/
 License: GPLv2 or later
 */
 
-require_once( 'base_url_shortcode.php' );
-require_once( 'eight_box_shortcode.php' );
-require_once( 'three_box_shortcode.php' );
-require_once( 'two_column_shortcode.php' );
-require_once( 'staff_shortcode.php');
-require_once( 'newsfeed_shortcode.php');
-require_once( 'google_map.php');
-require_once( 'archive_news_shortcode.php');
-require_once( 'archive_newsletters_shortcode.php');
-require_once( 'server_status.php');
-require_once( 'accordion_shortcode.php');
 require_once( 'library_books.php');
 
 
@@ -113,17 +102,7 @@ class ucf_com_shortcodes_settings {
 	 */
 	public static function get_shortcodes() {
 		return array(
-			new base_url_shortcode(),
-			new eight_box_shortcode(),
-			new three_box_shortcode(),
-			new two_column_shortcode(),
-			new staff_shortcode(),
-			new newsfeed_shortcode(),
-			new google_map(),
-			new archive_news_shortcode(),
-			new archive_newsletters_shortcode(),
-			new server_status(),
-			new accordion_shortcode(),
+		
 			new library_shortcode()
 		);
 	}
@@ -192,7 +171,8 @@ class ucf_com_shortcodes_settings {
 		/**
 		 * Include plugin.js in the tinymce way (which doesn't use wp_register_script but rather uses its own function)
 		 */
-		$plugin_array[ 'ucf_com_shortcodes_key' ] = get_template_directory_uri() . '/includes/plugin.js' ; // include the javascript for the button, located inside the current plugin folder
+	
+		$plugin_array[ 'ucf_com_shortcodes_key' ] = get_stylesheet_directory_uri() . '/includes/plugin.js' ; // include the javascript for the button, located inside the current plugin folder
 		return $plugin_array;
 	}
 

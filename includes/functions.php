@@ -9,6 +9,7 @@ Author URI: https://www.schrauger.com/
 License: GPLv2 or later
 */
 
+
 if (!class_exists('ucf_com_shortcodes_settings')){
-	//get_template_part('includes/shortcodes_settings');
+	get_template_part('includes/shortcodes_settings');
 }

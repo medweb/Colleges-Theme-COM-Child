@@ -1,5 +1,3 @@
-<div class="side-nav">
-
 <?php
 
 $args = array (
@@ -13,7 +11,9 @@ $args = array (
 
 $children = wp_list_pages( $args );
 
-//echo 'Current Page ID: '.get_the_ID(); ?> 
+//echo 'TROUBLESHOOT the Current Page ID: '.get_the_ID(); ?> 
+
+<div class="side-nav">
 
     <?php if ( $children && get_field( 'show_rsn') ) : ?>
 
