@@ -311,7 +311,7 @@ $articles_per_row = 1;
 										</tr>
 										<tr>
 											<td align="center" style="padding: 0; text-align: left; vertical-align: top;">
-												<img src="<?php bloginfo('template_url'); ?>/images/newsletter/communique/communique-header-events.png" width="151" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/communique/communique-header-events.png" width="151" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
 											</td>
 										</tr>
 										<tr>
@@ -354,7 +354,7 @@ $articles_per_row = 1;
 
 												<!-- Health Tip Widget -->
 																	
-													<img src="<?php bloginfo('template_url'); ?>/images/newsletter/communique/communique-header-wellness.png" width="199" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/communique/communique-header-wellness.png" width="199" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
 
 													<table class="wrapperInner" width="600" align="center" style="border-spacing: 0; border-collapse: collapse;">
 														<tbody>
