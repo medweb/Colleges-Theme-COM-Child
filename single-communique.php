@@ -1,5 +1,11 @@
-<table width="100%" align="center" style="width: 100% !important; table-lay=
-out: fixed;">
+<?php
+/**
+ */
+?>
+
+<?php get_header( 'newsletters' ); the_post(); ?>
+
+<table width="100%" align="center" style="width: 100% !important; table-layout: fixed;">
 	<tbody>
 		<tr>
 			<td align="center" style="padding: 0;">
@@ -8,8 +14,6 @@ out: fixed;">
 					<tbody>
 						<tr>
 							<td align="center" style="padding: 0; border-bottom: 1px solid #333;">
-
-
 
 								<table class="wrapperInner" width="600" align="center" style="border-spacing: 0; border-collapse: collapse;">
 									<tbody>
@@ -435,3 +439,5 @@ out: fixed;">
 		</tr>
 	</tbody>
 </table>
+
+<?php get_footer(); ?>

@@ -15,7 +15,7 @@ $children = wp_list_pages( $args );
 
 //echo 'Current Page ID: '.get_the_ID(); ?> 
 
-    <?php if ( $children ) : ?>
+    <?php if ( $children && get_field( 'show_rsn') ) : ?>
 
         <ul class="autonav">
 

@@ -12,6 +12,9 @@ get_template_part( 'includes/post-types' );
 // Custom permalinks for news and events
 get_template_part( 'includes/permalinks' );
 
+// Custom shortcodes
+get_template_part( 'includes/functions' );
+
 /**
  * Enqueues scripts and styles (javascript and css) used by the theme on every page.
  */
@@ -73,5 +76,23 @@ function com_child_theme_scripts() {
     );
 
 }
+
+// Custom templates for custom post types that have taxonomies - they now work as single-*VARIABLE*.php
+function get_custom_single_template($single_template) {
+    global $post;
+
+    if ($post->post_type == 'newsletters') {
+        $terms = get_the_terms($post->ID, 'newsletter_category');
+        if($terms && !is_wp_error( $terms )) {
+            //Make a foreach because $terms is an array but it supposed to be only one term
+            foreach($terms as $term){
+                $single_template = dirname( __FILE__ ) . '/single-'.$term->slug.'.php';
+            }
+        }
+     }
+     return $single_template;
+}
+
+add_filter( "single_template", "get_custom_single_template" ) ;
 
 ?>

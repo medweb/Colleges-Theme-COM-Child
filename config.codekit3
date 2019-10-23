@@ -25,12 +25,28 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
+	"/footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/footer.php",
+		"oF": 0
+		},
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/functions.php",
+		"oF": 0
+		},
+	"/header-newsletters.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/header-newsletters.php",
 		"oF": 0
 		},
 	"/hooks/pre-push": {
@@ -346,12 +362,12 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/includes/communique.php": {
+	"/includes/functions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/includes/communique.php",
+		"oAP": "/includes/functions.php",
 		"oF": 0
 		},
 	"/includes/instagram-feed.php": {
@@ -360,6 +376,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/instagram-feed.php",
+		"oF": 0
+		},
+	"/includes/library_books.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/library_books.php",
 		"oF": 0
 		},
 	"/includes/news-module.php": {
@@ -386,6 +410,17 @@
 		"oAP": "/includes/permalinks.php",
 		"oF": 0
 		},
+	"/includes/plugin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/includes/plugin-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/includes/post-types.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -400,6 +435,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/print-social-posts.php",
+		"oF": 0
+		},
+	"/includes/shortcodes_settings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/shortcodes_settings.php",
 		"oF": 0
 		},
 	"/includes/side-nav.php": {
@@ -480,6 +523,14 @@
 		"oAP": "/New COM 2020.sublime-workspace",
 		"oF": 0
 		},
+	"/page-library-eresources.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-library-eresources.php",
+		"oF": 0
+		},
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -525,6 +576,22 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/single-communique.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-communique.php",
+		"oF": 0
+		},
+	"/single-peptalk.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-peptalk.php",
+		"oF": 0
 		},
 	"/single.php": {
 		"cB": 0,

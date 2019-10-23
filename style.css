@@ -265,18 +265,24 @@
       padding-left: 0;
       padding-top: 0; }
 
-#main .side-nav {
-  width: 30%;
-  float: right;
-  margin: 0 0 0 3em; }
-  #main .side-nav .autonav {
-    padding-inline-start: 0; }
-    #main .side-nav .autonav li {
-      list-style: none;
-      border-bottom: 1px solid #ccc; }
-      #main .side-nav .autonav li a {
-        display: block;
-        padding: 15px 15px 15px 0px; }
+#main {
+  overflow: auto; }
+  #main .nav {
+    margin-left: 15px;
+    margin-right: 15px; }
+  #main .side-nav {
+    width: 30%;
+    float: right;
+    padding: 0 0 0 3em;
+    background: #fff; }
+    #main .side-nav .autonav {
+      padding-inline-start: 0; }
+      #main .side-nav .autonav li {
+        list-style: none;
+        border-bottom: 1px solid #ccc; }
+        #main .side-nav .autonav li a {
+          display: block;
+          padding: 15px 15px 15px 0px; }
 
 .grid .grid-item {
   float: left;

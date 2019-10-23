@@ -14,7 +14,10 @@
 
 		<ol class="breadcrumb" role="navigation" aria-label="breadcrumb">
 		  <li class="breadcrumb-item"><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
-		  <li class="breadcrumb-item"><a href="#"><?php echo get_the_title( $post->post_parent ); ?></a></li>
+		  
+
+		  <?php if ( get_the_title( $post->post_parent ) != get_the_title() ) { ?> <li class="breadcrumb-item"><a href="#"><?php echo get_the_title( $post->post_parent ); ?></a></li> <?php } ?>
+
 		  <li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
 		</ol>
 
@@ -30,12 +33,6 @@
 <?php if ( is_front_page() ) { ?>
 
  	<!-- -->
-
-<?php } if ( is_singular( 'newsletters' ) ) { ?>
-
-
-	<?php get_template_part('includes/communique'); ?>
-
 
 <?php } if ( is_singular( 'news' ) ) { ?>
 
