@@ -77,6 +77,18 @@ function com_child_theme_scripts() {
 
 }
 
+// Custom excerpt length for copy
+add_filter( 'excerpt_length', 'new_excerpt_length' );
+function new_excerpt_length( ) {
+    return 25;
+}
+
+// Custom excerpt ellipses
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+function new_excerpt_more( ) {
+    return '...';
+}
+
 // Custom templates for custom post types that have taxonomies - they now work as single-*VARIABLE*.php
 function get_custom_single_template($single_template) {
     global $post;

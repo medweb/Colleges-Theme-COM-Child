@@ -396,20 +396,20 @@ $articles_per_row = 1;
 											<td align="center" style="padding: 0 0 0 20px; text-align: left;">
 
 												<div class="social-links">
-													<a href="http://www.facebook.com/ourMedicalSchool" alt="Facebook" title="Facebook"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-facebook.jpg" width="27" alt="Facebook" title="Facebook" /></a>
+													<a href="http://www.facebook.com/ourMedicalSchool" alt="Facebook" title="Facebook"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-facebook.jpg" width="27" alt="Facebook" title="Facebook" /></a>
 											
-													<a href="http://www.instagram.com/ourMedSchool" alt="Instagram" title="Instagram"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-instagram.jpg" width="27" alt="Instagram" title="Instagram" /></a>
+													<a href="http://www.instagram.com/ourMedSchool" alt="Instagram" title="Instagram"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-instagram.jpg" width="27" alt="Instagram" title="Instagram" /></a>
 											
-													<a href="https://twitter.com/ourmedschool" alt="Twitter" title="Twitter"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-twitter.jpg" width="27" alt="Twitter" title="Twitter" /></a>
+													<a href="https://twitter.com/ourmedschool" alt="Twitter" title="Twitter"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-twitter.jpg" width="27" alt="Twitter" title="Twitter" /></a>
 											
-													<a href="http://www.flickr.com/photos/ourmedschool/" alt="Flickr" title="Flickr"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-flickr.jpg" width="27" alt="Flickr" title="Flickr" /></a>
+													<a href="http://www.flickr.com/photos/ourmedschool/" alt="Flickr" title="Flickr"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-flickr.jpg" width="27" alt="Flickr" title="Flickr" /></a>
 
-													<a href="http://www.youtube.com/ourmedicalschool" alt="YouTube" title="YouTube"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-youtube.jpg" width="27" alt="YouTube" title="YouTube" /></a>
+													<a href="http://www.youtube.com/ourmedicalschool" alt="YouTube" title="YouTube"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-youtube.jpg" width="27" alt="YouTube" title="YouTube" /></a>
 											
-													<a href="https://plus.google.com/102370863086974585070" alt="Google Plus" title="Google Plus"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-google.jpg" width="27" alt="Google Plus" title="Google Plus" /></a>
+													<a href="https://plus.google.com/102370863086974585070" alt="Google Plus" title="Google Plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-google.jpg" width="27" alt="Google Plus" title="Google Plus" /></a>
 												</div>
 
-												<a href="<?php bloginfo('url'); ?>" alt="UCF College of Medicine" title="UCF College of Medicine" class="com-link" style="margin: 10px 0; display: block;"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/newsletter-com-logo.png" width="233" alt="UCF College of Medicine" title="UCF College of Medicine" /></a>
+												<a href="<?php bloginfo('url'); ?>" alt="UCF College of Medicine" title="UCF College of Medicine" class="com-link" style="margin: 10px 0; display: block;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/newsletter-com-logo.png" width="233" alt="UCF College of Medicine" title="UCF College of Medicine" /></a>
 				
 
 												<!-- Auto Generated For Newsletter Use - CANSPAM Legal Compliance -->
