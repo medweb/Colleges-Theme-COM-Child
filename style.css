@@ -326,6 +326,10 @@
     margin: 10px;
     clear: both; }
 
+.person-addl-info {
+  margin: 25px 0;
+  font-size: .9em; }
+
 #library-search {
   position: relative;
   min-height: 500px; }
