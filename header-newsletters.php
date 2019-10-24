@@ -20,6 +20,11 @@
 				padding: 0;
 			}
 
+			h2 a {
+				color: #000;
+				font-size: 22px;
+			}
+
 			.index-event {
 				width: 27%;
 				float: left;

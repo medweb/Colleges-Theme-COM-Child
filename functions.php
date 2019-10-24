@@ -22,6 +22,8 @@ add_action( 'wp_enqueue_scripts', 'com_child_theme_scripts');
 
 get_template_part('acf-fields'); //add all theme ACF settings (side & top nav)
 
+
+
 function com_child_theme_scripts() {
     // Theme engine
     wp_enqueue_script(
@@ -29,6 +31,15 @@ function com_child_theme_scripts() {
         get_stylesheet_directory_uri() . '/js/engine.js',
         array('jquery'),
         filemtime( get_stylesheet_directory() . '/js/engine.js' ), // force cache invalidate if md5 changes
+        true // load in footer
+    );
+
+    // Library js
+    wp_enqueue_script(
+        'library_js',
+        get_stylesheet_directory_uri() . '/js/library.js',
+        array('jquery'),
+        filemtime( get_stylesheet_directory() . '/js/library.js' ), // force cache invalidate if md5 changes
         true // load in footer
     );
 
