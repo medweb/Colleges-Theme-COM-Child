@@ -53,6 +53,10 @@
 				width: 50%;
 			}
 
+			.site-footer {
+				display: none;
+			}
+
 			@media all and (max-width: 640px) {
 
 		        table {

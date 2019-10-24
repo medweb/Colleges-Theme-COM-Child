@@ -28,13 +28,19 @@
 
 					<div class="person-addl-info">
 
-						<h4 class="heading-underline">Education</h4>
+						<?php if ( get_field( 'education_person' ) ) { ?>
 
-						<?php the_field( 'education_person' ); ?>
+							<h4 class="heading-underline">Education</h4>
 
-						<h4 class="heading-underline">Specialties</h4>
+							<?php the_field( 'education_person' ); ?>
 
-						<?php the_field( 'specialties_person' ); ?>
+						<?php }  if ( get_field( 'specialties_person' ) ) { ?>
+
+							<h4 class="heading-underline">Specialties</h4>
+
+							<?php the_field( 'specialties_person' ); 
+
+						} ?>
 
 					</div>
 
@@ -49,7 +55,7 @@
 				<section class="person-content">
 					<?php echo get_person_desc_heading( $post ); ?>
 
-					<?php if(!get_field('ucf_tf_person')) { ?> <div class="alert alert-warning" role="alert">IF YOU ARE A UCF HEALTH PATIENT OF THIS PHYSICIAN AND WISH TO COMMUNICATE WITH THEM, PLEASE USE THE <a href="https://ucfhealth.com/patient-portal/">PATIENT PORTAL</a>.</div> <?php } ?>
+					<?php if( get_field('ucf_tf_person') ) { ?> <div class="alert alert-warning" role="alert">IF YOU ARE A UCF HEALTH PATIENT OF THIS PHYSICIAN AND WISH TO COMMUNICATE WITH THEM, PLEASE USE THE <a href="https://ucfhealth.com/patient-portal/">PATIENT PORTAL</a>.</div> <?php } ?>
 
 					<?php
 					if ( $post->post_content ) {

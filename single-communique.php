@@ -1,7 +1,7 @@
 <?php
 /**
  */
-$articles_per_row = 1;
+$articles_per_row = 2;
 ?>
 
 <?php get_header( 'newsletters' ); the_post(); ?>
