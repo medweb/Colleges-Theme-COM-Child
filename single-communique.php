@@ -6,7 +6,7 @@ $articles_per_row = 2;
 
 <?php get_header( 'newsletters' ); the_post(); ?>
 
-<table width="100%" align="center" style="width: 100% !important; table-layout: fixed;">
+<table width="100%" align="center" style="width: 100% !important; table-layout: fixed; background: #fff;" bgcolor="#fff">
 	<tbody>
 		<tr>
 			<td align="center" style="padding: 0;">
