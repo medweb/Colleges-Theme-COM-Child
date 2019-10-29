@@ -31,6 +31,10 @@ $std-fonts: "Gotham A", "Gotham B", Arial, Helvetica, sans-serif;
 $sprite-path: 'images/sprites';
 $background-path: 'images/backgrounds';
 
+.header-content {
+	background-color: #ccc;
+}
+
 .chevron-wrapper {
 	display: none;
 }

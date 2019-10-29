@@ -14,6 +14,9 @@
 /* Colors */
 /* Font Vars */
 /* Image Vars */
+.header-content {
+  background-color: #ccc; }
+
 .chevron-wrapper {
   display: none; }
 

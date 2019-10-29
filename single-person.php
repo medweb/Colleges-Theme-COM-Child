@@ -44,7 +44,7 @@
 
 					</div>
 
-					<a class="btn btn-secondary" href="<?php bloginfo( 'url' ); ?>/directory">Return to Directory</a>
+					<a class="btn btn-secondary" href="javascript:history.back()">Return to Directory</a>
 
 				</aside>
 

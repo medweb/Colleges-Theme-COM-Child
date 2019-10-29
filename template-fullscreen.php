@@ -30,6 +30,7 @@
 
 			</section>
 
+			<?php if ( get_current_blog_id() == 1 ) { ?>
 
 			<section class="in-news">
 
@@ -70,6 +71,8 @@
 			</section>
 
 			<a href="<?php bloginfo( 'url' ); ?>/news/" class="more">More News</a>
+
+			<?php } ?>
 
 		</section>
 
