@@ -12,16 +12,7 @@
 
 <?php if ( is_front_page() ) { ?>
 
- 	<!-- -->
-
- 	<section class="container grid">
-
-	 	<?php get_template_part( 'includes/print-social-posts' ); ?>
-
-	 	<div class="overlay-white-fade">&nbsp;</div>
-
-	 </section>
-
+ 	<!-- Front -->
 
 <?php } ?>
 
