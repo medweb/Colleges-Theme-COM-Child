@@ -29,14 +29,11 @@
 .wp-block-columns.right-column .wp-block-column {
   flex-basis: 33.3%;
   margin-left: 0; }
-
 .wp-block-columns.right-column .wp-block-column:first-child {
   flex-basis: 66.6%; }
-
 .wp-block-columns.left-column .wp-block-column {
   flex-basis: 33.3%;
   margin-left: 0; }
-
 .wp-block-columns.left-column .wp-block-column:last-child {
   flex-basis: 66.6%; }
 
@@ -144,8 +141,8 @@
         float: right;
         margin-right: 25px; }
     .sort-nav .sort-items select,
-.sort-nav .sort-items option,
-.sort-nav .sort-items input {
+    .sort-nav .sort-items option,
+    .sort-nav .sort-items input {
       border: 1px solid #ececec;
       font-size: 16px;
       margin: 0 8px 15px 0;
@@ -269,61 +266,6 @@
           display: block;
           padding: 15px 15px 15px 0px; }
 
-.grid {
-  height: 700px !important;
-  overflow: hidden;
-  margin-bottom: 80px;
-  padding: 30px 0; }
-  .grid .overlay-white-fade {
-    background: linear-gradient(transparent, white);
-    position: absolute;
-    bottom: 0;
-    height: 10%;
-    display: block;
-    width: 100%;
-    z-index: 3; }
-  .grid .grid-item {
-    float: left;
-    background: #e7e7e7;
-    width: 20%;
-    margin-bottom: 25px;
-    font-size: .8em;
-    padding: 10px;
-    position: relative;
-    /* To change margin sides, use the 'gutter' parameter in the engine.js masonry grid declaration */
-    /*listing of individual postings to disregard
-		&[data-instagram-id="1672725000673921503_1190672314"]{
-			display: none;
-		}*/ }
-    .grid .grid-item.instagram-post:after {
-      content: ' ';
-      position: absolute;
-      background: url("images/instagram.png") no-repeat;
-      background-size: cover;
-      width: 30px;
-      height: 30px;
-      display: block;
-      top: -10px;
-      left: -10px; }
-    .grid .grid-item.index-tweet:after {
-      content: ' ';
-      position: absolute;
-      background: url("images/twitter.png") no-repeat;
-      background-size: cover;
-      width: 30px;
-      height: 30px;
-      display: block;
-      top: -10px;
-      left: -10px; }
-    .grid .grid-item > a {
-      display: inline;
-      clear: both; }
-    .grid .grid-item img {
-      width: 92%;
-      height: inherit;
-      margin: 10px;
-      clear: both; }
-
 .person-addl-info {
   margin: 25px 0;
   font-size: .9em; }
@@ -332,7 +274,7 @@
   position: relative;
   min-height: 500px; }
   #library-search .loader,
-#library-search .loader:after {
+  #library-search .loader:after {
     border-radius: 50%;
     width: 10em;
     height: 10em;
@@ -352,7 +294,6 @@
     transform: translateZ(0);
     -webkit-animation: load8 1.1s infinite linear;
     animation: load8 1.1s infinite linear; }
-
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -360,7 +301,6 @@
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-
 @keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -386,7 +326,7 @@
     font-weight: bold;
     margin: 25px 0 10px 0; }
   #library-search #search-pagination-alternate-top,
-#library-search #search-pagination-alternate-bottom {
+  #library-search #search-pagination-alternate-bottom {
     display: none; }
   #library-search .pagination {
     display: flex;
@@ -420,9 +360,9 @@
     #library-search .book .author {
       margin: 10px 0 0 0; }
     #library-search .book .author,
-#library-search .book .title,
-#library-search .book .date,
-#library-search .book .provider {
+    #library-search .book .title,
+    #library-search .book .date,
+    #library-search .book .provider {
       line-height: 20px; }
   #library-search #search-results {
     z-index: 9;
@@ -433,3 +373,5 @@
 @media (min-width: 576px) {
   .home-header-title-wrapper {
     background-color: transparent !important; } }
+
+/*# sourceMappingURL=style.css.map */
