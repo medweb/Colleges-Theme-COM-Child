@@ -46,6 +46,33 @@ $background-path: 'images/backgrounds';
 	display: block;
 }
 
+.wp-block-columns {
+	&.right-column {
+
+		.wp-block-column {
+			flex-basis: 33.3%; 
+			margin-left: 0;
+		}
+
+		.wp-block-column:first-child {
+			flex-basis: 66.6%; 
+		}
+	}
+
+	&.left-column {
+
+		.wp-block-column {
+			flex-basis: 33.3%; 
+			margin-left: 0;
+		}
+
+		.wp-block-column:last-child {
+			flex-basis: 66.6%; 
+		}
+
+	}
+}
+
 .large {
 	font-size: 1.4em;
 	color: #555;
@@ -245,52 +272,6 @@ $background-path: 'images/backgrounds';
 	}
 }
 
-.news {
-	overflow: auto;
-	padding: 50px 0;
-	background: #ececec;
-
-	.more {
-		background: $yellow;
-		padding: 10px;
-		display: inline-block;
-		color: #000;
-	
-		margin: 10px 0;
-	}
-
-	.site-news {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		width: 70%;
-		float: left;
-
-		article {
-			width: 26%;
-			margin: 15px;
-
-			.photo-prev {
-				width: 100%;
-				height: 140px;
-				display: block;
-				text-indent: -9999px;
-				margin-bottom: 10px;
-			}
-		}
-	}
-
-	.in-news {
-		width: 250px;
-		float: left;
-
-		.innewsart {
-			border-bottom: 1px solid #ccc;
-			padding: 10px 0;
-		}
-	}
-}
-
 .archive {
 	.archive-content {
 		display: flex;
@@ -431,6 +412,20 @@ $background-path: 'images/backgrounds';
 }
 
 .grid {
+	height: 700px !important;
+	overflow: hidden;
+	margin-bottom: 80px;
+	padding: 30px 0;
+
+	.overlay-white-fade {
+		background: linear-gradient(transparent, white);
+		position: absolute;
+		bottom: 0;
+		height: 10%;
+		display: block;
+		width: 100%;
+		z-index: 3;
+	}
 
 	.grid-item {
 		float: left;

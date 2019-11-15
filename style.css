@@ -26,6 +26,20 @@
   margin: 0 0 2em 0;
   display: block; }
 
+.wp-block-columns.right-column .wp-block-column {
+  flex-basis: 33.3%;
+  margin-left: 0; }
+
+.wp-block-columns.right-column .wp-block-column:first-child {
+  flex-basis: 66.6%; }
+
+.wp-block-columns.left-column .wp-block-column {
+  flex-basis: 33.3%;
+  margin-left: 0; }
+
+.wp-block-columns.left-column .wp-block-column:last-child {
+  flex-basis: 66.6%; }
+
 .large {
   font-size: 1.4em;
   color: #555;
@@ -162,38 +176,6 @@
       background: #f7c100;
       padding: 10px; }
 
-.news {
-  overflow: auto;
-  padding: 50px 0;
-  background: #ececec; }
-  .news .more {
-    background: #f7c100;
-    padding: 10px;
-    display: inline-block;
-    color: #000;
-    margin: 10px 0; }
-  .news .site-news {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
-    float: left; }
-    .news .site-news article {
-      width: 26%;
-      margin: 15px; }
-      .news .site-news article .photo-prev {
-        width: 100%;
-        height: 140px;
-        display: block;
-        text-indent: -9999px;
-        margin-bottom: 10px; }
-  .news .in-news {
-    width: 250px;
-    float: left; }
-    .news .in-news .innewsart {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0; }
-
 .archive .archive-content {
   display: flex;
   flex-wrap: wrap;
@@ -287,47 +269,60 @@
           display: block;
           padding: 15px 15px 15px 0px; }
 
-.grid .grid-item {
-  float: left;
-  background: #e7e7e7;
-  width: 20%;
-  margin-bottom: 25px;
-  font-size: .8em;
-  padding: 10px;
-  position: relative;
-  /* To change margin sides, use the 'gutter' parameter in the engine.js masonry grid declaration */
-  /*listing of individual postings to disregard
+.grid {
+  height: 700px !important;
+  overflow: hidden;
+  margin-bottom: 80px;
+  padding: 30px 0; }
+  .grid .overlay-white-fade {
+    background: linear-gradient(transparent, white);
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    display: block;
+    width: 100%;
+    z-index: 3; }
+  .grid .grid-item {
+    float: left;
+    background: #e7e7e7;
+    width: 20%;
+    margin-bottom: 25px;
+    font-size: .8em;
+    padding: 10px;
+    position: relative;
+    /* To change margin sides, use the 'gutter' parameter in the engine.js masonry grid declaration */
+    /*listing of individual postings to disregard
 		&[data-instagram-id="1672725000673921503_1190672314"]{
 			display: none;
 		}*/ }
-  .grid .grid-item.instagram-post:after {
-    content: ' ';
-    position: absolute;
-    background: url("images/instagram.png") no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    display: block;
-    top: -10px;
-    left: -10px; }
-  .grid .grid-item.index-tweet:after {
-    content: ' ';
-    position: absolute;
-    background: url("images/twitter.png") no-repeat;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    display: block;
-    top: -10px;
-    left: -10px; }
-  .grid .grid-item > a {
-    display: inline;
-    clear: both; }
-  .grid .grid-item img {
-    width: 92%;
-    height: inherit;
-    margin: 10px;
-    clear: both; }
+    .grid .grid-item.instagram-post:after {
+      content: ' ';
+      position: absolute;
+      background: url("images/instagram.png") no-repeat;
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      display: block;
+      top: -10px;
+      left: -10px; }
+    .grid .grid-item.index-tweet:after {
+      content: ' ';
+      position: absolute;
+      background: url("images/twitter.png") no-repeat;
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      display: block;
+      top: -10px;
+      left: -10px; }
+    .grid .grid-item > a {
+      display: inline;
+      clear: both; }
+    .grid .grid-item img {
+      width: 92%;
+      height: inherit;
+      margin: 10px;
+      clear: both; }
 
 .person-addl-info {
   margin: 25px 0;
