@@ -386,28 +386,12 @@
 		"oAP": "/includes/health-tips-feed.php",
 		"oF": 0
 		},
-	"/includes/instagram-feed.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/includes/instagram-feed.php",
-		"oF": 0
-		},
 	"/includes/library_books.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/library_books.php",
-		"oF": 0
-		},
-	"/includes/news-module.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/includes/news-module.php",
 		"oF": 0
 		},
 	"/includes/peptalk.php": {
@@ -445,14 +429,6 @@
 		"oAP": "/includes/post-types.php",
 		"oF": 0
 		},
-	"/includes/print-social-posts.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/includes/print-social-posts.php",
-		"oF": 0
-		},
 	"/includes/shortcodes_settings.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -469,36 +445,12 @@
 		"oAP": "/includes/side-nav.php",
 		"oF": 0
 		},
-	"/includes/social-feed.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/includes/social-feed.php",
-		"oF": 0
-		},
 	"/includes/taxonomies.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/taxonomies.php",
-		"oF": 0
-		},
-	"/includes/theme-options.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/includes/theme-options.php",
-		"oF": 0
-		},
-	"/includes/twitter-feed.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/includes/twitter-feed.php",
 		"oF": 0
 		},
 	"/js/engine-min.js": {
@@ -627,6 +579,29 @@
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
+		},
+	"/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/style.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/template-basic.php": {
 		"cB": 0,
