@@ -76,6 +76,9 @@
     background: #f7c100;
     border-color: #f7c100; }
 
+.news article small {
+  display: none !important; }
+
 .social-icons {
   list-style-type: none;
   padding: 0; }
