@@ -10,6 +10,7 @@ License: GPLv2 or later
 */
 
 require_once( 'library_books.php');
+require_once( 'archive_news_shortcode.php');
 
 
 /**
@@ -103,7 +104,8 @@ class ucf_com_shortcodes_settings {
 	public static function get_shortcodes() {
 		return array(
 		
-			new library_shortcode()
+			new library_shortcode(),
+            new archive_news_shortcode()
 		);
 	}
 
