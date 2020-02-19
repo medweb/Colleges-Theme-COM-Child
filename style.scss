@@ -565,6 +565,15 @@ $background-path: 'images/backgrounds';
 	}
 }
 
+@media (min-width: 1000px) {
+
+	.tab-content {
+		div {
+			width: 100%;
+		}
+	}
+}
+
 
 @media (min-width: 576px) {
 	.home-header-title-wrapper {

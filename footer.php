@@ -51,7 +51,6 @@
 								    <li><a href="https://twitter.com/ourmedschool" class="twitter" alt="Follow us on Twitter" title="Follow us on Twitter" target="_blank">Twitter</a></li>
 								    <li><a href="https://www.flickr.com/photos/ourmedschool/albums" class="flickr" alt="See us on Flickr" title="See us on Flickr" target="_blank">Flickr</a></li>
 								    <li><a href="https://www.youtube.com/ourmedicalschool" class="youtube" alt="See us on YouTube" title="See us on YouTube" target="_blank">YouTube</a></li>
-								    <li><a href="https://plus.google.com/102370863086974585070" class="google" alt="See us on Google+" title="See us on Google+" target="_blank" rel="publisher">Google+</a></li>
 								</ul>
 
 							<?php } ?>
