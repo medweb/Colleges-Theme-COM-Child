@@ -12,6 +12,10 @@ get_template_part( 'includes/permalinks' );
 // Custom shortcodes
 get_template_part( 'includes/functions' );
 
+if (!class_exists('ucf_com_shortcodes_settings')){
+	get_template_part('includes/shortcodes_settings');
+}
+
 /**
  * Enqueues scripts and styles (javascript and css) used by the theme on every page.
  */
