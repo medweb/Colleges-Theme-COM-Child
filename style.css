@@ -372,6 +372,10 @@
     position: relative;
     margin-top: 50px; }
 
-@media (min-width: 576px) {
+@media screen and (max-width: 999px) {
+  .menu-expanded .tab-content div {
+    width: 94% !important; } }
+
+@media screen and (max-width: 576px) {
   .home-header-title-wrapper {
     background-color: transparent !important; } }

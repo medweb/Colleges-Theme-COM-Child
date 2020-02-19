@@ -565,17 +565,19 @@ $background-path: 'images/backgrounds';
 	}
 }
 
-@media (min-width: 1000px) {
+@media screen and (max-width: 999px) {
 
-	.tab-content {
-		div {
-			width: 100%;
+	.menu-expanded {
+		.tab-content {
+			div {
+				width: 94% !important;
+			}
 		}
 	}
 }
 
 
-@media (min-width: 576px) {
+@media screen and (max-width: 576px) {
 	.home-header-title-wrapper {
 		background-color: transparent !important;
 	}
