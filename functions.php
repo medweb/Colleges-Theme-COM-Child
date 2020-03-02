@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+include_once 'includes/header-functions.php';
+include_once 'includes/wp-bs-navwalker.php';
+
 
 // Custom taxonomies
 get_template_part( 'includes/taxonomies' );
