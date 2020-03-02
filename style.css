@@ -378,7 +378,12 @@
 
 @media screen and (max-width: 999px) {
   .menu-expanded .tab-content div {
-    width: 94% !important; } }
+    width: 94% !important; }
+  #main .nav {
+    width: 100%;
+    clear: both;
+    float: none;
+    margin: 0; } }
 
 @media screen and (max-width: 576px) {
   .home-header-title-wrapper {

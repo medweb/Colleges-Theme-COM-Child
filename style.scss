@@ -583,6 +583,15 @@ $background-path: 'images/backgrounds';
 			}
 		}
 	}
+
+	#main {
+		.nav {
+			width: 100%;
+		    clear: both;
+		    float: none;
+		    margin: 0;
+		}
+	}
 }
 
 
