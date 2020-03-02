@@ -17,6 +17,22 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/archive-news.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive-news.php",
+		"oF": 0
+		},
+	"/archive-newsletters.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive-newsletters.php",
+		"oF": 0
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -361,6 +377,22 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/includes/archive_news_shortcode.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/archive_news_shortcode.php",
+		"oF": 0
+		},
+	"/includes/archive_newsletters_shortcode.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/archive_newsletters_shortcode.php",
+		"oF": 0
 		},
 	"/includes/com_shortcode.php": {
 		"cB": 0,
