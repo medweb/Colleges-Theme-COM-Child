@@ -65,6 +65,14 @@
 		"oAP": "/header-newsletters.php",
 		"oF": 0
 		},
+	"/header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/header.php",
+		"oF": 0
+		},
 	"/hooks/pre-push": {
 		"cB": 0,
 		"ft": 8192,
@@ -410,6 +418,14 @@
 		"oAP": "/includes/functions.php",
 		"oF": 0
 		},
+	"/includes/header-functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/header-functions.php",
+		"oF": 0
+		},
 	"/includes/health-tips-feed.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -483,6 +499,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/taxonomies.php",
+		"oF": 0
+		},
+	"/includes/wp-bs-navwalker.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/wp-bs-navwalker.php",
 		"oF": 0
 		},
 	"/js/engine-min.js": {

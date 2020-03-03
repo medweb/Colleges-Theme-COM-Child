@@ -27,7 +27,7 @@ if ( !class_exists( 'bs4Navwalker_com' ) ) {
 		*/
 		public function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$indent = str_repeat("\t", $depth);
-			$output .= "\n$indent<div class=\"dropdown-menu\">\n";
+			$output .= "\n$indent<div class=\"com-dropdown\">\n";
 		}
 
 		/**
@@ -114,7 +114,7 @@ if ( !class_exists( 'bs4Navwalker_com' ) ) {
 			}
 
 			if ($depth === 1) {
-				$output .= '<div class="submenu-header">';
+				$output .= '<div class="com-submenu-header">';
 			}
 
 
