@@ -72,7 +72,7 @@ $current_year = get_query_var('years');
 
 
 		<section class="news-archive">
-			<?php echo do_shortcode( "[archive_news archive_news_count='21' category='$safe_current_term_slug']" ); ?>
+			<?php echo do_shortcode( "[archive_news archive_news_count='23' category='$safe_current_term_slug']" ); ?>
 			<div class="spinner-overlay">
 				<div id="loading-img"></div>
 			</div>
