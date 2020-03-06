@@ -121,6 +121,51 @@ function get_custom_single_template($single_template) {
      return $single_template;
 }
 
+add_action( 'init', 'register_my_menus' );
+
+function register_my_menus() {
+
+	global $blog_id;
+
+	if ( $blog_id == 1 ) {
+
+		register_nav_menus(
+			array(
+				'menu-1' => __( 'Main Header - About' ),
+				'menu-2' => __( 'Main Header - Admissions' ),
+				'menu-3' => __( 'Main Header - Academics' ),
+				'menu-4' => __( 'Main Header - Research' ),
+				'menu-5' => __( 'Main Header - Patient Care' ),
+				'menu-6' => __( 'Main Header - Giving' ),
+				'menu-7' => __( 'Footer - Visitor Menu' ),
+				'menu-8' => __( 'Footer - Facilities Menu' ),
+				'menu-9' => __( 'Homepage - Find People' ),
+				'menu-10' => __( 'Homepage - Personell Resources' ),
+				'menu-11' => __( 'Homepage - Prospective Students' ),
+				'menu-12' => __( 'Homepage - Current Students' )
+			)
+		);
+
+	} elseif ( $blog_id == 8 ) {
+
+		register_nav_menus(
+			array(
+				'menu-2' => __( 'Main Header - Research' )
+			)
+		);
+
+	} else {
+
+		register_nav_menus(
+			array(
+				'header-menu' => __( 'Main Header' )
+			)
+		);
+
+	}
+
+}
+
 add_filter( "single_template", "get_custom_single_template" ) ;
 
 ?>
