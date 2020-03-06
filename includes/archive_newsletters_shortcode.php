@@ -165,18 +165,18 @@ class archive_newsletters_shortcode extends com_shortcode {
 
 			$wp_query->the_post();
 
-			$return .= '<article class="news-feed">';
-			$return .= '<h2><a href="'.get_permalink().'">'.get_the_title().' - <small>'.get_the_time('m/d/Y').'</small></a></h2>';
+			$return .= '<article class="news-feed single-article">';
+			$return .= '<h2><a href="'.get_permalink().'">'.get_the_title().'</a></h2><small class="badge badge-default">'.get_the_time('m/d/Y').'</small>';
 			/*if ( has_post_thumbnail() ){
 				echo '<a class="news-image" href="'.get_permalink().'">';
 				the_post_thumbnail( array(100), array( 'style' => 'float:left; margin-right:10px;' ) );
 				echo '</a>';
 			}*/
-			$return .= '<p>'.get_the_excerpt().'&nbsp;<a href="'.get_permalink().'">Read More...</a></p>';
+			$return .= '<p>'.get_the_excerpt().'&nbsp;<a href="'.get_permalink().'" class="btn btn-info">Read More...</a></p>';
 			$return .= '</article>';
 		};
 
-		$return .= '<div class="pagination">';
+		$return .= '</section><div class="pagination">';
 
 		$big = 999999999; // need an unlikely integer
 		$return .= paginate_links(array(
