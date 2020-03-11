@@ -93,6 +93,39 @@ function com_child_theme_scripts() {
 
 }
 
+// Custom login screen
+add_action( 'login_head', 'custom_login_style' );
+function custom_login_style() {
+?>
+    <style type="text/css">
+    html, body {
+        background: #222 !important;
+    }
+    h1 a {
+        display: none !important;
+    }
+    a:hover {
+        color: #fff !important;
+    }
+    input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=checkbox]:focus {
+        border-color: #666 !important;
+        box-shadow: 0 0 2px #ffae00 !important;
+    }
+    .button-primary {
+        background: #ffcc00 !important;
+        box-shadow: 0 1px 0 #ffae00 !important;
+        border-color: #ffae00 !important;
+        text-shadow: 0 -1px 1px #ffae00, 1px 0 1px #ffae00, 0 1px 1px #ffae00, -1px 0 1px #ffae00 !important;
+    }
+    .message {
+        border-left-color: #ffcc00 !important;
+    }
+    </style>
+<?php
+}
+
 // Custom excerpt length for copy
 add_filter( 'excerpt_length', 'new_excerpt_length' );
 function new_excerpt_length( ) {
