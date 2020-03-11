@@ -131,18 +131,12 @@ function register_my_menus() {
 
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Main Header - About' ),
-				'menu-2' => __( 'Main Header - Admissions' ),
-				'menu-3' => __( 'Main Header - Academics' ),
-				'menu-4' => __( 'Main Header - Research' ),
-				'menu-5' => __( 'Main Header - Patient Care' ),
-				'menu-6' => __( 'Main Header - Giving' ),
-				'menu-7' => __( 'Footer - Visitor Menu' ),
-				'menu-8' => __( 'Footer - Facilities Menu' ),
-				'menu-9' => __( 'Homepage - Find People' ),
-				'menu-10' => __( 'Homepage - Personell Resources' ),
-				'menu-11' => __( 'Homepage - Prospective Students' ),
-				'menu-12' => __( 'Homepage - Current Students' )
+				'menu-1' => __( 'Main Header - Slot 1' ),
+				'menu-2' => __( 'Main Header - Slot 2' ),
+				'menu-3' => __( 'Main Header - Slot 3' ),
+				'menu-4' => __( 'Main Header - Slot 4' ),
+				'menu-5' => __( 'Main Header - Slot 5' ),
+				'menu-6' => __( 'Main Header - Slot 6' ),
 			)
 		);
 
@@ -150,7 +144,7 @@ function register_my_menus() {
 
 		register_nav_menus(
 			array(
-				'menu-2' => __( 'Main Header - Research' )
+				'menu-2' => __( 'Main Header - Slot 2' )
 			)
 		);
 
