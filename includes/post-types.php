@@ -9,12 +9,27 @@
 add_action( 'init', 'create_post_type' );
 
 function create_post_type() {
-	if ( get_current_blog_id() == 1 ) {
-		register_main_site_post_types();
-	}
+	register_main_site_post_types(is_main_site());
+
 }
-function register_main_site_post_types() {
-	
+function register_main_site_post_types($is_visible = true) {
+
+	if ($is_visible){
+		// hide from subsites, but still register the post type so plugins can query it.
+		// main `init` hook doesn't fire on switch_to_blog, so if we only register these
+		// post types on the main blog, they cease to exist for subsites even when they
+		// try to switch_to_blog(1)
+		$show_ui = true;
+		$show_in_menu = true;
+		$show_in_nav_menus = true;
+		$show_in_admin_bar = true;
+	} else {
+		$show_ui = false;
+		$show_in_menu = false;
+		$show_in_nav_menus = false;
+		$show_in_admin_bar = false;
+	}
+
 	// News articles
 	register_post_type( 'news',
         array(
@@ -27,6 +42,10 @@ function register_main_site_post_types() {
             ),
             'supports'    => array( 'title', 'editor', 'thumbnail', 'revisions' ),
             'public'      => true,
+            'show_ui'     => $show_ui,
+            'show_in_menu' => $show_in_menu,
+            'show_in_nav_menus' => $show_in_nav_menus,
+            'show_in_admin_bar' => $show_in_admin_bar,
             'has_archive' => true,
             'rewrite'     => array(
                 'slug'       => 'news',
@@ -49,6 +68,10 @@ function register_main_site_post_types() {
             ),
             'supports'    => array( 'title', 'editor', 'revisions' ),
             'public'      => true,
+            'show_ui'     => $show_ui,
+            'show_in_menu' => $show_in_menu,
+            'show_in_nav_menus' => $show_in_nav_menus,
+            'show_in_admin_bar' => $show_in_admin_bar,
             'has_archive' => true,
             'rewrite'     => array(
                 'slug'       => 'newsletters',
