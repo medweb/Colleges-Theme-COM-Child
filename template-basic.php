@@ -3,6 +3,10 @@
  * Template Name: Basic
  * Template Post Type: degree
  */
+global $post;
+$parentId = $post->post_parent;
+$linkToParent = get_permalink($parentId);
+
 ?>
 <?php get_header(); the_post(); ?>
 
@@ -16,7 +20,7 @@
 		  <li class="breadcrumb-item"><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
 		  
 
-		  <?php if ( get_the_title( $post->post_parent ) != get_the_title() ) { ?> <li class="breadcrumb-item"><a href="#"><?php echo get_the_title( $post->post_parent ); ?></a></li> <?php } ?>
+		  <?php if ( get_the_title( $post->post_parent ) != get_the_title() ) { ?> <li class="breadcrumb-item"><a href="<?php echo get_permalink( $parentId ); ?>"><?php echo get_the_title( $parentId ); ?></a></li> <?php } ?>
 
 		  <li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
 		</ol>
