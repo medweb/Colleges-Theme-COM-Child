@@ -27,7 +27,12 @@ $linkToParent = get_permalink($parentId);
 
 		<?php include('includes/side-nav.php'); 
 
-		if ( is_singular( 'news' ) ) { echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; }
+		if ( is_singular( 'news' ) ) { ?> 
+
+		<?php echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; ?> 
+
+
+		<?php }
 
 		the_content(); ?>
 
