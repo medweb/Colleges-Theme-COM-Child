@@ -3,7 +3,7 @@
  * Template Name: Basic
  * Template Post Type: degree
  */
-global $post;
+global $post, $post_id;
 $parentId = $post->post_parent;
 $linkToParent = get_permalink($parentId);
 
@@ -16,18 +16,48 @@ $linkToParent = get_permalink($parentId);
 
 		<!-- TODO Make Dynamic -->
 
-		<ol class="breadcrumb" role="navigation" aria-label="breadcrumb">
-		  <li class="breadcrumb-item"><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
-		  
+		<?php if ( !is_singular( 'news' ) ) { ?>
 
-		  <?php if ( get_the_title( $post->post_parent ) != get_the_title() ) { ?> <li class="breadcrumb-item"><a href="<?php echo get_permalink( $parentId ); ?>"><?php echo get_the_title( $parentId ); ?></a></li> <?php } ?>
+			<ol class="breadcrumb" role="navigation" aria-label="breadcrumb">
+			  <li class="breadcrumb-item"><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
+			  
 
-		  <li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
-		</ol>
+			  <?php if ( get_the_title( $post->post_parent ) != get_the_title() ) { ?> <li class="breadcrumb-item"><a href="<?php echo get_permalink( $parentId ); ?>"><?php echo get_the_title( $parentId ); ?></a></li> <?php } ?>
+
+			  <li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
+			</ol>
+
+		<?php } ?>
 
 		<?php include('includes/side-nav.php'); 
 
-		if ( is_singular( 'news' ) ) { ?> 
+		if ( is_singular( 'news' ) ) { ?>
+
+			<?php function custom_taxonomies_terms_links() {
+			    // get post by post id
+			    $post = &get_post($post->ID);
+			    // get post type by post
+			    $post_type = $post->post_type;
+			    // get post type taxonomies
+			    $taxonomies = get_object_taxonomies($post_type);
+
+			    $out = "<ul class='post-info'>";
+			    foreach ($taxonomies as $taxonomy) {        
+			        $out .= "<li>".$taxonomy.": ";
+			        // get the terms related to post
+			        $terms = get_the_terms( $post->ID, $taxonomy );
+			        if ( !empty( $terms ) ) {
+			            foreach ( $terms as $term )
+			                $out .= '<span class="btn btn-info btn-sm">'.$term->name.'</span> ';
+			        }
+			        $out .= "</li>";
+			    }
+			    $out .= "</ul>";
+
+			    return $out;
+			} ?>
+
+			<?php echo custom_taxonomies_terms_links(); ?>
 
 		<?php echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; ?> 
 

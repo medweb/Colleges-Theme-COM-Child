@@ -27,8 +27,6 @@ add_action( 'wp_enqueue_scripts', 'com_child_theme_scripts');
 
 get_template_part('acf-fields'); //add all theme ACF settings (side & top nav)
 
-
-
 function com_child_theme_scripts() {
     // Theme engine
     wp_enqueue_script(

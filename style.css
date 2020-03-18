@@ -79,6 +79,18 @@
 .news article small {
   display: none !important; }
 
+.single-news .post-info li {
+  list-style: none; }
+  .single-news .post-info li:first-child {
+    display: none; }
+
+.single-news .publish img.size-large:first-child {
+  clear: both;
+  width: 100%;
+  height: inherit;
+  display: block;
+  margin: 0 0 25px 0; }
+
 .news-archive {
   display: flex;
   overflow: auto;
