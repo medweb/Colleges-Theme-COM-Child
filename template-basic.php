@@ -14,8 +14,6 @@ $linkToParent = get_permalink($parentId);
 
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 
-		<!-- TODO Make Dynamic -->
-
 		<?php if ( !is_singular( 'news' ) ) { ?>
 
 			<ol class="breadcrumb" role="navigation" aria-label="breadcrumb">
