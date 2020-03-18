@@ -39,14 +39,24 @@ function com_child_theme_scripts() {
         true // load in footer
     );
 
-    // Library js
-    wp_enqueue_script(
+    // Library js - only register the script (the shortcode with enqueue it if shortcode exists on a page)
+    wp_register_script(
         'library_js',
         get_stylesheet_directory_uri() . '/js/library.js',
         array('jquery'),
         filemtime( get_stylesheet_directory() . '/js/library.js' ), // force cache invalidate if md5 changes
         true // load in footer
     );
+
+	// pagination for library e-resources
+	wp_register_script(
+		'twbs-pagination',
+		get_stylesheet_directory_uri() . '/js/jquery.twbsPagination.min.js',
+		array( 'jquery' ),
+		filemtime( get_stylesheet_directory() . '/js/jquery.twbsPagination.min.js' ),
+		true
+	);
+	//}
 
     // masonry javascript for grid layouts
     wp_enqueue_script(

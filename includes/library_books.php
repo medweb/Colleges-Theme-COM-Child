@@ -41,6 +41,10 @@ class library_shortcode extends com_shortcode {
 	
 
 	public function replacement( $attrs = null ) {
+
+	    wp_enqueue_script('library_js');
+		wp_enqueue_script('twbs-pagination');
+
 		$attrs = shortcode_atts(
 			array(
 				self::tinymce_library_resource => '', //default to show first resource, with a dropdown to select others
