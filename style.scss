@@ -129,9 +129,33 @@ $background-path: 'images/backgrounds';
 }
 
 .news {
+
 	article {
 		small {
 			display: none !important;
+		}
+	}
+}
+
+.single-news {
+	.post-info {
+		li {
+			&:first-child {
+				display: none;
+			}
+
+			list-style: none;
+
+		}
+	}
+
+	.publish {
+		img.size-large:first-child {
+			clear: both;
+			width: 100%;
+			height: inherit;
+			display: block;
+			margin: 0 0 25px 0;
 		}
 	}
 }
@@ -461,6 +485,7 @@ header nav {
 
 #library-search {
 	position: relative;
+	overflow: hidden;
 	min-height: 500px;
 
 
