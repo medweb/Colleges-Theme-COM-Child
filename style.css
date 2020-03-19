@@ -312,6 +312,7 @@ header nav .dropdown-menu div.submenu-header {
 
 #library-search {
   position: relative;
+  overflow: hidden;
   min-height: 500px; }
   #library-search .loader,
 #library-search .loader:after {
