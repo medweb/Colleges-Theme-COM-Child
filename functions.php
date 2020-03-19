@@ -93,13 +93,13 @@ function com_child_theme_scripts() {
     );
     
     // register, but don't enqueue this script. it will be enqueued if a page content has the shortcode.
-    wp_register_script(
+    /*wp_register_script(
         'view-all-events-script',
         get_stylesheet_directory_uri() . '/js/view-all-events.js',
         array('jquery'),
         filemtime( get_stylesheet_directory() . '/js/view-all-events.js' ), // force cache invalidate if md5 changes
         true // load in footer
-    );
+    );*/
 
 }
 
