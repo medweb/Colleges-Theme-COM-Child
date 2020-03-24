@@ -135,6 +135,13 @@ function custom_login_style() {
 <?php
 }
 
+// Custom sitemap shortcode
+add_shortcode('sitemap', 'wp_sitemap_page');
+
+function wp_sitemap_page(){
+    return "<ul class='sitemap comsitemap'>".wp_list_pages('title_li=&echo=0')."</ul>";
+}
+
 // Custom excerpt length for copy
 add_filter( 'excerpt_length', 'new_excerpt_length' );
 function new_excerpt_length( ) {
