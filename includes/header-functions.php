@@ -29,41 +29,45 @@ function get_nav_markup_com() {
                     <span class="navbar-toggler-icon" ></span >
                 </button >
 
-				<?php
-				$main_menu_array = array(
-					array( 'url' => '/about/', 'text' => 'About', 'acf_prefix' => 'about' ),
-					array( 'url' => '/admissions/', 'text' => 'Admissions', 'acf_prefix' => 'admissions' ),
-					array( 'url' => '/academics/', 'text' => 'Education', 'acf_prefix' => 'academics' ),
-					array( 'url' => '/research/', 'text' => 'Research', 'acf_prefix' => 'research' ),
-					array( 'url' => '/patient-care/', 'text' => 'Patient Care', 'acf_prefix' => 'patient_care' ),
-					array( 'url' => '/giving/', 'text' => 'Giving', 'acf_prefix' => 'giving' )
-				);
-				$count           = 1;
+                <div id="header-menu" class="navbar-collapse collapse" >
 
-				foreach ( $main_menu_array as $menu_item ) {
-					//$image_url = wp_get_attachment_image_src( get_field( $menu_item['acf_prefix'] . '_image', 'options' ), 'large' );
-					?>
+    				<?php
+    				$main_menu_array = array(
+    					array( 'url' => '/about/', 'text' => 'About', 'acf_prefix' => 'about' ),
+    					array( 'url' => '/admissions/', 'text' => 'Admissions', 'acf_prefix' => 'admissions' ),
+    					array( 'url' => '/academics/', 'text' => 'Education', 'acf_prefix' => 'academics' ),
+    					array( 'url' => '/research/', 'text' => 'Research', 'acf_prefix' => 'research' ),
+    					array( 'url' => '/patient-care/', 'text' => 'Patient Care', 'acf_prefix' => 'patient_care' ),
+    					array( 'url' => '/giving/', 'text' => 'Giving', 'acf_prefix' => 'giving' )
+    				);
+    				$count           = 1;
+
+    				foreach ( $main_menu_array as $menu_item ) {
+    					//$image_url = wp_get_attachment_image_src( get_field( $menu_item['acf_prefix'] . '_image', 'options' ), 'large' );
+    					?>
 
 
-					<?php $array = array(
+    					<?php $array = array(
 
-						'theme_location'  => 'menu-' . $count,
-						'depth'           => 3,
-						'container'       => 'div',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'header-menu-' . $count,
-						'menu_class'      => 'nav navbar-nav ml-md-auto',
-						'fallback_cb'     => 'bs4Navwalker::fallback',
-						'walker'          => new bs4Navwalker_com()
+    						'theme_location'  => 'menu-' . $count,
+    						'depth'           => 3,
+    						'container'       => 'div',
+    						'container_class' => '',
+    						'container_id'    => 'header-menu-' . $count,
+    						'menu_class'      => 'nav navbar-nav ml-md-auto',
+    						'fallback_cb'     => 'bs4Navwalker::fallback',
+    						'walker'          => new bs4Navwalker_com()
 
-					);
+    					);
 
-					wp_nav_menu( $array ); ?>
+    					wp_nav_menu( $array ); ?>
 
-					<?php
-					$count ++;
-				}
-				?>
+    					<?php
+    					$count ++;
+    				}
+    				?>
+
+                </div>
 
             </div >
         </nav >
