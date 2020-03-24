@@ -709,7 +709,12 @@ header nav {
 
 		.navbar-inverse {
 
+			#header-menu {
+				justify-content: flex-end;
+			}
+
 			.navbar-nav {
+				margin: 0;
 
 				.nav-item {
 					&.dropdown {

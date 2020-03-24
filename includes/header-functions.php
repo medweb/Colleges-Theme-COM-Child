@@ -52,7 +52,7 @@ function get_nav_markup_com() {
     						'theme_location'  => 'menu-' . $count,
     						'depth'           => 3,
     						'container'       => 'div',
-    						'container_class' => '',
+    						'container_class' => 'com-submenu-l1',
     						'container_id'    => 'header-menu-' . $count,
     						'menu_class'      => 'nav navbar-nav ml-md-auto',
     						'fallback_cb'     => 'bs4Navwalker::fallback',
