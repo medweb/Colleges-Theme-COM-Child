@@ -462,9 +462,9 @@ header nav .dropdown-menu div.submenu-header {
 			}
 		}
 	}*/
-  .navbar-inverse .navbar-nav .nav-item.dropdown {
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.dropdown {
     position: inherit; }
-  .navbar-inverse .navbar-nav .nav-item .com-dropdown {
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown {
     width: 100%;
     left: -9999px;
     position: absolute;
@@ -476,30 +476,30 @@ header nav .dropdown-menu div.submenu-header {
     padding: 10px 50px;
     font-size: .9em;
     border-bottom: 2px solid #ececec; }
-    .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header {
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header {
       float: left;
       width: 33%;
       overflow: auto; }
-      .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header a:first-child {
+      .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header a:first-child {
         font-weight: bold; }
-      .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .dropdown-item {
+      .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .dropdown-item {
         padding: .5em; }
-      .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown {
+      .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown {
         position: relative;
         display: block;
         top: 0;
         width: 100%;
         padding: 0;
         border-bottom: none; }
-        .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown a:first-child {
+        .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown a:first-child {
           font-weight: normal; }
-  .navbar-inverse .navbar-nav .nav-item.show .nav-link {
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .nav-link {
     background-color: #ffffff;
     color: #222222; }
-  .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
     left: 0;
     top: 100%; }
-  .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
     border-top-color: #222222 !important; } }
 
 @media screen and (max-width: 576px) {

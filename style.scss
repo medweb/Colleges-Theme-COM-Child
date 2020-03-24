@@ -705,73 +705,76 @@ header nav {
 			}
 		}
 	}*/
-	.navbar-inverse {
+	.site-collegeofmedicine {
 
-		.navbar-nav {
+		.navbar-inverse {
 
-			.nav-item {
-				&.dropdown {
-					position: inherit;
-				}
+			.navbar-nav {
 
-				.com-dropdown {
-					width: 100%;
-					left: -9999px;
-				    position: absolute;
-				    margin: 0 auto;
-				    z-index: 997;
-				    background: #fff;
-				    overflow: auto;
-				    display: inline-flex;
-				    padding: 10px 50px;
-				    font-size: .9em;
-				    border-bottom: 2px solid $lightgrey;
-
-				    .com-submenu-header {
-				    	float: left;
-				    	width: 33%;
-				    	overflow: auto;
-
-				    	a:first-child {
-							font-weight: bold;
-						}
-
-						.dropdown-item {
-							padding: .5em;
-				    	}
-
-				    	.com-dropdown {
-				    		position: relative;
-				    		display: block;
-				    		top: 0;
-				    		width: 100%;
-				    		padding: 0;
-				    		border-bottom: none;
-
-				    		a:first-child {
-							font-weight: normal;
-						}
-				    	}
-				    }
-				}
-
-				&.show {
-					.nav-link {
-						background-color: $white;
-						color: $black;
+				.nav-item {
+					&.dropdown {
+						position: inherit;
 					}
 
 					.com-dropdown {
-						left: 0;
-		    			top: 100%;
+						width: 100%;
+						left: -9999px;
+					    position: absolute;
+					    margin: 0 auto;
+					    z-index: 997;
+					    background: #fff;
+					    overflow: auto;
+					    display: inline-flex;
+					    padding: 10px 50px;
+					    font-size: .9em;
+					    border-bottom: 2px solid $lightgrey;
+
+					    .com-submenu-header {
+					    	float: left;
+					    	width: 33%;
+					    	overflow: auto;
+
+					    	a:first-child {
+								font-weight: bold;
+							}
+
+							.dropdown-item {
+								padding: .5em;
+					    	}
+
+					    	.com-dropdown {
+					    		position: relative;
+					    		display: block;
+					    		top: 0;
+					    		width: 100%;
+					    		padding: 0;
+					    		border-bottom: none;
+
+					    		a:first-child {
+								font-weight: normal;
+							}
+					    	}
+					    }
+					}
+
+					&.show {
+						.nav-link {
+							background-color: $white;
+							color: $black;
+						}
+
+						.com-dropdown {
+							left: 0;
+			    			top: 100%;
+						}
 					}
 				}
-			}
 
-			.dropdown.show {
-				.dropdown-toggle {
-					&:after {
-						border-top-color: $black !important;
+				.dropdown.show {
+					.dropdown-toggle {
+						&:after {
+							border-top-color: $black !important;
+						}
 					}
 				}
 			}
