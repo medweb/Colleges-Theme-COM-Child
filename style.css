@@ -479,7 +479,9 @@ header nav .dropdown-menu div.submenu-header {
       display: inline-flex;
       padding: 10px 50px;
       font-size: .9em;
-      border-bottom: 2px solid #ececec; }
+      border-bottom: 1px solid #222222;
+      border-right: 1px solid #222222;
+      border-left: 1px solid #222222; }
       .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header {
         float: left;
         width: 33%;
@@ -494,7 +496,7 @@ header nav .dropdown-menu div.submenu-header {
           top: 0;
           width: 100%;
           padding: 0;
-          border-bottom: none; }
+          border: none; }
           .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown a:first-child {
             font-weight: normal; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .nav-link {
