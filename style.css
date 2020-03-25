@@ -91,7 +91,7 @@
   display: block;
   margin: 0 0 25px 0; }
 
-.single-news .publish p.large:first-letter {
+.single-news .publish .large:first-letter {
   color: #222222;
   float: left;
   font-size: 75px;
