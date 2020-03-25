@@ -107,7 +107,6 @@ add_filter( 'body_class', 'body_class_for_pages' );
 
 function body_class_for_pages( $classes ) {
 
-    if ( is_singular( 'page' ) ) {
         global $post;
 
         $sitename = get_bloginfo('name');
@@ -118,7 +117,6 @@ function body_class_for_pages( $classes ) {
 
         $classes[] = 'page-' . $post->post_name;
         $classes[] = 'site-' . $sitename_clean;
-    }
 
     return $classes;
 
