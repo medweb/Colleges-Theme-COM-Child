@@ -157,6 +157,18 @@ $background-path: 'images/backgrounds';
 			display: block;
 			margin: 0 0 25px 0;
 		}
+
+		p.large {
+			&:first-letter {
+			  color: $black;
+			  float: left;
+			  font-size: 75px;
+			  line-height: 60px;
+			  padding-top: 4px;
+			  padding-right: 8px;
+			  padding-left: 3px;
+			}
+		}
 	}
 }
 
