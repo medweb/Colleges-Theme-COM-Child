@@ -31,31 +31,9 @@ $linkToParent = get_permalink($parentId);
 
 		if ( is_singular( 'news' ) ) { ?>
 
-			<?php function custom_taxonomies_terms_links() {
-			    // get post by post id
-			    $post = &get_post($post->ID);
-			    // get post type by post
-			    $post_type = $post->post_type;
-			    // get post type taxonomies
-			    $taxonomies = get_object_taxonomies($post_type);
+			<?php  ?>
 
-			    $out = "<ul class='post-info'>";
-			    foreach ($taxonomies as $taxonomy) {        
-			        $out .= "<li>";
-			        // get the terms related to post
-			        $terms = get_the_terms( $post->ID, $taxonomy );
-			        if ( !empty( $terms ) ) {
-			            foreach ( $terms as $term )
-			                $out .= '<span class="btn btn-info btn-sm">'.$term->name.'</span> ';
-			        }
-			        $out .= "</li>";
-			    }
-			    $out .= "</ul>";
-
-			    return $out;
-			} ?>
-
-			<?php echo custom_taxonomies_terms_links(); ?>
+			<?php echo custom_taxonomies_terms_links('news_category'); ?>
 
 		<?php echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; ?> 
 
@@ -63,6 +41,7 @@ $linkToParent = get_permalink($parentId);
 		<?php }
 
 		the_content(); ?>
+		<?php echo custom_taxonomies_terms_links('post_tag'); ?>
 
 	</article>
 </div>
@@ -121,4 +100,23 @@ $linkToParent = get_permalink($parentId);
 
 	</section>
 
-<?php } get_footer(); ?>
+<?php } get_footer();
+
+function custom_taxonomies_terms_links($taxonomy = null) {
+    global $post;
+
+	$out = "<ul class='post-info {$taxonomy}'>";
+		$out .= "<li>";
+		// get the terms related to post
+		$terms = get_the_terms( $post->ID, $taxonomy );
+		if ( !empty( $terms ) ) {
+			foreach ( $terms as $term )
+				$out .= '<span class="btn btn-info btn-sm">'.$term->name.'</span> ';
+		}
+		$out .= "</li>";
+	$out .= "</ul>";
+
+	return $out;
+}
+
+?>
