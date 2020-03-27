@@ -41,6 +41,9 @@ $linkToParent = get_permalink($parentId);
 		<?php }
 
 		the_content(); ?>
+
+		<h6>Post Tags</h6>
+
 		<?php echo custom_taxonomies_terms_links('post_tag'); ?>
 
 	</article>

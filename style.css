@@ -79,8 +79,10 @@
 .news article small {
   display: none !important; }
 
-.single-news .post-info li {
-  list-style: none; }
+.single-news .post-info {
+  padding: 15px 0 0 0; }
+  .single-news .post-info li {
+    list-style: none; }
 
 .single-news .publish img.size-large:first-child {
   clear: both;
