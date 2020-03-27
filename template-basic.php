@@ -41,7 +41,7 @@ $linkToParent = get_permalink($parentId);
 
 			    $out = "<ul class='post-info'>";
 			    foreach ($taxonomies as $taxonomy) {        
-			        $out .= "<li>".$taxonomy.": ";
+			        $out .= "<li>";
 			        // get the terms related to post
 			        $terms = get_the_terms( $post->ID, $taxonomy );
 			        if ( !empty( $terms ) ) {
