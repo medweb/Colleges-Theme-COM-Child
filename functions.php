@@ -1,6 +1,6 @@
 <?php
 
-get_template_part('includes/header-functions.php');
+get_template_part('includes/header-functions');
 
 // associate news with people
 get_template_part('includes/person-functions');
