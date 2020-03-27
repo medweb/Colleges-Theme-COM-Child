@@ -1,9 +1,12 @@
 <?php
 
-include_once 'includes/header-functions.php';
-include_once 'includes/person-functions.php';
-include_once 'includes/wp-bs-navwalker.php';
+get_template_part('includes/header-functions.php');
 
+// associate news with people
+get_template_part('includes/person-functions');
+
+// modify menus to allow multi column
+get_template_part('includes/wp-bs-navwalker');
 
 // Custom taxonomies
 get_template_part( 'includes/taxonomies' );
