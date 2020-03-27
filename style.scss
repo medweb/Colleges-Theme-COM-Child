@@ -140,12 +140,7 @@ $background-path: 'images/backgrounds';
 .single-news {
 	.post-info {
 		li {
-			&:first-child {
-				display: none;
-			}
-
 			list-style: none;
-
 		}
 	}
 

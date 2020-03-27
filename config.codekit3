@@ -539,6 +539,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/jquery.twbsPagination.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/jquery.twbsPagination.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/library.js": {
 		"bF": 0,
 		"ft": 64,

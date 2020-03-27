@@ -81,8 +81,6 @@
 
 .single-news .post-info li {
   list-style: none; }
-  .single-news .post-info li:first-child {
-    display: none; }
 
 .single-news .publish img.size-large:first-child {
   clear: both;
