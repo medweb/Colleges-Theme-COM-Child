@@ -40,11 +40,11 @@ $linkToParent = get_permalink($parentId);
 
 		<?php }
 
-		the_content(); ?>
+		the_content(); if ( is_singular( 'news' ) ) { ?>
 
 		<h6>Post Tags</h6>
 
-		<?php echo custom_taxonomies_terms_links('post_tag'); ?>
+		<?php echo custom_taxonomies_terms_links('post_tag'); } ?>
 
 	</article>
 </div>
