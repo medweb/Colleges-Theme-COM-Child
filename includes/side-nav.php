@@ -15,7 +15,15 @@ $children = wp_list_pages( $args );
 
 <div class="side-nav">
 
-    <?php if ( $children && get_field( 'show_rsn') ) : ?>
+    <?php //var_dump ( get_field( 'show_rsn') ) ?>
+
+    <?php 
+
+    $haschildset = ( $children && get_field( 'show_rsn') );
+    $haschildunset = ( $children && get_field( 'show_rsn') === NULL );
+
+
+    if ( $haschildunset || $haschildset ) { ?>
 
         <ul class="autonav">
 
@@ -25,9 +33,7 @@ $children = wp_list_pages( $args );
 
         </ul>
 
-    <?php endif; ?>
-
-    <?php if ( get_field( 'right_side_custom' ) ) { ?>
+    <?php } if ( get_field( 'right_side_custom' ) ) { ?>
 
         <aside class="right-side-info">
 

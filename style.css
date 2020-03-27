@@ -91,6 +91,15 @@
   display: block;
   margin: 0 0 25px 0; }
 
+.single-news .publish .large:first-letter {
+  color: #222222;
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px; }
+
 .news-archive {
   display: flex;
   overflow: auto;
@@ -462,45 +471,51 @@ header nav .dropdown-menu div.submenu-header {
 			}
 		}
 	}*/
-  .navbar-inverse .navbar-nav .nav-item.dropdown {
-    position: inherit; }
-  .navbar-inverse .navbar-nav .nav-item .com-dropdown {
-    width: 100%;
-    left: -9999px;
-    position: absolute;
-    margin: 0 auto;
-    z-index: 997;
-    background: #fff;
-    overflow: auto;
-    display: inline-flex;
-    padding: 10px 50px;
-    font-size: .9em;
-    border-bottom: 2px solid #ececec; }
-    .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header {
-      float: left;
-      width: 33%;
-      overflow: auto; }
-      .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header a:first-child {
-        font-weight: bold; }
-      .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .dropdown-item {
-        padding: .5em; }
-      .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown {
-        position: relative;
-        display: block;
-        top: 0;
-        width: 100%;
-        padding: 0;
-        border-bottom: none; }
-        .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown a:first-child {
-          font-weight: normal; }
-  .navbar-inverse .navbar-nav .nav-item.show .nav-link {
-    background-color: #ffffff;
-    color: #222222; }
-  .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
-    left: 0;
-    top: 100%; }
-  .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
-    border-top-color: #222222 !important; } }
+  .site-collegeofmedicine .navbar-inverse #header-menu {
+    justify-content: flex-end; }
+  .site-collegeofmedicine .navbar-inverse .navbar-nav {
+    margin: 0; }
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.dropdown {
+      position: inherit; }
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown {
+      width: 100%;
+      left: -9999px;
+      position: absolute;
+      margin: 0 auto;
+      z-index: 997;
+      background: #fff;
+      overflow: auto;
+      display: inline-flex;
+      padding: 10px 50px;
+      font-size: .9em;
+      border-bottom: 1px solid #222222;
+      border-right: 1px solid #222222;
+      border-left: 1px solid #222222; }
+      .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header {
+        float: left;
+        width: 33%;
+        overflow: auto; }
+        .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header a:first-child {
+          font-weight: bold; }
+        .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .dropdown-item {
+          padding: .5em; }
+        .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown {
+          position: relative;
+          display: block;
+          top: 0;
+          width: 100%;
+          padding: 0;
+          border: none; }
+          .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown .com-submenu-header .com-dropdown a:first-child {
+            font-weight: normal; }
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .nav-link {
+      background-color: #ffffff;
+      color: #222222; }
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
+      left: 0;
+      top: 100%; }
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
+      border-top-color: #222222 !important; } }
 
 @media screen and (max-width: 576px) {
   .home-header-title-wrapper {

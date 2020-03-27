@@ -102,6 +102,26 @@ function com_child_theme_scripts() {
 
 }
 
+// Custom body class for page-name and site-name
+add_filter( 'body_class', 'body_class_for_pages' );
+
+function body_class_for_pages( $classes ) {
+
+        global $post;
+
+        $sitename = get_bloginfo('name');
+        // strip out all whitespace
+        $sitename = preg_replace('/\s*/', '', $sitename);
+        // convert the string to all lowercase
+        $sitename_clean = strtolower($sitename);
+
+        $classes[] = 'page-' . $post->post_name;
+        $classes[] = 'site-' . $sitename_clean;
+
+    return $classes;
+
+}
+
 // Custom login screen
 add_action( 'login_head', 'custom_login_style' );
 function custom_login_style() {
@@ -133,6 +153,13 @@ function custom_login_style() {
     }
     </style>
 <?php
+}
+
+// Custom sitemap shortcode
+add_shortcode('sitemap', 'wp_sitemap_page');
+
+function wp_sitemap_page(){
+    return "<ul class='sitemap comsitemap'>".wp_list_pages('title_li=&echo=0')."</ul>";
 }
 
 // Custom excerpt length for copy

@@ -28,19 +28,13 @@
 
 					<div class="person-addl-info">
 
-						<?php if ( get_field( 'education_person' ) ) { ?>
+						<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
 
 							<h4 class="heading-underline">Education</h4>
 
-							<?php the_field( 'education_person' ); ?>
+							<?php the_field( 'person_educationspecialties' ); ?>
 
-						<?php }  if ( get_field( 'specialties_person' ) ) { ?>
-
-							<h4 class="heading-underline">Specialties</h4>
-
-							<?php the_field( 'specialties_person' ); 
-
-						} ?>
+						<?php } ?>
 
 					</div>
 

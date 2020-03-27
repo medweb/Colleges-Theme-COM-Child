@@ -157,6 +157,18 @@ $background-path: 'images/backgrounds';
 			display: block;
 			margin: 0 0 25px 0;
 		}
+
+		.large {
+			&:first-letter {
+			  color: $black;
+			  float: left;
+			  font-size: 75px;
+			  line-height: 60px;
+			  padding-top: 4px;
+			  padding-right: 8px;
+			  padding-left: 3px;
+			}
+		}
 	}
 }
 
@@ -705,73 +717,84 @@ header nav {
 			}
 		}
 	}*/
-	.navbar-inverse {
+	.site-collegeofmedicine {
 
-		.navbar-nav {
+		.navbar-inverse {
 
-			.nav-item {
-				&.dropdown {
-					position: inherit;
-				}
+			#header-menu {
+				justify-content: flex-end;
+			}
 
-				.com-dropdown {
-					width: 100%;
-					left: -9999px;
-				    position: absolute;
-				    margin: 0 auto;
-				    z-index: 997;
-				    background: #fff;
-				    overflow: auto;
-				    display: inline-flex;
-				    padding: 10px 50px;
-				    font-size: .9em;
-				    border-bottom: 2px solid $lightgrey;
+			.navbar-nav {
+				margin: 0;
 
-				    .com-submenu-header {
-				    	float: left;
-				    	width: 33%;
-				    	overflow: auto;
-
-				    	a:first-child {
-							font-weight: bold;
-						}
-
-						.dropdown-item {
-							padding: .5em;
-				    	}
-
-				    	.com-dropdown {
-				    		position: relative;
-				    		display: block;
-				    		top: 0;
-				    		width: 100%;
-				    		padding: 0;
-				    		border-bottom: none;
-
-				    		a:first-child {
-							font-weight: normal;
-						}
-				    	}
-				    }
-				}
-
-				&.show {
-					.nav-link {
-						background-color: $white;
-						color: $black;
+				.nav-item {
+					&.dropdown {
+						position: inherit;
 					}
 
 					.com-dropdown {
-						left: 0;
-		    			top: 100%;
+						width: 100%;
+						left: -9999px;
+					    position: absolute;
+					    margin: 0 auto;
+					    z-index: 997;
+					    background: #fff;
+					    overflow: auto;
+					    display: inline-flex;
+					    padding: 10px 50px;
+					    font-size: .9em;
+					    border-bottom: 1px solid $black;
+					    border-right: 1px solid $black;
+					    border-left: 1px solid $black;
+
+
+					    .com-submenu-header {
+					    	float: left;
+					    	width: 33%;
+					    	overflow: auto;
+
+					    	a:first-child {
+								font-weight: bold;
+							}
+
+							.dropdown-item {
+								padding: .5em;
+					    	}
+
+					    	.com-dropdown {
+					    		position: relative;
+					    		display: block;
+					    		top: 0;
+					    		width: 100%;
+					    		padding: 0;
+					    		border: none;
+
+					    		a:first-child {
+								font-weight: normal;
+							}
+					    	}
+					    }
+					}
+
+					&.show {
+						.nav-link {
+							background-color: $white;
+							color: $black;
+						}
+
+						.com-dropdown {
+							left: 0;
+			    			top: 100%;
+						}
 					}
 				}
-			}
 
-			.dropdown.show {
-				.dropdown-toggle {
-					&:after {
-						border-top-color: $black !important;
+				.dropdown.show {
+					.dropdown-toggle {
+						&:after {
+							border-top-color: $black !important;
+						}
 					}
 				}
 			}
