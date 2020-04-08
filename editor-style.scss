@@ -1,0 +1,7 @@
+.wp-block{
+    max-width: 800px;
+}
+
+.wp-block[data-align=wide] { /* it can be "data-align=full" and also "right", "left" and "center" */
+    max-width: 1228px;
+}

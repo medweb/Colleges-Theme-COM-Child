@@ -7,7 +7,7 @@
 		"uuidString": "6FB276DF-83C9-431B-BA1C-30EA3B8ADCA7"
 		}
 	],
-"creatorBuild": "31924",
+"creatorBuild": "32001",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -40,6 +40,19 @@
 		"oA": 0,
 		"oAP": "/archive.php",
 		"oF": 0
+		},
+	"/editor-style.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/editor-style.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"/footer.php": {
 		"cB": 0,
@@ -678,6 +691,14 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/template-basic.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-basic.php",
+		"oF": 0
+		},
 	"/template-fullscreen.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1292,6 +1313,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -1468,6 +1493,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -1493,6 +1522,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -1796,6 +1829,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -1999,6 +2036,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,
@@ -2628,7 +2669,6 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
-		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
