@@ -25,33 +25,60 @@ function create_taxonomy() {
 	// Taxonomy for post type news
 	register_taxonomy( 'news_category', 'news', array(
 		'hierarchical' => true,
-		'labels' => $labels,
+		'labels' => create_taxonomy_labels("News"),
 		'show_in_rest' => true,
 	));
 
 	// Taxonomy for post type newsletters
 	register_taxonomy( 'newsletter_category', 'newsletters', array(
 		'hierarchical' => true,
-		'labels' => $labels,
+		'labels' => create_taxonomy_labels("Newsletter"),
 		'show_in_rest' => true,
 	));
 
 	// Taxonomy for post type profiles
 	register_taxonomy( 'profiles_category', 'profiles', array(
 		'hierarchical' => true,
-		'labels' => $labels,
+		'labels' => create_taxonomy_labels("Profile"),
 		'show_in_rest' => true,
 	));
 
-	register_taxonomy( 'page_shortcode_taxonomy', 'page', array(
+	/*register_taxonomy( 'page_shortcode_taxonomy', 'page', array(
 		'hierarchical' => true,
 		'labels' => array(
 			'name' => _x( 'Shortcode Taxonomy', 'taxonomy general name'),
 			'menu_name' => __('Shortcode Taxonomy')
 		),
 		'show_in_rest' => true,
-	));
+	));*/
 
+
+}
+
+/**
+ * Returns an array of taxonomy parameters, with an optional prefix (to differentiate taxonomies)
+ * @param string $prefix
+ *
+ * @return array
+ */
+function create_taxonomy_labels($prefix = ""){
+	if ($prefix) {
+		$prefix = trim( $prefix ) . " "; // single space after prefix
+	} else {
+		$prefix = ""; // no prefix
+	}
+	$labels = array(
+		"name" => _x( "{$prefix}Categories", "taxonomy general name" ),
+		"singular_name" => _x( "{$prefix}Category", "taxonomy singular name" ),
+		"all_items" => __( "All {$prefix}Categories" ),
+		"edit_item" => __( "Edit {$prefix}Category" ),
+		"update_item" => __( "Update {$prefix}Category" ),
+		"add_new_item" => __( "Add New {$prefix}Category" ),
+		"new_item_name" => __( "New {$prefix}Category Name" ),
+		"menu_name" => __( "{$prefix}Categories" )
+	);
+
+	return $labels;
 
 }
 
