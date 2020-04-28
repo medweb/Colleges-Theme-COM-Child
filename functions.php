@@ -203,44 +203,7 @@ function get_custom_single_template($single_template) {
      return $single_template;
 }
 
-add_action( 'init', 'register_my_menus' );
 
-function register_my_menus() {
-
-	global $blog_id;
-
-	if ( $blog_id == 1 ) {
-
-		register_nav_menus(
-			array(
-				'menu-1' => __( 'Main Header - Slot 1' ),
-				'menu-2' => __( 'Main Header - Slot 2' ),
-				'menu-3' => __( 'Main Header - Slot 3' ),
-				'menu-4' => __( 'Main Header - Slot 4' ),
-				'menu-5' => __( 'Main Header - Slot 5' ),
-				'menu-6' => __( 'Main Header - Slot 6' ),
-			)
-		);
-
-	} elseif ( $blog_id == 8 ) {
-
-		register_nav_menus(
-			array(
-				'menu-2' => __( 'Main Header - Slot 2' )
-			)
-		);
-
-	} else {
-
-		register_nav_menus(
-			array(
-				'header-menu' => __( 'Main Header' )
-			)
-		);
-
-	}
-
-}
 
 add_filter( "single_template", "get_custom_single_template" ) ;
 
