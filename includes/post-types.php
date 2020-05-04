@@ -10,6 +10,8 @@ add_action( 'init', 'create_post_type' );
 
 function create_post_type() {
 	register_main_site_post_types(is_main_site());
+	// if main site, show the post types.
+	// otherwise, hide them (but still register them so it can query other sites)
 
 }
 function register_main_site_post_types($is_visible = true) {
@@ -46,6 +48,7 @@ function register_main_site_post_types($is_visible = true) {
             'show_in_menu' => $show_in_menu,
             'show_in_nav_menus' => $show_in_nav_menus,
             'show_in_admin_bar' => $show_in_admin_bar,
+            'show_in_rest' => true,
             'has_archive' => true,
             'rewrite'     => array(
                 'slug'       => 'news',
@@ -72,6 +75,7 @@ function register_main_site_post_types($is_visible = true) {
             'show_in_menu' => $show_in_menu,
             'show_in_nav_menus' => $show_in_nav_menus,
             'show_in_admin_bar' => $show_in_admin_bar,
+            'show_in_rest' => true,
             'has_archive' => true,
             'rewrite'     => array(
                 'slug'       => 'newsletters',
@@ -80,25 +84,4 @@ function register_main_site_post_types($is_visible = true) {
             'menu_icon'   => get_stylesheet_directory_uri() . '/images/admin/icon-news.png'
         )
 	);
-
-	/* profile pages for people: staff, faculty, residents, etc
-	register_post_type( 'profiles',
-        array(
-            'labels'      => array(
-                'name'          => __( 'Profiles' ),
-                'singular_name' => __( 'Profile' ),
-                'add_new'       => __( 'Add Profile' ),
-                'add_new_item'  => __( 'Add Profile' ),
-                'edit_item'     => __( 'Edit Profile' )
-            ),
-            'supports'    => array( 'title', 'editor', 'revisions' ),
-            'public'      => true,
-            'has_archive' => true,
-            'rewrite'     => array(
-                'slug'       => 'profiles',
-                'with_front' => false
-            ),
-            'menu_icon'   => get_stylesheet_directory_uri() . '/images/admin/icon-profiles.png'
-        )
-	);*/
 }
