@@ -5,7 +5,7 @@
  Author:       Matthew Vaccaro, Stephen Schrauger
  Author URI:   http://med.ucf.edu/
  Template:     Colleges-Theme
- Version:      1.0.1
+ Version:      1.0.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         ucf
@@ -26,14 +26,11 @@
 .wp-block-columns.right-column .wp-block-column {
   flex-basis: 33.3%;
   margin-left: 0; }
-
 .wp-block-columns.right-column .wp-block-column:first-child {
   flex-basis: 66.6%; }
-
 .wp-block-columns.left-column .wp-block-column {
   flex-basis: 33.3%;
   margin-left: 0; }
-
 .wp-block-columns.left-column .wp-block-column:last-child {
   flex-basis: 66.6%; }
 
@@ -83,14 +80,12 @@
   padding: 15px 0 0 0; }
   .single-news .post-info li {
     list-style: none; }
-
 .single-news .publish img.size-large:first-child {
   clear: both;
   width: 100%;
   height: inherit;
   display: block;
   margin: 0 0 25px 0; }
-
 .single-news .publish .large:first-letter {
   color: #222222;
   float: left;
@@ -182,8 +177,8 @@
         float: right;
         margin-right: 25px; }
     .sort-nav .sort-items select,
-.sort-nav .sort-items option,
-.sort-nav .sort-items input {
+    .sort-nav .sort-items option,
+    .sort-nav .sort-items input {
       border: 1px solid #ececec;
       font-size: 16px;
       margin: 0 8px 15px 0;
@@ -216,7 +211,6 @@
 
 header nav .dropdown-menu .dropdown-menu {
   display: inline-block; }
-
 header nav .dropdown-menu div.submenu-header {
   display: block; }
 
@@ -324,7 +318,7 @@ header nav .dropdown-menu div.submenu-header {
   overflow: hidden;
   min-height: 500px; }
   #library-search .loader,
-#library-search .loader:after {
+  #library-search .loader:after {
     border-radius: 50%;
     width: 10em;
     height: 10em;
@@ -344,7 +338,6 @@ header nav .dropdown-menu div.submenu-header {
     transform: translateZ(0);
     -webkit-animation: load8 1.1s infinite linear;
     animation: load8 1.1s infinite linear; }
-
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -352,7 +345,6 @@ header nav .dropdown-menu div.submenu-header {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-
 @keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -378,7 +370,7 @@ header nav .dropdown-menu div.submenu-header {
     font-weight: bold;
     margin: 25px 0 10px 0; }
   #library-search #search-pagination-alternate-top,
-#library-search #search-pagination-alternate-bottom {
+  #library-search #search-pagination-alternate-bottom {
     display: none; }
   #library-search .pagination {
     display: flex;
@@ -414,9 +406,9 @@ header nav .dropdown-menu div.submenu-header {
     #library-search .book .author {
       margin: 10px 0 0 0; }
     #library-search .book .author,
-#library-search .book .title,
-#library-search .book .date,
-#library-search .book .provider {
+    #library-search .book .title,
+    #library-search .book .date,
+    #library-search .book .provider {
       line-height: 20px; }
   #library-search #search-results {
     z-index: 9;
@@ -427,50 +419,59 @@ header nav .dropdown-menu div.submenu-header {
 @media screen and (max-width: 999px) {
   .menu-expanded .tab-content div {
     width: 94% !important; }
+
   #main .nav {
     width: 100%;
     clear: both;
     float: none;
     margin: 0; }
+
   .news-archive .single-article {
     width: 100%; }
+
   .sort-nav .sort-items {
     width: 100%;
     clear: both;
     margin: 0 0 25px 0;
     padding-left: 0; } }
-
+@media screen and (max-width: 991px) {
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown {
+    display: none; }
+  .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
+    display: block; }
+    .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown .com-submenu-header > a:first-child {
+      font-weight: bold; } }
 @media screen and (min-width: 992px) {
-  /*.navbar-toggleable-md {
-
-		.navbar-nav {
-
-			.dropdown-menu {
-				width: 800px;
-			    height: 200px;
-			    overflow: auto;
-			    display: inline-flex;
-
-			    .submenu-header {
-			    	width: 30%;
-			    	overflow: auto;
-
-			    	a {
-			    		font-weight: bold;
-			    	}
-			    }
-
-			    .dropdown-menu {
-			    	display: inline-block;
-				    position: relative !important;
-				    border: none;
-				    top: 0;
-				    background: transparent;
-				    padding: 0;
-			    }
-			}
-		}
-	}*/
+  	/*.navbar-toggleable-md {
+  
+  		.navbar-nav {
+  
+  			.dropdown-menu {
+  				width: 800px;
+  			    height: 200px;
+  			    overflow: auto;
+  			    display: inline-flex;
+  
+  			    .submenu-header {
+  			    	width: 30%;
+  			    	overflow: auto;
+  
+  			    	a {
+  			    		font-weight: bold;
+  			    	}
+  			    }
+  
+  			    .dropdown-menu {
+  			    	display: inline-block;
+  				    position: relative !important;
+  				    border: none;
+  				    top: 0;
+  				    background: transparent;
+  				    padding: 0;
+  			    }
+  			}
+  		}
+  	}*/
   .site-collegeofmedicine .navbar-inverse #header-menu {
     justify-content: flex-end; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav {
@@ -516,7 +517,8 @@ header nav .dropdown-menu div.submenu-header {
       top: 100%; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
       border-top-color: #222222 !important; } }
-
 @media screen and (max-width: 576px) {
   .home-header-title-wrapper {
     background-color: transparent !important; } }
+
+/*# sourceMappingURL=style.css.map */

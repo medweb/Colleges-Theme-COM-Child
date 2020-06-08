@@ -5,7 +5,7 @@
  Author:       Matthew Vaccaro, Stephen Schrauger
  Author URI:   http://med.ucf.edu/
  Template:     Colleges-Theme
- Version:      1.0.1
+ Version:      1.0.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         ucf
@@ -683,6 +683,32 @@ header nav {
 	}
 }
 
+
+@media screen and (max-width: 991px) {
+	.site-collegeofmedicine {
+
+		.navbar-inverse {
+			.navbar-nav {
+				.nav-item {
+					.com-dropdown {
+						display: none; // on mobile, hide by default
+					}
+					&.show {
+						.com-dropdown {
+							display: block;
+
+							.com-submenu-header {
+								> a:first-child {
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 @media screen and (min-width: 992px) {
 	/*.navbar-toggleable-md {
 
@@ -775,6 +801,7 @@ header nav {
 					}
 
 					&.show {
+
 						.nav-link {
 							background-color: $white;
 							color: $black;

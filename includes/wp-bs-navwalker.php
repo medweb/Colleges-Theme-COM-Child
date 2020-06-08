@@ -88,11 +88,10 @@ if ( !class_exists( 'bs4Navwalker_com' ) ) {
 			if (in_array('current-menu-item', $classes)) {
 				$class_names .= ' active';
 			}
-			//
 
-			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+			// sanitize classes
+			$class_names_esc = esc_attr($class_names);
 
-			// print_r($class_names);
 
 			/**
 			* Filter the ID applied to a menu item's list item element.
@@ -105,12 +104,13 @@ if ( !class_exists( 'bs4Navwalker_com' ) ) {
 			* @param array  $args    An array of {@see wp_nav_menu()} arguments.
 			* @param int    $depth   Depth of menu item. Used for padding.
 			*/
-			$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
+			$id = esc_attr(apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth ));
+
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
 			// New
 			if ($depth === 0) {
-				$output .= $indent . '<li' . $id . $class_names .'>';
+				$output .= "{$indent}<li $id class='{$class_names_esc}' >";
 			}
 
 			if ($depth === 1) {
