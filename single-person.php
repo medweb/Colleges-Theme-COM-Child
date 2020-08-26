@@ -30,7 +30,7 @@
 
 						<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
 
-							<h4 class="heading-underline">Education</h4>
+							<h3><strong>Education</strong></h3>
 
 							<?php the_field( 'person_educationspecialties' ); ?>
 
