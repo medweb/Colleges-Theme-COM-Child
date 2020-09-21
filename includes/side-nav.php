@@ -1,46 +1,55 @@
 <?php
 
-$args = array (
+// output a side nav, if the user hasn't disabled it.
+// side nav shows current page's children, or if none, current page's siblings.
+// also outputs a legacy side nav if previously defined.
 
+$args = array (
     'child_of' => get_the_ID(),
     'depth' => 1,
     'title_li' => '',
-    'echo' => 0
-
+    'echo' => 0,
+    'post_status' => 'publish'
 );
 
-$children = wp_list_pages( $args );
 
-//echo 'TROUBLESHOOT the Current Page ID: '.get_the_ID(); ?> 
+$links_to_show = wp_list_pages( $args );
+if (!$links_to_show){
+    // no children. get siblings
+    $args['child_of'] = wp_get_post_parent_id(get_the_ID()); // get this page's parent, then find its children.
+	$links_to_show = wp_list_pages( $args );
+}
 
-<div class="side-nav">
+$show_right_side_nav = get_field( 'show_rsn');
+$legacy_right_side_custom_data = get_field( 'right_side_custom' ) ;
 
-    <?php //var_dump ( get_field( 'show_rsn') ) ?>
+// if we have a right side nav, or if the legacy nav is defined, output the side-nav div
 
-    <?php 
+if ($show_right_side_nav || $legacy_right_side_custom_data){
+    echo "
+    <div class='side-nav'>
+    ";
 
-    $haschildset = ( $children && get_field( 'show_rsn') );
-    $haschildunset = ( $children && get_field( 'show_rsn') === NULL );
-
-
-    if ( $haschildunset || $haschildset ) { ?>
-
-        <ul class="autonav">
-
+    if ($show_right_side_nav){
+        echo "
+        <ul class='autonav'>
             <h4>In This Section</h4>
-
-            <?php echo $children; ?>
-
+            {$links_to_show}
         </ul>
+        ";
+    } else {
+        // no children. output siblings.
+    }
 
-    <?php } if ( get_field( 'right_side_custom' ) ) { ?>
-
-        <aside class="right-side-info">
-
-            <?php the_field( 'right_side_custom' ); ?>
-
+	// right_side_custom is a legacy field.
+	// output it if it was previously defined.
+    if ($legacy_right_side_custom_data) {
+        echo "
+        <aside class='right-side-info'>
+            {$legacy_right_side_custom_data}
         </aside>
+        ";
+    }
 
-    <?php } ?>
-
-</div>
+    echo "</div>";
+};
