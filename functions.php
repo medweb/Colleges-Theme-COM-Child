@@ -168,6 +168,46 @@ function custom_login_style() {
 <?php
 }
 
+// Notify MedWebCMS@ucf.edu of any post updates
+add_action( 'publish_page', 'notify_admin', 0 );
+add_action( 'publish_news', 'notify_admin', 0 );
+add_action( 'publish_newsletters', 'notify_admin', 0 );
+//add_action( 'publish_my-custom-post-type', 'notify_admin', 0 );
+
+function notify_admin( $post_id, $post ) {
+    $permalink = get_permalink( $post_id );
+    $authorname = get_the_modified_author();
+
+    if ($authorname) {
+        // notify_admin is being called more than once. however, authorname is only set during one of those calls.
+        // therefore, simply check that variable before sending an email.
+        // wordpress doesn't guarantee that this hook will only be called once.
+
+        $message = 'Content has been updated, published or deleted by ';
+        $message .= $authorname;
+        $message .= '. Please review it.' . "\n\n";
+        $message .= 'If you receive a 404 error, the page was deleted.' . "\n\n";
+        $message .= $permalink;
+
+        wp_mail( 'medwebcms@ucf.edu', 'Content Update Alert - med.ucf.edu', $message );
+
+    }
+}
+
+// Force login for dev
+function rl_redirect(){
+    $allowed_ips = array(
+        '127.0.0.1', // localhost
+        '10.0.0.0/8', // ucf internal network
+        '132.170.0.0/16', // ucf external ip
+    ); // list all allowed ips to view dev WITHOUT requiring login
+    if (!is_user_logged_in()) {
+        if (!ip_in_array($_SERVER['REMOTE_ADDR'], $allowed_ips)) {
+            auth_redirect();
+        }
+    }
+}
+
 // Custom sitemap shortcode
 add_shortcode('sitemap', 'wp_sitemap_page');
 
@@ -203,7 +243,20 @@ function get_custom_single_template($single_template) {
      return $single_template;
 }
 
-
+// Run environment options and functions
+switch ( ENVIRONMENT ):
+    case 'local':
+    case 'dev':
+        add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
+        break;
+    case 'staging':
+        add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
+        break;
+    case 'production':
+        break;
+    default:
+        break;
+endswitch;
 
 add_filter( "single_template", "get_custom_single_template" ) ;
 
