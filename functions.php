@@ -169,9 +169,9 @@ function custom_login_style() {
 }
 
 // Notify MedWebCMS@ucf.edu of any post updates
-add_action( 'publish_page', 'notify_admin', 0 );
-add_action( 'publish_news', 'notify_admin', 0 );
-add_action( 'publish_newsletters', 'notify_admin', 0 );
+add_action( 'publish_page', 'notify_admin', 0, 2 );
+add_action( 'publish_news', 'notify_admin', 0, 2 );
+add_action( 'publish_newsletters', 'notify_admin', 0, 2 );
 //add_action( 'publish_my-custom-post-type', 'notify_admin', 0 );
 
 function notify_admin( $post_id, $post ) {
