@@ -21,6 +21,11 @@ if (!$links_to_show){
 }
 
 $show_right_side_nav = get_field( 'show_rsn');
+if ($show_right_side_nav === null) {
+	// we want to default to showing. if the page hasn't been edited since the migration, this might not exist.
+	// so a null value should be equated to the default of true.
+	$show_right_side_nav = true;
+}
 $legacy_right_side_custom_data = get_field( 'right_side_custom' ) ;
 
 // if we have a right side nav, or if the legacy nav is defined, output the side-nav div
