@@ -199,15 +199,8 @@ function notify_admin( $post_id, $post ) {
 
 // Force login for dev
 function rl_redirect(){
-    $allowed_ips = array(
-        '127.0.0.1', // localhost
-        '10.0.0.0/8', // ucf internal network
-        '132.170.0.0/16', // ucf external ip
-    ); // list all allowed ips to view dev WITHOUT requiring login
     if (!is_user_logged_in()) {
-        if (!ip_in_array($_SERVER['REMOTE_ADDR'], $allowed_ips)) {
-            auth_redirect();
-        }
+        auth_redirect();
     }
 }
 
