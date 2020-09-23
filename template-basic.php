@@ -27,8 +27,12 @@ $linkToParent = get_permalink($parentId);
 
 		<?php } ?>
 
-		<?php include('includes/side-nav.php'); 
+		<?php
 
+        if (get_post_type() == 'page') {
+	        include( 'includes/side-nav.php' );
+        }
+        
 		if ( is_singular( 'news' ) ) { ?>
 
 			<?php  ?>
