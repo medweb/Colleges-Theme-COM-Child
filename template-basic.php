@@ -57,7 +57,9 @@ $linkToParent = get_permalink($parentId);
 
  	<!-- -->
 
-<?php } if ( is_singular( 'news' ) ) { ?>
+<?php } if ( is_singular( 'news' ) ) { 
+
+do_shortcode('[ucf-spotlight slug="giving"]'); ?>
 
 <hr/>
 

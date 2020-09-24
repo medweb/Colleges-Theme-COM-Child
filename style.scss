@@ -39,6 +39,14 @@ $background-path: 'images/backgrounds';
 	display: none;
 }
 
+.alignleft {
+	margin-right: 15px;
+}
+
+.alignright {
+	margin-left: 15px;
+}
+
 .author-meta {
 	text-transform: uppercase;
 	font-size: .8em;
@@ -147,6 +155,10 @@ $background-path: 'images/backgrounds';
 
 		li {
 			list-style: none;
+
+			span {
+				margin: 0 0 5px 0;
+			}
 		}
 	}
 
@@ -186,6 +198,10 @@ $background-path: 'images/backgrounds';
 		padding: 15px;
 
 		h2 {
+			font-size: 1.3em;
+			text-transform: none;
+			line-height: 28px;
+
 			a{
 				color: $black;
 			}
