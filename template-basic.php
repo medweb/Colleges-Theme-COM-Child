@@ -61,8 +61,6 @@ $linkToParent = get_permalink($parentId);
 
 echo do_shortcode('[ucf-spotlight slug="giving"]'); ?>
 
-<hr/>
-
 <center><h6>Related Stories</h6></center>
 
 <section class="container related-content">
