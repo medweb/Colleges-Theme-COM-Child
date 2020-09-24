@@ -497,7 +497,8 @@ header nav .dropdown-menu div.submenu-header {
   .site-collegeofmedicine .navbar-inverse #header-menu {
     justify-content: flex-end; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav {
-    margin: 0; }
+    margin: 0;
+    height: 100%; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.dropdown {
       position: inherit; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown {
