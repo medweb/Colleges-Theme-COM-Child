@@ -59,7 +59,11 @@ $linkToParent = get_permalink($parentId);
 
 <?php } if ( is_singular( 'news' ) ) { 
 
-echo do_shortcode('[ucf-spotlight slug="giving"]'); ?>
+if ( get_field( 'affiliate_url' ) ) { ?>
+
+	<a href="<?php get_field( 'affiliate_url' ); ?>" class="btn btn-primary">View Article On Affiliate Site</a>
+
+<?php } echo do_shortcode( '[ucf-spotlight slug="giving"]' ); ?>
 
 <hr/>
 
