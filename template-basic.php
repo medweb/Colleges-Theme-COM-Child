@@ -42,9 +42,13 @@ $linkToParent = get_permalink($parentId);
 		<?php echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; ?> 
 
 
-		<?php }
+		<?php } the_content(); if ( is_singular( 'news' ) ) { 
 
-		the_content(); if ( is_singular( 'news' ) ) { ?>
+			if ( get_field( 'affiliate_url' ) ) { ?>
+
+				<a href="<?php get_field( 'affiliate_url' ); ?>" class="btn btn-primary">View Article On Affiliate Site</a>
+
+			<?php } ?>
 
 		<h6>Post Tags</h6>
 
@@ -57,13 +61,7 @@ $linkToParent = get_permalink($parentId);
 
  	<!-- -->
 
-<?php } if ( is_singular( 'news' ) ) { 
-
-if ( get_field( 'affiliate_url' ) ) { ?>
-
-	<a href="<?php get_field( 'affiliate_url' ); ?>" class="btn btn-primary">View Article On Affiliate Site</a>
-
-<?php } echo do_shortcode( '[ucf-spotlight slug="giving"]' ); ?>
+<?php } if ( is_singular( 'news' ) ) { echo do_shortcode( '[ucf-spotlight slug="giving"]' ); ?>
 
 <hr/>
 
