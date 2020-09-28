@@ -7,6 +7,7 @@
  */
 
 add_action( 'init', 'create_taxonomy' );
+add_filter( 'ucf_people_taxonomies', 'remove_people_categories', 20); // the ucf people plugin has this filter which we can use to override settings
 
 function create_taxonomy() {
 
@@ -53,6 +54,17 @@ function create_taxonomy() {
 	));*/
 
 
+}
+
+/**
+ * Removes the default 'categories' from the people post type
+ * @return array
+ */
+function remove_people_categories() {
+	$taxonomies = array(
+		'post_tag'
+	);
+	return $taxonomies;
 }
 
 /**
