@@ -70,7 +70,7 @@
 			</div>
 		</div>
 
-		<?php echo get_person_news_publications_markup( $post ); ?>
+		<?php echo get_person_news_publications_markup_com( $post ); ?>
 
 		<?php echo get_person_videos_markup( $post ); ?>
 	</div>
