@@ -37,33 +37,15 @@ function create_taxonomy() {
 		'show_in_rest' => true,
 	));
 
-	// Taxonomy for post type profiles
-	register_taxonomy( 'profiles_category', 'profiles', array(
-		'hierarchical' => true,
-		'labels' => create_taxonomy_labels("Profile"),
-		'show_in_rest' => true,
-	));
-
-	/*register_taxonomy( 'page_shortcode_taxonomy', 'page', array(
-		'hierarchical' => true,
-		'labels' => array(
-			'name' => _x( 'Shortcode Taxonomy', 'taxonomy general name'),
-			'menu_name' => __('Shortcode Taxonomy')
-		),
-		'show_in_rest' => true,
-	));*/
-
-
 }
 
 /**
- * Removes the default 'categories' from the people post type
+ * Removes the default 'categories' from the people post type.
+ * Also removes the default 'tags' taxonomy.
  * @return array
  */
 function remove_people_categories() {
-	$taxonomies = array(
-		'post_tag'
-	);
+	$taxonomies = array();
 	return $taxonomies;
 }
 

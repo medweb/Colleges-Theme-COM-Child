@@ -1,4 +1,8 @@
 <?php
+
+add_action( 'pre_get_posts', 'get_person_news_com_news_type' ); // link 'news' to people instead of 'posts'
+
+
 /**
  * Returns news publications related to a person.
  * Overrides parent theme so that we can use 'news' post types instead of the default 'post' type.
@@ -22,7 +26,10 @@ function get_person_news_com_news_type( $query ) {
 
 }
 
-add_action( 'pre_get_posts', 'get_person_news_com_news_type' );
+function disable_taxonomy_person_tags( ) {
+
+}
+
 
 
 /**
