@@ -55,8 +55,8 @@ class ucf_com_shortcodes_settings {
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_action_links' ), 10, 2 );
 
 		// Register the tinymce hooks to create buttons
-		add_filter( 'mce_external_plugins', array( $this, 'tinymce_shortcodes_js' ) );
-		add_filter( 'mce_buttons', array( $this, 'tinymce_shortcodes_button' ) );
+		//add_filter( 'mce_external_plugins', array( $this, 'tinymce_shortcodes_js' ) );
+		//add_filter( 'mce_buttons', array( $this, 'tinymce_shortcodes_button' ) );
 
 	}
 
