@@ -46,7 +46,7 @@ $linkToParent = get_permalink($parentId);
 
 			if ( get_field( 'affiliate_url' ) ) { ?>
 
-				<a href="<?php get_field( 'affiliate_url' ); ?>" class="btn btn-primary" style="margin: 0 0 30px 0;">View Article On Affiliate Site</a>
+				<a href="<?php echo get_field( 'affiliate_url' ); ?>" class="btn btn-primary" style="margin: 0 0 30px 0;">View Article On Affiliate Site</a>
 
 			<?php } ?>
 
