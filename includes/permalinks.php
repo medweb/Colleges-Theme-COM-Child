@@ -5,20 +5,15 @@
  * Date: 2016-03-18
  * Time: 4:00 PM
  */
-// @TODO do we use this anymore?
 
-add_filter( 'post_type_link', 'news_and_events_permalink', 10, 3 );
+add_filter( 'post_type_link', 'com_news_permalink', 10, 3 );
 
 global $wp_rewrite;
 $news_structure = '/news/%year%/%monthnum%/%news%';
 $wp_rewrite->add_rewrite_tag( "%news%", '([^/]+)', "news=" );
 $wp_rewrite->add_permastruct( 'news', $news_structure, false );
 
-$events_structure = '/events/%year%/%monthnum%/%events%';
-$wp_rewrite->add_rewrite_tag( "%events%", '([^/]+)', "events=" );
-$wp_rewrite->add_permastruct( 'events', $events_structure, false );
-
-function news_and_events_permalink( $permalink, $post_id, $leavename ) {
+function com_news_permalink( $permalink, $post_id, $leavename ) {
 	$post = get_post( $post_id );
 	$rewritecode = array(
 		'%year%',
@@ -43,7 +38,8 @@ function news_and_events_permalink( $permalink, $post_id, $leavename ) {
 			if ( $cats ) {
 				usort( $cats, '_usort_terms_by_ID' ); // order by ID
 				$category = $cats[0]->slug;
-				if ( $parent == $cats[0]->parent ) {
+				$parent = $cats[0]->parent;
+				if ( $parent ) {
 					$category = get_category_parents( $parent, false, '/', true ) . $category;
 				}
 			}
