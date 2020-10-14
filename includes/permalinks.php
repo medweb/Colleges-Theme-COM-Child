@@ -6,13 +6,20 @@
  * Time: 4:00 PM
  */
 
+
 add_filter( 'post_type_link', 'com_news_permalink', 10, 3 );
+add_action( 'init', 'com_news_add_rewrite_rules' );
 
-global $wp_rewrite;
-$news_structure = '/news/%year%/%monthnum%/%news%';
-$wp_rewrite->add_rewrite_tag( "%news%", '([^/]+)', "news=" );
-$wp_rewrite->add_permastruct( 'news', $news_structure, false );
+/**
+ * The rewrite rules have to be added after init, or else they may not apply correctly.
+ */
+function com_news_add_rewrite_rules(){
+	global $wp_rewrite;
+	$news_structure = '/news/%year%/%monthnum%/%news%';
+	$wp_rewrite->add_rewrite_tag( "%news%", '([^/]+)', "news=" );
+	$wp_rewrite->add_permastruct( 'news', $news_structure, false );
 
+}
 function com_news_permalink( $permalink, $post_id, $leavename ) {
 	$post = get_post( $post_id );
 	$rewritecode = array(
