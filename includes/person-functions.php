@@ -104,7 +104,17 @@ function get_person_news_publications_markup_com( $post ) {
 			<?php if ( $news ): ?>
                 <div class="col-lg" >
                     <h2 class="person-subheading mt-5" >In The News</h2 >
-					<?php echo get_person_post_list_markup( $news ); ?>
+					<?php
+                    // this will print out the news for current and com sites. note: if there is news on both sites, it will output two <ul> elements.
+                    if ( $news_this_site ) {
+	                    echo get_person_post_list_markup( $news_this_site );
+                    }
+                    if ( $news_com_site ) {
+                        switch_to_blog(1);
+	                    echo get_person_post_list_markup( $news_com_site );
+                        restore_current_blog();
+                    }
+                    ?>
                 </div >
 			<?php endif; ?>
 
