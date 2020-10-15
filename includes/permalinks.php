@@ -7,8 +7,12 @@
  */
 
 
-add_filter( 'post_type_link', 'com_news_permalink', 10, 3 );
-add_action( 'init', 'com_news_add_rewrite_rules' );
+// Removed 2020-10-15. This was fixed a few days previously after the new site went live and we noticed the year/month/post wasn't working.
+//                      But then we realized this had actually been broken for years, so adding it in caused years worth of
+//                      old links to be broken, with no easy way to tell WordPress to redirect. So this has been disabled again.
+
+//add_filter( 'post_type_link', 'com_news_permalink', 10, 3 );
+//add_action( 'init', 'com_news_add_rewrite_rules' );
 
 /**
  * The rewrite rules have to be added after init, or else they may not apply correctly.
