@@ -39,7 +39,17 @@ $linkToParent = get_permalink($parentId);
 
 			<?php echo custom_taxonomies_terms_links('news_category'); ?>
 
-		<?php echo '<span class="author-meta">By '.get_the_author().' | '.get_the_date().' '.get_the_time().'</span>'; ?> 
+		<?php
+            $author = '';
+			if (get_field('author_override')){
+				$author = get_field('author_override_text');
+			}
+			if (!$author){
+			    // author override wasn't enabled, or it was but the text was left blank. use the user's name.
+			    $author = get_the_author();
+            }
+            echo '<span class="author-meta">By ' . $author . ' | '.get_the_date().' '.get_the_time().'</span>';
+            ?>
 
 
 		<?php } the_content(); if ( is_singular( 'news' ) ) { 
