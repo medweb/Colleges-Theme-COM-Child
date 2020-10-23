@@ -124,6 +124,52 @@ $background-path: 'images/backgrounds';
 	}
 }
 
+@mixin pseudo-element {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+}
+
+.secure,
+.restricted {
+	padding-left: 25px;
+	display: block;
+	
+	&:before {
+		@include pseudo-element;
+		left: 4px;
+		top: 2px;
+		width: 14px;
+		height: 10px;
+		margin-top: 4px;
+		background: $yellow;
+	}
+
+	&:after {
+		@include pseudo-element;
+		left: 6px;
+		width: 10px;
+		height: 8px;
+		border: 2px solid $yellow;
+		border-bottom: 0;
+		margin-top: -1px;
+		background: transparent;
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
+	}
+}
+
+.restricted {
+	width: 10px;
+	height: 60px;
+	float: left;
+	position: relative;
+	margin-top: 5px;
+}
+
 .searchbar {
 	input {
 		padding: 10px;
