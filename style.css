@@ -76,12 +76,12 @@
 .home-header-title-wrapper .home-header-title {
   font-weight: 900 !important; }
 
-.library-search .secure,
-.library-search .restricted {
+#library-search .secure,
+#library-search .restricted {
   padding-left: 25px;
   display: block; }
-  .library-search .secure:before,
-  .library-search .restricted:before {
+  #library-search .secure:before,
+  #library-search .restricted:before {
     content: "";
     position: absolute;
     display: block;
@@ -93,8 +93,8 @@
     height: 10px;
     margin-top: 4px;
     background: #f7c100; }
-  .library-search .secure:after,
-  .library-search .restricted:after {
+  #library-search .secure:after,
+  #library-search .restricted:after {
     content: "";
     position: absolute;
     display: block;
@@ -111,7 +111,7 @@
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0; }
 
-.library-search .restricted {
+#library-search .restricted {
   width: 10px;
   height: 60px;
   float: left;
