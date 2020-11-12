@@ -96,7 +96,7 @@ function com_child_theme_scripts() {
     wp_enqueue_script(
         'ucf_com_google_analytics',
         get_template_directory_uri() . '/js/google-analytics.js',
-        array( 'ucf_com_engine' ),
+        array( ),
         filemtime( get_template_directory() . '/js/google-analytics.js' ), // force cache invalidate if md5 changes
         true // load in footer
     );
@@ -106,7 +106,7 @@ function com_child_theme_scripts() {
         wp_enqueue_script(
             'ucf_com_library_google_analytics',
             get_template_directory_uri() . '/js/google-analytics-library-page-click.js',
-            array( 'ucf_com_engine' ),
+            array( ),
             filemtime( get_template_directory() . '/js/google-analytics-library-page-click.js' ), // force cache invalidate if md5 changes
             false //
         );
