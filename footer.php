@@ -24,14 +24,14 @@
 							  	<h2 class="h6 heading-underline letter-spacing-3">Access Modules</h2>		
 
 								<ul>
-						            <li><a href="https://med.ucf.edu/login" target="_blank" class="secure">Website Login</a></li>
-						            <li><a href="https://webcourses.ucf.edu" target="_blank" class="secure">Webcourses</a></li>
-						            <li><a href="https://oasis.med.ucf.edu/" target="_blank" class="secure">OASIS</a></li>
-						            <li><a href="https://helpdesk.med.ucf.edu/calltickets/submit.aspx" target="_blank" class="secure">Submit a Support Ticket</a></li>
-						            <li><a href="https://share.med.ucf.edu/sites/com" target="_blank" class="secure">Intranet</a></li>
-						            <li><a href="https://portal.med.ucf.edu" target="_blank" class="secure">Extranet</a></li>
-						            <li><a href="https://my.ucf.edu/" target="blank" class="secure">myUCF Login</a></li>
-						            <li><a href="https://meducf.compliance-assist.com/" target="blank" class="secure">LCME Documents</a></li>
+						            <li><a href="https://portal.med.ucf.edu/" target="_blank" rel="noopener noreferrer">Extranet</a></li>
+									<li><a href="https://share.med.ucf.edu/sites/com" target="_blank" rel="noopener noreferrer">Intranet</a></li>
+									<li><a href="https://my.ucf.edu/" target="blank" rel="noopener noreferrer">myUCF Login</a></li>
+									<li><a href="https://oasis.med.ucf.edu/" target="_blank" rel="noopener noreferrer">OASIS</a></li>
+									<li><a href="https://ucf.qualtrics.com">Student Professionalism Reporting</a></li>
+									<li><a href="https://helpdesk.med.ucf.edu/calltickets/submit.aspx" target="_blank" rel="noopener noreferrer">Submit a Support Ticket</a></li>
+									<li><a href="https://webcourses.ucf.edu/" target="_blank" rel="noopener noreferrer">Webcourses</a></li>
+									<li><a href="https://med.ucf.edu/login" target="_blank" rel="noopener noreferrer">Website Login</a></li>
 						        </ul>
 
 							<?php } ?>
