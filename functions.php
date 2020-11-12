@@ -91,6 +91,26 @@ function com_child_theme_scripts() {
         null,
         false
     );
+
+    // Google analytics
+    wp_enqueue_script(
+        'ucf_com_google_analytics',
+        get_template_directory_uri() . '/js/google-analytics.js',
+        array( 'ucf_com_engine' ),
+        filemtime( get_template_directory() . '/js/google-analytics.js' ), // force cache invalidate if md5 changes
+        true // load in footer
+    );
+
+    if ( is_page_template( 'page-library.php' ) ) {
+        // Google analytics
+        wp_enqueue_script(
+            'ucf_com_library_google_analytics',
+            get_template_directory_uri() . '/js/google-analytics-library-page-click.js',
+            array( 'ucf_com_engine' ),
+            filemtime( get_template_directory() . '/js/google-analytics-library-page-click.js' ), // force cache invalidate if md5 changes
+            false //
+        );
+    }
     
     // register, but don't enqueue this script. it will be enqueued if a page content has the shortcode.
     /*wp_register_script(
