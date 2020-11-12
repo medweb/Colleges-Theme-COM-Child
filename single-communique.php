@@ -1,6 +1,10 @@
 <?php
 /**
  */
+
+locate_template( 'includes/simple_html_dom.php', true, true);
+
+
 $articles_per_row = 2;
 ?>
 
