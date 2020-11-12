@@ -101,7 +101,7 @@ function com_child_theme_scripts() {
         true // load in footer
     );
 
-    if ( is_page_template( 'page-library.php' ) ) {
+    if ( is_page( 'library' ) ) {
         // Google analytics
         wp_enqueue_script(
             'ucf_com_library_google_analytics',
