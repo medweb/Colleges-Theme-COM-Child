@@ -287,7 +287,8 @@ add_filter( "single_template", "get_custom_single_template" ) ;
 if (defined('TERTIARY_SERVER')){
 	if (TERTIARY_SERVER === true){
 		// disable the social board plugin, and any other we need to.
-		add_action( 'admin_init', 'disable_bad_plugins' );
+		add_action( 'init', 'disable_bad_plugins' );
+
 	}
 }
 
@@ -300,11 +301,7 @@ function disable_bad_plugins(){
 	$array_bad_plugins = array(
 		'ax-social-stream/ax-social-stream.php',
 	);
-	foreach ($array_bad_plugins as $plugin) {
-		if ( is_plugin_active( $plugin ) ) {
-			deactivate_plugins( $plugin );
-		}
-	}
+	deactivate_plugins( $array_bad_plugins );
 }
 
 ?>
