@@ -19,6 +19,6 @@ function colleges_theme_com_child_preload(){
 		"/wp-content/themes/Colleges-Theme/static/fonts/ucf-sans-serif-alt/ucfsansserifalt-semibold-webfont.woff2"
 	);
 	foreach ($important_fonts as $font){
-		echo "<link rel='preload' href='${font}' as='font' />";
+		echo "<link rel='preload' href='${font}' as='font' type='font/woff2' crossorigin />";
 	}
 }
