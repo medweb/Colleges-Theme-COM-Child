@@ -17,6 +17,9 @@ get_template_part( 'includes/post-types' );
 // Custom permalinks for news and events
 get_template_part( 'includes/permalinks' );
 
+// Preload often-used font files on every page
+get_template_part('includes/preload');
+
 // Custom shortcodes
 if (!class_exists('ucf_com_shortcodes_settings')){
 	get_template_part('includes/shortcodes_settings');
@@ -111,7 +114,7 @@ function com_child_theme_scripts() {
             false //
         );
     }
-    
+
     // register, but don't enqueue this script. it will be enqueued if a page content has the shortcode.
     /*wp_register_script(
         'view-all-events-script',
