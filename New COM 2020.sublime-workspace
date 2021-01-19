@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"list",
+				"list-style\tproperty"
+			],
+			[
 				"word-",
 				"word-wrap\tproperty"
 			],
@@ -26,10 +30,6 @@
 			[
 				"tect",
 				"text-decoration\tproperty"
-			],
-			[
-				"list",
-				"list-style-position\tproperty"
 			],
 			[
 				"b",
@@ -71,15 +71,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 7913,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -113,16 +104,55 @@
 	},
 	"expanded_folders":
 	[
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main"
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child"
 	],
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/style.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/post-types.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/functions.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/taxonomies.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/functions.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/style.scss",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/index.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/style.scss",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-People-Directory/includes/plugin.scss",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/template-basic.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/side-nav.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/style.css",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/template-fullscreen.php",
+		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/template-basic.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme-healtharch-child/footer.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/footer.php",
+		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master/template-basic.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme/template-basic.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme/style.css",
+		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/functions.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/healtharch-child-theme/template-fullscreen.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/healtharch-child-theme/template-basic.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/healtharch-child-theme/style.scss",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/healtharch-child-theme/style.css",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/style.css",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme/index.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme/single.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme/page.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/Colleges-Theme/template-fullscreen.php",
+		"/Applications/MAMP/htdocs/healtharch.org/wp-content/themes/nursing-child-theme/style.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/includes/javascript-and-css.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/js/google-analytics.js",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/js/google-analytics.js",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/config.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/header.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/functions.php",
+		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/plugins/ucf-health-locations/ucf_health_locations.php",
+		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/functions.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-College-Tabbed-Content/includes/plugin.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/news-block/news-block.php",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/news-block/css/news-block.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-News-Plugin/src/scss/_layout-classic.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-News-Plugin/src/scss/_layout-card.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-News-Plugin/src/scss/ucf-news.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/style.scss",
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-People-Directory/includes/plugin.scss",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page-patient-portal.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/template-basic.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/page-library.php",
@@ -133,11 +163,8 @@
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-College-Accordion/includes/plugin.scss",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/social-mixer-block/css/social-mixer-block.scss",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/single.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/functions.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/functions.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/editor-style.scss",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/style.scss",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/side-nav.php",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/header.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-People-Directory/includes/shortcode.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/single-person.php",
@@ -157,16 +184,13 @@
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/header-functions.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/com_shortcode.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/wp-bs-navwalker.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/header.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-People-Directory/ucf-people-directory.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/404.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/functions.php",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page-sitemap.php",
-		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/functions.php",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/person-functions.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/includes/person-functions.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/post-types.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/functions.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/includes/utilities.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/footer.php",
@@ -186,11 +210,7 @@
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/loop-custom-health-tips.php",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/loop-custom-post.php",
 		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page-question-wall.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/news-block/news-block.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/news-block/css/news-block.scss",
 		"/Users/MattVaccaro/Desktop/index.htm",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/footer.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/style.css",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main-screen/page-social.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/news-block/css/news-block.css",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/single-person.php",
@@ -211,52 +231,27 @@
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/communique.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/single-peptalk.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/header-newsletters.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/includes/javascript-and-css.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/page-library-shell.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/includes/shortcodes/functions.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/footer.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/page.php",
 		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/includes/side-nav.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/twitter-feed.php",
-		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page-np-schedule.php",
-		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page-schedule.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/page-main.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/index.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main-screen/page-horizontal-no-loop.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main-screen/page.php",
-		"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017/page-our-team.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/style.scss",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/index.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/archive.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/template-archive.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/single.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/template-basic.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master-child/functions.php",
-		"/Applications/MAMP/htdocs/nursing.ucf.edu/wp-content/themes/Colleges-Theme-master/functions.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/archive-news.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/print-social-posts.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/archive.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/peptalk.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/single-communique.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/includes/config.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main/single-news.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme/single.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/news-module.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/js/engine.js",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/ucf-com-main-screen/includes/instagram-feed.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/theme-options.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/instagram-feed.php",
-		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/social-feed.php"
+		"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child/includes/twitter-feed.php"
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
 		"height": 101.0,
 		"where_history":
 		[
+			"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child",
+			"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017",
+			"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme",
+			"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child",
+			"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/plugins/UCF-News-Plugin",
 			"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme-COM-Child",
 			"/Applications/MAMP/htdocs/ucfhealth.com/wp-content/themes/ucf-health-theme-2017",
 			"/Applications/MAMP/htdocs/med.ucf.edu/wp-content/themes/Colleges-Theme",
@@ -274,6 +269,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"taxon",
+			"page-li",
+			"google",
+			"UA-",
+			"locations",
+			"ocat",
+			".has-cyan-bluish-gray-color",
+			"restric",
+			"image",
+			"article",
+			"photo-prev",
 			"pseudo-element",
 			"lock",
 			"ƒlock",
@@ -390,17 +396,7 @@
 			"iframe",
 			"categories",
 			"sidebar",
-			"social",
-			"after",
-			"before",
-			"piece",
-			"main",
-			"get_the_ID",
-			"get_the_IF",
-			"walker",
-			"grid-",
-			"iframe",
-			"nursing"
+			"social"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -418,39 +414,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "functions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7913,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								565,
-								565
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
