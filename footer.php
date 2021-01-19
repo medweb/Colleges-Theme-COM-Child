@@ -61,5 +61,6 @@
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
-	</body>
+        <!-- Server hostname: <?php echo gethostname(); ?> -->
+    </body>
 </html>

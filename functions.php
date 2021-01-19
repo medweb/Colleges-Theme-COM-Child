@@ -262,6 +262,8 @@ function get_custom_single_template($single_template) {
 // Note that users who know the correct path to the hidden options can still access them
 
 if ( get_current_blog_id() != '1' ) {
+            remove_submenu_page( 'themes.php', 'widgets.php' );
+
 
     function hide_menu() {
         $user = wp_get_current_user();
@@ -279,7 +281,6 @@ if ( get_current_blog_id() != '1' ) {
             remove_submenu_page( 'themes.php', 'themes.php' );
      
             // Hide the Widgets page
-            remove_submenu_page( 'themes.php', 'widgets.php' );
 
             // Hide the Customize page
             remove_submenu_page( 'themes.php', 'customize.php' );
