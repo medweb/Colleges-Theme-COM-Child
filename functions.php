@@ -17,9 +17,12 @@ get_template_part( 'includes/post-types' );
 // Custom permalinks for news and events
 get_template_part( 'includes/permalinks' );
 
+// Preload often-used font files on every page
+get_template_part('includes/preload');
+
 // Custom shortcodes
 if (!class_exists('ucf_com_shortcodes_settings')){
-	get_template_part('includes/shortcodes_settings');
+    get_template_part('includes/shortcodes_settings');
 }
 
 /**
@@ -48,15 +51,15 @@ function com_child_theme_scripts() {
         true // load in footer
     );
 
-	// pagination for library e-resources
-	wp_register_script(
-		'twbs-pagination',
-		get_stylesheet_directory_uri() . '/js/jquery.twbsPagination.min.js',
-		array( 'jquery' ),
-		filemtime( get_stylesheet_directory() . '/js/jquery.twbsPagination.min.js' ),
-		true
-	);
-	//}
+    // pagination for library e-resources
+    wp_register_script(
+        'twbs-pagination',
+        get_stylesheet_directory_uri() . '/js/jquery.twbsPagination.min.js',
+        array( 'jquery' ),
+        filemtime( get_stylesheet_directory() . '/js/jquery.twbsPagination.min.js' ),
+        true
+    );
+    //}
 
     // masonry javascript for grid layouts
     wp_enqueue_script(
@@ -111,7 +114,7 @@ function com_child_theme_scripts() {
             false //
         );
     }
-    
+
     // register, but don't enqueue this script. it will be enqueued if a page content has the shortcode.
     /*wp_register_script(
         'view-all-events-script',
@@ -257,13 +260,10 @@ function get_custom_single_template($single_template) {
      return $single_template;
 }
 
-//
 // Allow editors to see access the Menus page under Appearance but hide other options
 // Note that users who know the correct path to the hidden options can still access them
 
 if ( get_current_blog_id() != '1' ) {
-            remove_submenu_page( 'themes.php', 'widgets.php' );
-
 
     function hide_menu() {
         $user = wp_get_current_user();
@@ -281,6 +281,7 @@ if ( get_current_blog_id() != '1' ) {
             remove_submenu_page( 'themes.php', 'themes.php' );
      
             // Hide the Widgets page
+            remove_submenu_page( 'themes.php', 'widgets.php' );
 
             // Hide the Customize page
             remove_submenu_page( 'themes.php', 'customize.php' );
@@ -294,6 +295,15 @@ if ( get_current_blog_id() != '1' ) {
     add_action('admin_menu', 'hide_menu', 10);
 
 }
+
+// suppress site-health.php warning for disabled automatic updates.
+// we disable them on purpose and update wordpress core and plugins manually. no need to have it complain about it.
+function prefix_remove_background_updates_test( $tests ) {
+    unset( $tests['async']['background_updates'] );
+    return $tests;
+}
+add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
+
 
 // Run environment options and functions
 switch ( ENVIRONMENT ):
@@ -311,5 +321,26 @@ switch ( ENVIRONMENT ):
 endswitch;
 
 add_filter( "single_template", "get_custom_single_template" ) ;
+
+// TERTIARY server detection
+if (defined('TERTIARY_SERVER')){
+    if (TERTIARY_SERVER === true){
+        // disable the social board plugin, and any other we need to.
+        add_action( 'init', 'disable_bad_plugins' );
+
+    }
+}
+
+/**
+ * Only runs if the server is currently hosted on the tertiary server. Due to firewall rules and
+ * odd php versions, some plugins can cause pages to crash and should be disabled during the
+ * period that the tertiary server is serving the failover site.
+ */
+function disable_bad_plugins(){
+    $array_bad_plugins = array(
+        'ax-social-stream/ax-social-stream.php',
+    );
+    deactivate_plugins( $array_bad_plugins );
+}
 
 ?>
