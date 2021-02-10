@@ -559,6 +559,14 @@
 		"oAP": "/includes/post-types.php",
 		"oF": 0
 		},
+	"/includes/preload.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/preload.php",
+		"oF": 0
+		},
 	"/includes/shortcodes_settings.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -573,6 +581,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/includes/side-nav.php",
+		"oF": 0
+		},
+	"/includes/simple_html_dom.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/simple_html_dom.php",
 		"oF": 0
 		},
 	"/includes/taxonomies.php": {
@@ -609,6 +625,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/engine-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/google-analytics-library-page-click.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/google-analytics-library-page-click-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/google-analytics.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/google-analytics-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

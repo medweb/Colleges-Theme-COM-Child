@@ -7,6 +7,8 @@
 
 				<aside class="person-contact-container">
 
+					<a href="javascript:history.back()" class="return-tp"><i class="fa fa-chevron-circle-left icongrey"></i> Return to Directory</a>
+
 					<div class="mb-4">
 						<?php echo get_person_thumbnail( $post, 'rounded-circle' ); ?>
 					</div>
@@ -38,7 +40,7 @@
 
 					</div>
 
-					<a class="btn btn-secondary" href="javascript:history.back()">Return to Directory</a>
+					<!--<a class="btn btn-secondary" href="javascript:history.back()">Return to Directory</a> -->
 
 				</aside>
 
