@@ -304,7 +304,15 @@ function disable_bad_plugins(){
 	$array_bad_plugins = array(
 		'ax-social-stream/ax-social-stream.php',
 	);
+	$array_bad_shortcodes = array(
+	        'social_board',
+    );
+
 	deactivate_plugins( $array_bad_plugins );
+
+	foreach ($array_bad_shortcodes as $bad_shortcode){
+	    remove_shortcode($bad_shortcode);
+    }
 }
 
 ?>
