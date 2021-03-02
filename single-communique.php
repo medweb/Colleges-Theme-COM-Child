@@ -124,7 +124,7 @@ $articles_per_row = 2;
 																	'operator' => 'NOT IN',
 																),*/
 																array(
-																	'taxonomy' => 'newsletter_category',
+																	'taxonomy' => 'news_category',
 																	'field'    => 'slug',
 																	'terms'    => 'communique',
 																	'operator' => 'IN',
