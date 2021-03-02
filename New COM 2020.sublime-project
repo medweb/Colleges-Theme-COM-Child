@@ -15,6 +15,9 @@
 		},
 		{
 			"path": "/Applications/MAMP/htdocs/ucfhealth.com/wp-content/plugins"
+		},
+		{
+			"path": "/Applications/MAMP/htdocs/healtharch.org/wp-content/themes"
 		}
 	]
 }

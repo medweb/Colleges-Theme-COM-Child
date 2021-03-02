@@ -284,7 +284,7 @@ $articles_per_row = 2;
 														<?php
 														} else {
 															// only fires if there are 0 com articles and 0 ucf health crosspost articles
-															echo '<p>No current news.</p>';
+															the_content();
 														} ?>
 
 														<!-- end individual news TDs -->
@@ -313,21 +313,21 @@ $articles_per_row = 2;
 												&nbsp;
 											</td>
 										</tr>
-										<tr>
+										<!-- <tr>
 											<td align="center" style="padding: 0; text-align: left; vertical-align: top;">
 												<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/communique/communique-header-events.png" width="151" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
 											</td>
-										</tr>
+										</tr> -->
 										<tr>
 											<td align="center" style="padding: 0; text-align: left; vertical-align: top;">
 
-												<!-- Events Widget -->
+												<!-- Events Widget 
 
 												<div class="events-widget">
 												
 													<?php //locate_template( 'includes/ucf-events-feed.php', true, true); ucf_events_feed::output(3); ?>
 
-												</div>
+												</div> -->
 
 												<!-- -->
 
@@ -356,7 +356,7 @@ $articles_per_row = 2;
 										<tr>
 											<td align="center" style="padding: 0; text-align: left; vertical-align: top;">
 
-												<!-- Health Tip Widget -->
+												<!-- Health Tip Widget 
 																	
 													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/communique/communique-header-wellness.png" width="199" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
 
@@ -366,7 +366,7 @@ $articles_per_row = 2;
 															<?php get_template_part( 'includes/health-tips-feed' );?>
 
 														</tbody>
-													</table>
+													</table> -->
 													
 													<!-- <a href="http://ucfhealth.com/health-and-wellness/" alt="UCF Health - Health Tip Link" title="UCF Health - Health Tip Link"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/communique/communique-header-wellness-more.png" width="413" class="responsiveimgh" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" border="0" /></a> -->
 																

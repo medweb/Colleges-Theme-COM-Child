@@ -555,9 +555,18 @@ header nav {
 	}
 }
 
-.person-addl-info {
-	margin: 25px 0;
-	font-size: .9em;
+.single-person {
+
+	.return-tp {
+		margin-bottom: 25px;
+		display: block;
+	}
+
+	.person-addl-info {
+		margin: 25px 0;
+		font-size: .9em;
+	}
+
 }
 
 #library-search {
