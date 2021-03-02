@@ -110,8 +110,8 @@ $articles_per_row = 2;
 														   'post_type' => 'news',
 														   'posts_per_page' => $numberArticles,
 															'tax_query' => array(
-																'relation' => 'AND',
-																array(
+																//'relation' => 'AND',
+																/*array(
 																	'taxonomy' => 'news_category',
 																	'field'    => 'slug',
 																	'terms'    => 'external-news',
@@ -122,6 +122,12 @@ $articles_per_row = 2;
 																	'field'    => 'slug',
 																	'terms'    => 'health-sciences-campus-news',
 																	'operator' => 'NOT IN',
+																),*/
+																array(
+																	'taxonomy' => 'newsletter_category',
+																	'field'    => 'slug',
+																	'terms'    => 'communique',
+																	'operator' => 'IN',
 																),
 															)
 														);
