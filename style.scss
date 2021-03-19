@@ -31,6 +31,14 @@ $std-fonts: "Gotham A", "Gotham B", Arial, Helvetica, sans-serif;
 $sprite-path: 'images/sprites';
 $background-path: 'images/backgrounds';
 
+.spotlight-horizontal {
+	.spotlight-header {
+		background: rgba(255,255,255,.5);
+    	padding: 10px 20px 10px 20px;
+    	margin: 0 0 0 -15px;
+	}
+}
+
 .wp-block-media-text__media img, .wp-block-image img {
 	height: inherit;
 }
