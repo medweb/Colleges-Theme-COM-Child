@@ -139,6 +139,12 @@ figure figcaption {
 .news article small {
   display: none !important; }
 
+.single-news article iframe {
+  width: 60%;
+  height: 350px;
+  margin: 0 auto;
+  display: block; }
+
 .single-news .post-info {
   padding: 15px 0 0 0; }
   .single-news .post-info li {
@@ -549,6 +555,11 @@ header nav .dropdown-menu div.submenu-header {
 			}
 		}
 	}*/
+  .single-news article iframe {
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    display: block; }
   .site-collegeofmedicine .navbar-inverse #header-menu {
     justify-content: flex-end; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav {

@@ -213,6 +213,16 @@ figure {
 }
 
 .single-news {
+
+	article {
+		iframe {
+			width: 60%;
+		    height: 350px;
+		    margin: 0 auto;
+		    display: block;
+		}
+	}
+
 	.post-info {
 		padding: 15px 0 0 0;
 
@@ -832,6 +842,17 @@ header nav {
 			}
 		}
 	}*/
+	.single-news {
+
+		article {
+			iframe {
+				width: 100%;
+			    height: 250px;
+			    margin: 0 auto;
+			    display: block;
+			}
+		}
+	}
 	.site-collegeofmedicine {
 
 		.navbar-inverse {
