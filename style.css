@@ -19,6 +19,10 @@
   padding: 10px 20px 10px 20px;
   margin: 0 0 0 -15px; }
 
+figure figcaption {
+  font-size: .8em;
+  color: #636c72; }
+
 .wp-block-media-text__media img, .wp-block-image img {
   height: inherit; }
 
