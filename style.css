@@ -517,6 +517,11 @@ header nav .dropdown-menu div.submenu-header {
     padding-left: 0; } }
 
 @media screen and (max-width: 991px) {
+  .single-news article iframe {
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    display: block; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown {
     display: none; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
@@ -555,11 +560,6 @@ header nav .dropdown-menu div.submenu-header {
 			}
 		}
 	}*/
-  .single-news article iframe {
-    width: 100%;
-    height: 250px;
-    margin: 0 auto;
-    display: block; }
   .site-collegeofmedicine .navbar-inverse #header-menu {
     justify-content: flex-end; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav {
