@@ -127,6 +127,9 @@ figure figcaption {
   position: relative;
   margin-top: 5px; }
 
+.home .tabs .spotlight {
+  min-height: 480px; }
+
 .searchbar input {
   padding: 10px;
   margin: 15px 0; }
