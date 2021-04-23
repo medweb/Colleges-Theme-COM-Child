@@ -36,7 +36,6 @@ $background-path: 'images/backgrounds';
 		background: rgba(255,255,255,.5);
     	padding: 10px 20px 10px 20px;
     	margin: 0 0 0 -15px;
-    	font-size: 3.75rem;
 	}
 }
 
@@ -191,7 +190,7 @@ figure {
 .home {
 	.tabs {
 		.spotlight {
-			min-height: 480px;
+			/*min-height: 480px;*/ /* this was a temp value to expand the box height due to large font in h1 title */
 		}
 	}
 }
