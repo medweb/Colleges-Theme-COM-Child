@@ -17,7 +17,8 @@
 .spotlight-horizontal .spotlight-header {
   background: rgba(255, 255, 255, 0.5);
   padding: 10px 20px 10px 20px;
-  margin: 0 0 0 -15px; }
+  margin: 0 0 0 -15px;
+  font-size: 3.75rem; }
 
 figure figcaption {
   font-size: .8em;
@@ -609,6 +610,10 @@ header nav .dropdown-menu div.submenu-header {
       top: 100%; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
       border-top-color: #222222 !important; } }
+
+@media screen and (min-width: 768px) {
+  .h1.font-condensed, h1.font-condensed {
+    font-size: 3.375rem !important; } }
 
 @media screen and (max-width: 576px) {
   .home-header-title-wrapper {

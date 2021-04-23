@@ -36,6 +36,7 @@ $background-path: 'images/backgrounds';
 		background: rgba(255,255,255,.5);
     	padding: 10px 20px 10px 20px;
     	margin: 0 0 0 -15px;
+    	font-size: 3.75rem;
 	}
 }
 
@@ -950,6 +951,11 @@ header nav {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.h1.font-condensed, h1.font-condensed {
+	    font-size: 3.375rem !important;
+	}
+}
 
 @media screen and (max-width: 576px) {
 	.home-header-title-wrapper {
