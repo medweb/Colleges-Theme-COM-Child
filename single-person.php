@@ -49,18 +49,18 @@
 				<section class="person-content">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 					  <li class="nav-item">
-					    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Biography & Research</a>
+					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography & Research</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Education & Specialties</a>
+					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Education & Specialties</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">News & Media</a>
+					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News & Media</a>
 					  </li>
 					</ul>
 
 					<div class="tab-content" id="myTabContent">
-					  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					  <div class="tab-pane fade show active" id="bio" role="tabpanel" aria-labelledby="bio-tab">
 					  	<?php echo get_person_desc_heading( $post ); ?>
 					  	<?php
 						if ( $post->post_content ) {
@@ -70,23 +70,35 @@
 						}
 						?>
 					  </div>
-					  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-					  	<div class="person-addl-info">
+					  <div class="tab-pane fade" id="edu" role="tabpanel" aria-labelledby="edu-tab">
+					  	
 
 							<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
 
-								<h3><strong>Education</strong></h3>
+								<h2 class="person-subheading">Education & Specialties</h3>
 
 								<?php the_field( 'person_educationspecialties' ); ?>
 
+							<?php } else { ?>
+
+								<p>No information specified.</p>
+
 							<?php } ?>
 
-						</div>
+						
 					  </div>
-					  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-					  	<?php echo get_person_news_publications_markup_com( $post ); ?>
+					  <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
 
-						<?php echo get_person_videos_markup( $post ); ?>
+					  	<?php if ( get_person_news_publications_markup_com( $post ) || get_person_videos_markup( $post ) ) {
+
+					  	 echo get_person_news_publications_markup_com( $post ); ?>
+
+						<?php echo get_person_videos_markup( $post ); } else { ?>
+
+						<p>No recent media. Please check back soon.</p>
+
+						<?php } ?>
+
 					  </div>
 					</div>
 					
