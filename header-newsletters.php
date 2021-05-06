@@ -10,7 +10,7 @@
 				zoom:1;
 			}
 
-			img[data-imagetype], [data-imagetype], img[data-imagetype="*"], .x_responsiveimgh, .x_lazyload {
+			img[data-imagetype="DataUri"], .x_responsiveimgh, .x_lazyload {
 				display: none !important;
 			}
 
