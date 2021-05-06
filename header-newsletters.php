@@ -10,9 +10,10 @@
 				zoom:1;
 			}
 
-			.x_responsiveimgh, .x_lazyload {
+			img[data-imagetype], [data-imagetype], img[data-imagetype="*"], .x_responsiveimgh, .x_lazyload {
 				display: none !important;
 			}
+
 	     
 		  	div, p, a, li, td { 
 		  		-webkit-text-size-adjust:none; 
