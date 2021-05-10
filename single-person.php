@@ -2,6 +2,10 @@
 
 <!-- Add Search Bar here to be floated right of page title -->
 
+<?php
+do_action( 'single_person_before_article'); // allows plugins (ie the directory) to add data (like the search bar)
+?>
+
 <article class="<?php echo $post->post_status; ?> post-list-item">
 	<div class="container my-5">
 		<div class="row">
