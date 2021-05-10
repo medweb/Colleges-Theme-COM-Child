@@ -9,6 +9,11 @@
 			* {
 				zoom:1;
 			}
+
+			img[data-imagetype="DataUri"], .x_responsiveimgh, .x_lazyload {
+				display: none !important;
+			}
+
 	     
 		  	div, p, a, li, td { 
 		  		-webkit-text-size-adjust:none; 
@@ -53,8 +58,8 @@
 				width: 50%;
 			}
 
-			.site-footer {
-				display: none;
+			footer, .site-footer {
+				display: none !important;
 			}
 
 			@media all and (max-width: 640px) {
@@ -145,6 +150,8 @@
 		        td[class="givedesc"] {
 		          font-size: 16px !important;
 		        }
+
+
 	        }
 			
 		</style>
