@@ -33,6 +33,12 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 					</p>
 					<?php endif; ?>
 
+					<?php if ( get_field( 'ucfp_lab_website_url' ) ): ?>
+					<p>
+						<a class="btn btn-complementary" href="<?php echo get_field( 'ucfp_lab_website_url' ); ?>" target="_blank">Lab Website</a>
+					</p>
+					<?php endif; ?>
+
 					<?php echo get_person_contact_btns_markup( $post ); ?>
 
 					<?php echo get_person_dept_markup( $post ); ?>
