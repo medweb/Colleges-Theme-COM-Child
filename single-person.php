@@ -4,6 +4,9 @@
 
 <?php
 do_action( 'single_person_before_article'); // allows plugins (ie the directory) to add data (like the search bar)
+
+$max_articles_to_show = 15; // number of articles to show
+
 ?>
 
 <article class="<?php echo $post->post_status; ?> post-list-item">
@@ -85,7 +88,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 							<?php if ( get_field( 'person_educationspecialties' ) ) { ?>
 
-								<h2 class="person-subheading">Education & Specialties</h3>
+								<h2 class="person-subheading">Education & Specialties</h2>
 
 								<?php the_field( 'person_educationspecialties' ); ?>
 
@@ -101,7 +104,7 @@ do_action( 'single_person_before_article'); // allows plugins (ie the directory)
 
 					  	<?php if ( get_person_news_publications_markup_com( $post ) || get_person_videos_markup( $post ) ) {
 
-					  	 echo get_person_news_publications_markup_com( $post ); ?>
+					  	 echo get_person_news_publications_markup_com( $post, $max_articles_to_show ); ?>
 
 						<?php echo get_person_videos_markup( $post ); } else { ?>
 

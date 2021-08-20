@@ -72,21 +72,23 @@ function get_person_news_com_for_subsite($acf_association_subsite_key_name, $pos
  * single-person.php
  *
  * @param $post object | Person post object
+ * @param $limit integer | Max number of articles to list
+ * @param $start integer | Articles to skip (useful for pagination)
  *
  * @return Mixed | Grid and person's publication list HTML or void
  **@author Jo Dickson, Stephen Schrauger
  * @since 1.0.0
  */
-function get_person_news_publications_markup_com( $post ) {
+function get_person_news_publications_markup_com( $post, $limit = 4, $start = 0 ) {
 	if ( $post->post_type !== 'person' ) {
 		return;
 	}
-	$news_this_site = get_person_news( $post );
+	$news_this_site = get_person_news( $post, $limit, $start );
 	$news_com_site  = [];
 
 	switch ( get_current_blog_id() ) {
 		case 8: // biomed site. pull in articles from com that associate with biomed profiles
-			$news_com_site = get_person_news_com_for_subsite( 'post_associated_people_biomed',  $post ); // get articles from main com site (or whatever network site was specified in this site's acf fields)
+			$news_com_site = get_person_news_com_for_subsite( 'post_associated_people_biomed',  $post, $limit, $start ); // get articles from main com site (or whatever network site was specified in this site's acf fields)
             break;
         // case: 123 // if we want to add sites in the future, add the id here, and call the subsite function with the acf key (which has to be created/duplicated)
 	}
@@ -94,7 +96,7 @@ function get_person_news_publications_markup_com( $post ) {
 	// mix articles if needed
 	$news = array_merge( $news_this_site, $news_com_site );
 
-	$pubs = get_person_publications( $post );
+	$pubs = get_person_publications( $post, $limit, $start );
 
 	ob_start();
 
