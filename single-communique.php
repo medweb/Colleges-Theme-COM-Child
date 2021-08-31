@@ -208,7 +208,7 @@ $articles_per_row = 2;
 
 																if ( ! isset( $image_url ) ) // if exists
 																{
-																	$image_url = '/wp-content/themes/ucf-health-theme/images/logos/ucf-building.jpg'; // default stock image if image not set
+																	$image_url = 'https://ucfhealth.com/wp-content/themes/ucf-health-theme/images/logos/ucf-building.jpg'; // default stock image if image not set
 																}
 
 																$UTC = new DateTimeZone("UTC");
