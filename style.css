@@ -272,6 +272,8 @@ figure figcaption {
       margin-bottom: 15px; }
 
 .extra-nav {
+  float: right;
+  width: 380px;
   overflow: auto;
   margin: 0 0 25px 20px;
   z-index: 99;
@@ -288,9 +290,9 @@ figure figcaption {
       background: #f7c100;
       padding: 10px; }
 
-:not(.page-home) .extra-nav {
-  float: right;
-  width: 380px; }
+.tabs .extra-nav {
+  float: none;
+  width: 100%; }
 
 header nav .dropdown-menu .dropdown-menu {
   display: inline-block; }
