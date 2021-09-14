@@ -415,8 +415,6 @@ figure {
 }
 
 .extra-nav {
-	float: right;
-	width: 380px;
 	overflow: auto;
 	margin: 0 0 25px 20px;
 	z-index: 99;
@@ -435,6 +433,13 @@ figure {
 			background: $yellow;
 			padding: 10px;
 		}
+	}
+}
+
+:not(.page-home) {
+	.extra-nav {
+		float: right;
+		width: 380px;
 	}
 }
 
