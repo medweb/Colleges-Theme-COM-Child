@@ -64,12 +64,15 @@ $max_articles_to_show = 15; // number of articles to show
 					  <li class="nav-item">
 					    <a class="nav-link active" id="bio-tab" data-toggle="tab" href="#bio" role="tab" aria-controls="bio" aria-selected="true">Biography & Research</a>
 					  </li>
+					  <?php if ( get_field( 'person_educationspecialties' ) ) { ?>
 					  <li class="nav-item">
 					    <a class="nav-link" id="edu-tab" data-toggle="tab" href="#edu" role="tab" aria-controls="edu" aria-selected="false">Education & Specialties</a>
 					  </li>
+					  <?php } if ( get_person_news_publications_markup_com( $post ) || get_person_videos_markup( $post ) ) { ?>
 					  <li class="nav-item">
 					    <a class="nav-link" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="false">News & Media</a>
 					  </li>
+					  <?php } ?>
 					</ul>
 
 					<div class="tab-content" id="myTabContent">
