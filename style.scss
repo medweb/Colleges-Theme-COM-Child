@@ -46,6 +46,8 @@ figure {
 	}
 }
 
+.no-border-radius,
+.no-border-radius .wp-block-button__link, 
 .wp-block-button__link {
 	border-radius:  0px !important;
 }

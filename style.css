@@ -23,6 +23,8 @@ figure figcaption {
   font-size: .8em;
   color: #636c72; }
 
+.no-border-radius,
+.no-border-radius .wp-block-button__link,
 .wp-block-button__link {
   border-radius: 0px !important; }
 
