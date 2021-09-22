@@ -46,6 +46,10 @@ figure {
 	}
 }
 
+.wp-block-button__link {
+	border-radius:  0px !important;
+}
+
 .wp-block-media-text__media img, .wp-block-image img {
 	height: inherit;
 }
