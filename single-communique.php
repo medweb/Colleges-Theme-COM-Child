@@ -362,7 +362,21 @@ $articles_per_row = 2;
 										<tr>
 											<td align="center" style="padding: 0; text-align: left; vertical-align: top;">
 
-												
+												<!-- Health Tip Widget 
+																	
+													<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter/communique/communique-header-wellness.png" width="199" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+
+													<table class="wrapperInner" width="600" align="center" style="border-spacing: 0; border-collapse: collapse;">
+														<tbody>
+
+															<?php //get_template_part( 'includes/health-tips-feed' );?>
+
+														</tbody>
+													</table> -->
+													
+													<!-- <a href="http://ucfhealth.com/health-and-wellness/" alt="UCF Health - Health Tip Link" title="UCF Health - Health Tip Link"><img src="<?php bloginfo('template_url'); ?>/images/newsletter/communique/communique-header-wellness-more.png" width="413" class="responsiveimgh" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" border="0" /></a> -->
+																
+												<!-- -->
 
 											</td>
 										</tr>
