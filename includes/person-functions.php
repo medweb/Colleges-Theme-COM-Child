@@ -1,7 +1,11 @@
 <?php
 
+
+
 add_action( 'pre_get_posts', 'get_person_news_com_news_type' ); // link 'news' to people instead of 'posts'
 
+add_filter( 'ucf_people_post_type_args', 'enable_rest' ); // enables blocks for person cpt
+add_filter( 'ucf_people_group_args', 'enable_rest' ); // allows taxonomy to be shown in cpt that is rest-enabled
 
 /**
  * Returns news publications related to a person.
@@ -134,3 +138,9 @@ function get_person_news_publications_markup_com( $post, $limit = 4, $start = 0 
 }
 
 
+// Enabled blocks in person post type. This gives the ability to add blocks to the content,
+// plus it enables a far better hierarchical checkbox list.
+function enable_rest( $args ) {
+	$args[ 'show_in_rest' ] = true;
+	return $args;
+}
