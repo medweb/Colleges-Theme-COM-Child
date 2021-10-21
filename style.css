@@ -393,7 +393,7 @@ header nav .dropdown-menu div.submenu-header {
     z-index: 99;
     position: relative;
     overflow: hidden; }
-  #main .navbar.navbar-side {
+  #main .navbar-side {
     flex-wrap: wrap;
     margin: 0 0 1.5rem 1.5rem;
     width: 30%;
@@ -521,12 +521,12 @@ header nav .dropdown-menu div.submenu-header {
     margin-top: 50px; }
 
 @media screen and (max-width: 1199px) {
-  #main .navbar.navbar-side {
+  #main .navbar-side {
     flex-wrap: nowrap;
     width: 100%;
     float: none;
     margin: 0 0 1.5rem 0; }
-    #main .navbar.navbar-side .navbar-brand {
+    #main .navbar-side .navbar-brand {
       display: none !important; }
   #main .side-nav {
     margin: 0 0 0 1.5rem; } }

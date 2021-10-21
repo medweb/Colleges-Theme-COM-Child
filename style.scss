@@ -583,7 +583,7 @@ header nav {
 		overflow:  hidden;
 	}
 
-	.navbar.navbar-side {
+	.navbar-side {
 		flex-wrap: wrap;
 		margin: 0 0 1.5rem 1.5rem;
 		width:  30%;
@@ -787,7 +787,7 @@ header nav {
 @media screen and (max-width: 1199px) {
 
 	#main {
-		.navbar.navbar-side {	
+		.navbar-side {	
 			flex-wrap: nowrap;
 			width:  100%;	
 			float:  none;
