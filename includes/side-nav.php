@@ -31,20 +31,37 @@ $legacy_right_side_custom_data = get_field( 'right_side_custom' ) ;
 // if we have a right side nav, or if the legacy nav is defined, output the side-nav div
 
 if ($show_right_side_nav || $legacy_right_side_custom_data){
-    echo "
-    <div class='side-nav'>
-    ";
+    
 
     if ($show_right_side_nav){
         echo "
-        <ul class='autonav'>
-            <h4>In This Section</h4>
+        <nav class='navbar navbar-toggleable-lg navbar-light bg-faded'>
+          <h3 class='navbar-brand'>In This Section</h3>
+
+<div class='container'>
+  <button class='navbar-toggler collapsed' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+    <span class='navbar-toggler-text'>In This Section</span>
+    <span class='navbar-toggler-icon'></span>
+  </button>
+  <div class='collapse navbar-collapse' id='navbarNav'>
+
+    <ul class='autonav'>
+
             {$links_to_show}
+
         </ul>
+
+  </div>
+</div>
+</nav>
         ";
     } else {
         // no children. output siblings.
     }
+
+      echo "
+    <div class='side-nav'>
+    ";
 
 	// right_side_custom is a legacy field.
 	// output it if it was previously defined.
@@ -57,4 +74,23 @@ if ($show_right_side_nav || $legacy_right_side_custom_data){
     }
 
     echo "</div>";
-};
+}; ?>
+<!--
+<nav class="navbar navbar-toggleable-lg navbar-light side-nav">
+    <a class="navbar-brand" href="#">In This Section</a>
+<div class="container">
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-text">In This Section</span>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="ucfcom-navbarstyle">
+
+            <li class="nav-item"><a class="nav-item nav-link" href="#">Item</a></li>
+
+    </ul>
+
+  </div>
+</div>
+</nav> -->

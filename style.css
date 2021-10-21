@@ -387,18 +387,24 @@ header nav .dropdown-menu div.submenu-header {
   #main .side-nav {
     width: 30%;
     float: right;
-    padding: 0 0 0 3em;
+    clear: right;
     background: #fff;
     z-index: 99;
-    position: relative; }
-    #main .side-nav .autonav {
-      padding-inline-start: 0; }
-      #main .side-nav .autonav li {
-        list-style: none;
-        border-bottom: 1px solid #ccc; }
-        #main .side-nav .autonav li a {
-          display: block;
-          padding: 15px 15px 15px 0px; }
+    position: relative;
+    overflow: hidden; }
+  #main .navbar {
+    flex-wrap: wrap;
+    margin: 0 0 1.5rem 1.5rem;
+    width: 30%;
+    float: right; }
+  #main .autonav {
+    padding-inline-start: 0; }
+    #main .autonav li {
+      list-style: none;
+      border-bottom: 1px solid #ccc; }
+      #main .autonav li a {
+        display: block;
+        padding: 15px 15px 15px 0px; }
 
 .single-person .return-tp {
   margin-bottom: 25px;
@@ -513,6 +519,17 @@ header nav .dropdown-menu div.submenu-header {
     position: relative;
     margin-top: 50px; }
 
+@media screen and (max-width: 1199px) {
+  #main .navbar {
+    flex-wrap: nowrap;
+    width: 100%;
+    float: none;
+    margin: 0 0 1.5rem 0; }
+    #main .navbar .navbar-brand {
+      display: none !important; }
+  #main .side-nav {
+    margin: 0 0 0 1.5rem; } }
+
 @media screen and (max-width: 999px) {
   .menu-expanded .tab-content div {
     width: 94% !important; }
@@ -623,6 +640,10 @@ header nav .dropdown-menu div.submenu-header {
 @media screen and (min-width: 768px) {
   .h1.font-condensed, h1.font-condensed {
     font-size: 3.375rem !important; } }
+
+@media screen and (max-width: 771px) {
+  #main .side-nav {
+    display: none; } }
 
 @media screen and (max-width: 576px) {
   .home-header-title-wrapper {
