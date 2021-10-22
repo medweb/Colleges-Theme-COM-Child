@@ -394,6 +394,7 @@ header nav .dropdown-menu div.submenu-header {
     position: relative;
     overflow: hidden; }
   #main .navbar-side {
+    /*comment1*/
     flex-wrap: wrap;
     margin: 0 0 1.5rem 1.5rem;
     width: 30%;
