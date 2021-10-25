@@ -646,7 +646,3 @@ header nav .dropdown-menu div.submenu-header {
 @media screen and (max-width: 771px) {
   #main .side-nav {
     display: none; } }
-
-@media screen and (max-width: 576px) {
-  .home-header-title-wrapper {
-    background-color: transparent !important; } }
