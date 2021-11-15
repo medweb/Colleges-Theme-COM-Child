@@ -6,7 +6,7 @@ add_action( 'pre_get_posts', 'get_person_news_com_news_type' ); // link 'news' t
 
 add_filter( 'ucf_people_post_type_args', 'enable_rest' ); // enables blocks for person cpt
 add_filter( 'ucf_people_group_args', 'enable_rest' ); // allows taxonomy to be shown in cpt that is rest-enabled
-
+add_filter( 'pre_get_posts', 'enable_rss_parameter_post_associated_people'); // allows rss feed to be filtered by 'post_associated_people' ACF field
 /**
  * Returns news publications related to a person.
  * Overrides parent theme so that we can use 'news' post types instead of the default 'post' type.
@@ -143,4 +143,60 @@ function get_person_news_publications_markup_com( $post, $limit = 4, $start = 0 
 function enable_rest( $args ) {
 	$args[ 'show_in_rest' ] = true;
 	return $args;
+}
+
+
+/**
+ * Adds a parameter to the rss feeds.
+ * Paramater will filter to show only posts with a specific person associated with that post.
+ * Person can be specified either by post ID or by post slug
+ * @param $query
+ */
+function enable_rss_parameter_post_associated_people($query){
+    if ($query->is_feed() && isset($_GET['post_associated_people'])) {
+        $requested_person = sanitize_text_field($_GET['post_associated_people']);
+
+        $person_post = get_post($requested_person);
+
+        if (!$person_post) {
+            // check if the parameter passed in is the slug instead of the id. if the following function returns a page, grab the id from that.
+            $person_post = get_page_by_path($requested_person, OBJECT, 'person'); // get the id based on the slug
+            if ($person_post){
+                $requested_person = $person_post->ID;
+            }
+        }
+
+        // if we found the person, get the id
+        if ($person_post){
+	        $requested_person_id = $person_post->ID;
+        } else {
+            // parameter passed in doesn't match an id or a slug. set to 000000 so that the rss feed matches nothing instead of just showing unfiltered articles.
+            $requested_person_id = 000000;
+        }
+
+	    $query->set(
+		    'meta_query',
+		    array(
+			    array(
+			            // example in database:
+                        // meta_id,   post_id,  meta_key,                 meta_value
+                        // '3449030', '213305', 'post_associated_people', 'a:2:{i:0;s:4:"3561";i:1;s:5:"81774";}'
+				    'key' => 'post_associated_people',
+				    'value' => '"' . $requested_person_id . '"', // relationship acf fields are stored as serialized data. to match, search for the id surrounded by quotes, in a LIKE comparison
+                    'compare' => 'LIKE'
+			    )
+		    )
+	    );
+    }
+/*    if (!empty($_GET) && isset($_GET['post_associated_people']) && $query->is_main_query()) {
+        $query->set(
+            'meta_query',
+            array(
+                array(
+                    'key' => 'post_associated_people',
+                    'value' => sanitize_text_field($_GET['post_associated_people'])
+                )
+            )
+        );
+    }*/
 }
