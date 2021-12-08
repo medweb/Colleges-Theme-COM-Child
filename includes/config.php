@@ -17,7 +17,7 @@ define( 'THEME_CUSTOMIZER_PREFIX', 'ucf_colleges_' );
 define( 'THEME_CUSTOMIZER_DEFAULTS', serialize( array(
 	'apply_undergraduate_url' => 'https://apply.ucf.edu/application/',
 	'apply_graduate_url'      => 'https://application.graduate.ucf.edu/',
-	'enable_feeds'            => false,
+	'enable_feeds'            => true,
 	'person_header_title'     => 'Directory',
 	'person_header_subtitle'  => '',//get_bloginfo( 'name' ),
 	'person_thumbnail'        => THEME_IMG_URL . '/no-photo.jpg'
@@ -35,7 +35,7 @@ define( 'COLLEGES_THEME_CUSTOMIZER_PREFIX', 'ucf_colleges_' );
 define( 'COLLEGES_THEME_CUSTOMIZER_DEFAULTS', serialize( array(
 	'apply_undergraduate_url' => 'https://apply.ucf.edu/application/',
 	'apply_graduate_url'      => 'https://application.graduate.ucf.edu/',
-	'enable_feeds'            => false,
+	'enable_feeds'            => true,
 	'person_header_title'     => 'Directory',
 	'person_header_subtitle'  => '',//get_bloginfo( 'name' ),
 	'person_thumbnail'        => COLLEGES_THEME_IMG_URL . '/no-photo.jpg'
