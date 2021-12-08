@@ -103,3 +103,16 @@ function govid_custom_column( $column_name, $post_id ) {
 		echo '<i>'.__( 'None' ).'</i>';
 	}
 }
+
+
+// WordPress limits the editor to only show 100 terms at a time.
+// This function overrided that so we can show all of our terms in the list.
+add_filter('rest_postal_code_query', 'increase_taxonomy_term_limit', 10, 2);
+function increase_taxonomy_term_limit($prepared_args, $request) {
+	if (strpos($request->get_route(), '/wp/v2/') === 0) {
+		if ($prepared_args['number'] === 100) {
+			$prepared_args['number'] = 100000;
+		}
+	}
+	return $prepared_args;
+}
