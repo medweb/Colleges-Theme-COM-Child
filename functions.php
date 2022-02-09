@@ -300,7 +300,7 @@ function notify_admin_email($status, WP_Post $modified_post){
 		$page_status = "An existing {$modified_post->post_type} has transitioned from {$status} at {$post_view_url}, {$edit_message}.";
 	}
 
-	$relative_link = substr(get_permalink(), strlen(home_url('/'))); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
+	$relative_link = substr(get_permalink($modified_post), strlen(home_url('/'))); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
 
 	$message = "
     {$page_status}
