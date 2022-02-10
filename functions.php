@@ -291,8 +291,9 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$post_edit_relative_url = parse_url($post_edit_url, PHP_URL_PATH) . parse_url($post_edit_url, PHP_URL_QUERY); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
 	$post_edit_html = "<a href='{$post_edit_url}'>$post_edit_url</a>";
 
-	$post_revision_url = get_permalink(array_shift(wp_get_post_revisions($modified_post->ID))); // get the most recent revision
-    $post_revision_html = "<a href='{$post_revision_url}'>$post_revision_url</a>";
+	$post_revision_id = array_shift(wp_get_post_revisions($modified_post->ID))->ID; // get the most recent revision
+    $post_revision_admin_url = admin_url("revision.php?revision={$post_revision_id}");
+    $post_revision_html = "<a href='{$post_revision_admin_url}'>$post_revision_admin_url</a>";
 
 	$edit_message = "and it can be edited at {$post_edit_html}";
 	$revision_message = "View the differences for the latest page revision at {$post_revision_html}";
