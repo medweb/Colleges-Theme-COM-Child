@@ -320,7 +320,7 @@ function notify_admin_email($status, WP_Post $modified_post){
 		<div>An existing {$modified_post->post_type} has been updated.</div>
 		<div>View: {$post_view_html}</div>
 		<div>Edit: {$post_edit_html}</div>
-		<div>Changes: {$revision_message}</div>
+		<div>Changes: {$post_revision_html}</div>
 		";
 	} elseif ($status == "deleted") {
 		$page_status = "
