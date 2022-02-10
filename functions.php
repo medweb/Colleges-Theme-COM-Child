@@ -309,27 +309,46 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$author_name = "{$author->first_name} {$author->last_name}";
 
 	if ($status == "published") {
-		$page_status = "A new {$modified_post->post_type} has been published at {$post_view_html}, {$edit_message}.";
+		$page_status = "
+		<div>A new {$modified_post->post_type} has been published.</div>
+		<div>View: {$post_view_html}</div>
+		<div>Edit: {$post_edit_html}</div>
+		";
 
 	} elseif ($status == "updated") {
-		$page_status = "An existing {$modified_post->post_type} has been updated at {$post_view_html}, {$edit_message}. ";
-		$page_status .= "{$revision_message}.";
+		$page_status = "
+		<div>An existing {$modified_post->post_type} has been updated.</div>
+		<div>View: {$post_view_html}</div>
+		<div>Edit: {$post_edit_html}</div>
+		<div>Changes: {$revision_message}</div>
+		";
 	} elseif ($status == "deleted") {
-		$page_status = "An existing {$modified_post->post_type} has been deleted, and can be restored at {$admin_edit_html}";
+		$page_status = "
+		<div>An existing {$modified_post->post_type} has been deleted.</div>
+		<div>Restore: {$admin_edit_html}</div>
+		";
 	} elseif ($status == "restored") {
-		$page_status = "A previously deleted {$modified_post->post_type} has been restored to draft at {$post_view_html}, {$edit_message}";
+		$page_status = "
+		<div>A previously deleted {$modified_post->post_type} has been restored to draft.</div>
+		<div>View: {$post_view_html}</div>
+		<div>Edit: {$post_edit_html}</div>
+		";
 	} else {
-		$page_status = "An existing {$modified_post->post_type} has transitioned from {$status} at {$post_view_html}, {$edit_message}.";
+		$page_status = "
+		<div>An existing {$modified_post->post_type} has transitioned from {$status}.</div>
+		<div>View: {$post_view_html}</div>
+		<div>Edit: {$post_edit_html}</div>
+		";
 	}
 
 
 	$message = "
 	<html>
 	<body>
-	<h1>{$modified_post->post_name} {$status}</h1>
+	<h1>{$modified_post->post_title} {$status}</h1>
 	<p>{$page_status}</p>
     
-    <p>Name of {$modified_post->post_type}: {$modified_post->post_name}</p>
+    <p>Name of {$modified_post->post_type}: {$modified_post->post_title}</p>
     
     <p>Change by: {$author_name}</p>
     
@@ -340,7 +359,7 @@ function notify_admin_email($status, WP_Post $modified_post){
     </html>
     ";
 
-	$subject = "Content Update Alert - med.ucf.edu - {$modified_post->post_name} {$status}";
+	$subject = "Content Update Alert - {$host} - {$modified_post->post_title} {$status}";
 
 
 	$from = "content-update@{$host}";
