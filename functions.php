@@ -349,7 +349,7 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$message = "
 	<html>
 	<body>
-	<h1>{$modified_post->post_title} {$status}</h1>
+	<h1><u>{$modified_post->post_title}</u> {$status}</h1>
 	<p>{$page_status}</p>
     
     <p>Name of {$post_type_label}: {$modified_post->post_title}</p>
