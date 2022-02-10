@@ -269,6 +269,7 @@ function notify_me(  $new_status,  $old_status,  WP_Post $post ) {
  * @param WP_Post $modified_post
  */
 function notify_admin_email($status, WP_Post $modified_post){
+	$to = "medwebcms@ucf.edu";
 
 
 	$message = "";
@@ -312,26 +313,24 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$message = "
 	<html>
 	<body>
-	<h1>{$modified_post->post_type} {$modified_post->post_name}</h1>
+	<h1>{$modified_post->post_name} {$status}</h1>
 	<p>{$page_status}</p>
     
     <p>Name of {$modified_post->post_type}: {$modified_post->post_name}</p>
     
     <p>Change by: {$author_name}</p>
     
-    <p>Relative link: {$post_view_relative_url}</p>
+    <p>Copy and paste this link: {$post_view_url}</p>
 
-    <p>Please review it.</p>
+    <p>Please review the changes.</p>
     </body>
     </html>
     ";
 
 	$subject = "Content Update Alert - med.ucf.edu - {$modified_post->post_name} {$status}";
 
-	//write_log("#############" . $subject . $message);
 
 	$from = "content-update@{$host}";
-	$to = "medwebcms@ucf.edu";
 	// To send HTML mail, the Content-type header must be set
 	$headers  = 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -340,12 +339,13 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$headers .= 'From: '.$from."\r\n".
 	            'Reply-To: '.$from."\r\n" .
 	            'X-Mailer: PHP/' . phpversion();
+	//write_log("#############" . $to . $subject . $message . $headers);
 
 	wp_mail( $to, $subject, $message, $headers );
 }
 
 
-/*if ( ! function_exists('write_log')) {
+if ( ! function_exists('write_log')) {
 	function write_log ( $log )  {
 		if ( is_array( $log ) || is_object( $log ) ) {
 			error_log( print_r( $log, true ) );
@@ -353,7 +353,7 @@ function notify_admin_email($status, WP_Post $modified_post){
 			error_log( $log );
 		}
 	}
-}*/
+}
 
 
 /*function notify_admin( $post_id, $post ) {
