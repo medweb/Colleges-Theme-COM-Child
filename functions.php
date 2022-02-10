@@ -270,16 +270,24 @@ function notify_me(  $new_status,  $old_status,  WP_Post $post ) {
  */
 function notify_admin_email($status, WP_Post $modified_post){
 
+
 	$message = "";
 
+	// get the permalink, then use it to build a clickable link
 	$post_view_url = get_permalink($modified_post);
-	//$post_view_html = "<a href='{$post_view_url}'>$post_view_url</a>";
+
+	$host = parse_url($post_view_url, PHP_URL_HOST);
+	$post_view_relative_url = parse_url($post_view_url, PHP_URL_PATH) . parse_url($post_view_url, PHP_URL_QUERY); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
+	$post_view_html = "<a href='{$post_view_url}'>$post_view_url</a>";
+
 	$post_edit_url = get_edit_post_link($modified_post);
-	//$post_edit_html = "<a href='{$post_edit_url}'>$post_edit_url</a>";
-	$edit_message = "and it can be edited at {$post_edit_url}";
+	$post_edit_relative_url = parse_url($post_edit_url, PHP_URL_PATH) . parse_url($post_edit_url, PHP_URL_QUERY); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
+	$post_edit_html = "<a href='{$post_edit_url}'>$post_edit_url</a>";
+
+	$edit_message = "and it can be edited at {$post_edit_html}";
 
 	$admin_edit_url = admin_url("edit.php?post_status=trash&post_type={$modified_post->post_type}");
-	//$admin_edit_html = "<a href='{$admin_edit_url}'>$admin_edit_url</a>";
+	$admin_edit_html = "<a href='{$admin_edit_url}'>$admin_edit_url</a>";
 	$page_status = "";
 
 	// get the last editor for the page. we might not be in the main loop, so we have to grab it via meta keys and find the name from there
@@ -288,37 +296,52 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$author_name = "{$author->first_name} {$author->last_name}";
 
 	if ($status == "published") {
-		$page_status = "A new {$modified_post->post_type} has been published at {$post_view_url}, {$edit_message}.";
+		$page_status = "A new {$modified_post->post_type} has been published at {$post_view_html}, {$edit_message}.";
 
 	} elseif ($status == "updated") {
-		$page_status = "An existing {$modified_post->post_type} has been updated at {$post_view_url}, {$edit_message}.";
+		$page_status = "An existing {$modified_post->post_type} has been updated at {$post_view_html}, {$edit_message}.";
 	} elseif ($status == "deleted") {
-		$page_status = "An existing {$modified_post->post_type} has been deleted, and can be restored at {$admin_edit_url}";
+		$page_status = "An existing {$modified_post->post_type} has been deleted, and can be restored at {$admin_edit_html}";
 	} elseif ($status == "restored") {
-		$page_status = "A previously deleted {$modified_post->post_type} has been restored to draft at {$post_view_url}, {$edit_message}";
+		$page_status = "A previously deleted {$modified_post->post_type} has been restored to draft at {$post_view_html}, {$edit_message}";
 	} else {
-		$page_status = "An existing {$modified_post->post_type} has transitioned from {$status} at {$post_view_url}, {$edit_message}.";
+		$page_status = "An existing {$modified_post->post_type} has transitioned from {$status} at {$post_view_html}, {$edit_message}.";
 	}
 
-	$relative_link = parse_url($post_view_url, PHP_URL_PATH) . parse_url($post_view_url, PHP_URL_QUERY); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
 
 	$message = "
-    {$page_status}
+	<html>
+	<body>
+	<h1>{$modified_post->post_type} {$modified_post->post_name}</h1>
+	<p>{$page_status}</p>
     
-    Name of {$modified_post->post_type}: {$modified_post->post_name}
+    <p>Name of {$modified_post->post_type}: {$modified_post->post_name}</p>
     
-    Change by: {$author_name}
+    <p>Change by: {$author_name}</p>
     
-    Relative link: {$relative_link}
+    <p>Relative link: {$post_view_relative_url}</p>
 
-    Please review it.
+    <p>Please review it.</p>
+    </body>
+    </html>
     ";
 
 	$subject = "Content Update Alert - med.ucf.edu - {$modified_post->post_name} {$status}";
 
 	//write_log("#############" . $subject . $message);
 
-	wp_mail( 'medwebcms@ucf.edu', $subject, $message );
+	$from = "content-update@{$host}";
+	$to = "medwebcms@ucf.edu";
+	// To send HTML mail, the Content-type header must be set
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+	// Create email headers
+	$headers .= 'From: '.$from."\r\n".
+	            'Reply-To: '.$from."\r\n" .
+	            'X-Mailer: PHP/' . phpversion();
+
+	wp_mail( $to, $subject, $message, $headers );
 }
 
 
