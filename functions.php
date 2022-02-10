@@ -303,6 +303,10 @@ function notify_admin_email($status, WP_Post $modified_post){
 
 	$page_status = "";
 
+	$post_type = get_post_type_object($modified_post->post_type); // get the entire definition of the custom post type
+    $post_type_label = $post_type->labels->singular_name;
+
+
 	// get the last editor for the page. we might not be in the main loop, so we have to grab it via meta keys and find the name from there
 	$last_author_id = get_post_meta( $modified_post->ID, '_edit_last', true );
 	$author = get_user_by( "ID", $last_author_id );
@@ -310,32 +314,32 @@ function notify_admin_email($status, WP_Post $modified_post){
 
 	if ($status == "published") {
 		$page_status = "
-		<div>A new {$modified_post->post_type} has been published.</div>
+		<div>A new {$post_type_label} has been published.</div>
 		<div>View: {$post_view_html}</div>
 		<div>Edit: {$post_edit_html}</div>
 		";
 
 	} elseif ($status == "updated") {
 		$page_status = "
-		<div>An existing {$modified_post->post_type} has been updated.</div>
+		<div>An existing {$post_type_label} has been updated.</div>
 		<div>View: {$post_view_html}</div>
 		<div>Edit: {$post_edit_html}</div>
 		<div>Changes: {$post_revision_html}</div>
 		";
 	} elseif ($status == "deleted") {
 		$page_status = "
-		<div>An existing {$modified_post->post_type} has been deleted.</div>
+		<div>An existing {$post_type_label} has been deleted.</div>
 		<div>Restore: {$admin_edit_html}</div>
 		";
 	} elseif ($status == "restored") {
 		$page_status = "
-		<div>A previously deleted {$modified_post->post_type} has been restored to draft.</div>
+		<div>A previously deleted {$post_type_label} has been restored to draft.</div>
 		<div>View: {$post_view_html}</div>
 		<div>Edit: {$post_edit_html}</div>
 		";
 	} else {
 		$page_status = "
-		<div>An existing {$modified_post->post_type} has transitioned from {$status}.</div>
+		<div>An existing {$post_type_label} has transitioned from {$status}.</div>
 		<div>View: {$post_view_html}</div>
 		<div>Edit: {$post_edit_html}</div>
 		";
@@ -348,7 +352,7 @@ function notify_admin_email($status, WP_Post $modified_post){
 	<h1>{$modified_post->post_title} {$status}</h1>
 	<p>{$page_status}</p>
     
-    <p>Name of {$modified_post->post_type}: {$modified_post->post_title}</p>
+    <p>Name of {$post_type_label}: {$modified_post->post_title}</p>
     
     <p>Change by: {$author_name}</p>
     
@@ -359,7 +363,7 @@ function notify_admin_email($status, WP_Post $modified_post){
     </html>
     ";
 
-	$subject = "Content Update Alert - {$host} - {$modified_post->post_title} {$status}";
+	$subject = "Content Update Alert - {$host} - "{$modified_post->post_title}" {$status}";
 
 
 	$from = "content-update@{$host}";
