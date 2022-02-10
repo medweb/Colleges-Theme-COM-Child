@@ -363,7 +363,7 @@ function notify_admin_email($status, WP_Post $modified_post){
     </html>
     ";
 
-	$subject = "Content Update Alert - {$host} - "{$modified_post->post_title}" {$status}";
+	$subject = "Content Update Alert - {$host} - \"{$modified_post->post_title}\" {$status}";
 
 
 	$from = "content-update@{$host}";
