@@ -291,10 +291,15 @@ function notify_admin_email($status, WP_Post $modified_post){
 	$post_edit_relative_url = parse_url($post_edit_url, PHP_URL_PATH) . parse_url($post_edit_url, PHP_URL_QUERY); // remove the domain, to prevent from being turned into an active link and then obfuscated by outlook safe protection
 	$post_edit_html = "<a href='{$post_edit_url}'>$post_edit_url</a>";
 
+	$post_revision_url = get_permalink(array_shift(wp_get_post_revisions($modified_post->ID))); // get the most recent revision
+    $post_revision_html = "<a href='{$post_revision_url}'>$post_revision_url</a>";
+
 	$edit_message = "and it can be edited at {$post_edit_html}";
+	$revision_message = "View the differences for the latest page revision at {$post_revision_html}";
 
 	$admin_edit_url = admin_url("edit.php?post_status=trash&post_type={$modified_post->post_type}");
 	$admin_edit_html = "<a href='{$admin_edit_url}'>$admin_edit_url</a>";
+
 	$page_status = "";
 
 	// get the last editor for the page. we might not be in the main loop, so we have to grab it via meta keys and find the name from there
@@ -306,7 +311,8 @@ function notify_admin_email($status, WP_Post $modified_post){
 		$page_status = "A new {$modified_post->post_type} has been published at {$post_view_html}, {$edit_message}.";
 
 	} elseif ($status == "updated") {
-		$page_status = "An existing {$modified_post->post_type} has been updated at {$post_view_html}, {$edit_message}.";
+		$page_status = "An existing {$modified_post->post_type} has been updated at {$post_view_html}, {$edit_message}. ";
+		$page_status .= "{$revision_message}.";
 	} elseif ($status == "deleted") {
 		$page_status = "An existing {$modified_post->post_type} has been deleted, and can be restored at {$admin_edit_html}";
 	} elseif ($status == "restored") {
