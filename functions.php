@@ -240,6 +240,9 @@ function notify_me(  $new_status,  $old_status,  WP_Post $post ) {
 		} elseif ( $old_status === "new" && $new_status === "inherit" ) {
 			$care_about_this_change = false; // this happens all the time. ignore it.
 
+		} elseif ( $old_status === "new" && $new_status === "auto-draft" ) {
+			$care_about_this_change = false; // this happens all the time. ignore it.
+
 		} else {
 			// we can add new rules as needed in the future. for now, any other request, lets notate them in emails.
 			$content_status         = "{$old_status} to {$new_status}";
