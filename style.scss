@@ -276,10 +276,10 @@ figure {
 	display: flex;
 	overflow: auto;
 	flex-wrap: wrap;
+	justify-content:  space-around;
 
 	.single-article {
-		float: left;
-		width: 340px;
+		width: 30%;
 		margin: 10px;
 		background: $lightgrey;
 		padding: 15px;

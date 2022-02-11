@@ -49,11 +49,14 @@ figure figcaption {
 .wp-block-columns.right-column .wp-block-column {
   flex-basis: 33.3%;
   margin-left: 0; }
+
 .wp-block-columns.right-column .wp-block-column:first-child {
   flex-basis: 66.6%; }
+
 .wp-block-columns.left-column .wp-block-column {
   flex-basis: 33.3%;
   margin-left: 0; }
+
 .wp-block-columns.left-column .wp-block-column:last-child {
   flex-basis: 66.6%; }
 
@@ -121,6 +124,7 @@ figure figcaption {
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0; }
+
 #library-search .restricted {
   width: 10px;
   height: 60px;
@@ -149,18 +153,21 @@ figure figcaption {
   height: 350px;
   margin: 0 auto;
   display: block; }
+
 .single-news .post-info {
   padding: 15px 0 0 0; }
   .single-news .post-info li {
     list-style: none; }
     .single-news .post-info li span {
       margin: 0 0 5px 0; }
+
 .single-news .publish img.size-large:first-child {
   clear: both;
   width: 100%;
   height: inherit;
   display: block;
   margin: 0 0 25px 0; }
+
 .single-news .publish .large:first-letter {
   color: #222222;
   float: left;
@@ -173,10 +180,10 @@ figure figcaption {
 .news-archive {
   display: flex;
   overflow: auto;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
   .news-archive .single-article {
-    float: left;
-    width: 340px;
+    width: 30%;
     margin: 10px;
     background: #ececec;
     padding: 15px; }
@@ -294,6 +301,7 @@ figure figcaption {
 
 header nav .dropdown-menu .dropdown-menu {
   display: inline-block; }
+
 header nav .dropdown-menu div.submenu-header {
   display: block; }
 
@@ -405,6 +413,7 @@ header nav .dropdown-menu div.submenu-header {
 .single-person .return-tp {
   margin-bottom: 25px;
   display: block; }
+
 .single-person .person-addl-info {
   margin: 25px 0;
   font-size: .9em; }
@@ -434,6 +443,7 @@ header nav .dropdown-menu div.submenu-header {
     transform: translateZ(0);
     -webkit-animation: load8 1.1s infinite linear;
     animation: load8 1.1s infinite linear; }
+
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -441,6 +451,7 @@ header nav .dropdown-menu div.submenu-header {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -522,68 +533,67 @@ header nav .dropdown-menu div.submenu-header {
       display: none !important; }
   #main .side-nav {
     margin: 0 0 0 1.5rem; } }
+
 @media screen and (max-width: 999px) {
   .menu-expanded .tab-content div {
     width: 94% !important; }
-
   #main .nav {
     width: 100%;
     clear: both;
     float: none;
     margin: 0; }
-
   .news-archive .single-article {
     width: 100%; }
-
   .sort-nav .sort-items {
     width: 100%;
     clear: both;
     margin: 0 0 25px 0;
     padding-left: 0; } }
+
 @media screen and (max-width: 991px) {
   .single-news article iframe {
     width: 100%;
     height: 250px;
     margin: 0 auto;
     display: block; }
-
   .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item .com-dropdown {
     display: none; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown {
     display: block; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .nav-item.show .com-dropdown .com-submenu-header > a:first-child {
       font-weight: bold; } }
+
 @media screen and (min-width: 992px) {
-  	/*.navbar-toggleable-md {
-  
-  		.navbar-nav {
-  
-  			.dropdown-menu {
-  				width: 800px;
-  			    height: 200px;
-  			    overflow: auto;
-  			    display: inline-flex;
-  
-  			    .submenu-header {
-  			    	width: 30%;
-  			    	overflow: auto;
-  
-  			    	a {
-  			    		font-weight: bold;
-  			    	}
-  			    }
-  
-  			    .dropdown-menu {
-  			    	display: inline-block;
-  				    position: relative !important;
-  				    border: none;
-  				    top: 0;
-  				    background: transparent;
-  				    padding: 0;
-  			    }
-  			}
-  		}
-  	}*/
+  /*.navbar-toggleable-md {
+
+		.navbar-nav {
+
+			.dropdown-menu {
+				width: 800px;
+			    height: 200px;
+			    overflow: auto;
+			    display: inline-flex;
+
+			    .submenu-header {
+			    	width: 30%;
+			    	overflow: auto;
+
+			    	a {
+			    		font-weight: bold;
+			    	}
+			    }
+
+			    .dropdown-menu {
+			    	display: inline-block;
+				    position: relative !important;
+				    border: none;
+				    top: 0;
+				    background: transparent;
+				    padding: 0;
+			    }
+			}
+		}
+	}*/
   .site-collegeofmedicine .navbar-inverse #header-menu {
     justify-content: flex-end; }
   .site-collegeofmedicine .navbar-inverse .navbar-nav {
@@ -630,11 +640,11 @@ header nav .dropdown-menu div.submenu-header {
       top: 100%; }
     .site-collegeofmedicine .navbar-inverse .navbar-nav .dropdown.show .dropdown-toggle:after {
       border-top-color: #222222 !important; } }
+
 @media screen and (min-width: 768px) {
   .h1.font-condensed, h1.font-condensed {
     font-size: 3.375rem !important; } }
+
 @media screen and (max-width: 771px) {
   #main .side-nav {
     display: none; } }
-
-/*# sourceMappingURL=style.css.map */
