@@ -35,7 +35,7 @@ if ($show_right_side_nav || $legacy_right_side_custom_data){
 
     if ($show_right_side_nav){
         echo "
-        <nav class='navbar navbar-side navbar-toggleable-lg navbar-light bg-faded'>
+        <nav class='navbar navbar-side navbar-sidebar navbar-toggleable-lg navbar-light bg-faded'>
           <h3 class='navbar-brand'>In This Section</h3>
 
 <div class='container'>

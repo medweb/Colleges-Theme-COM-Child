@@ -585,7 +585,7 @@ header nav {
 		overflow:  hidden;
 	}
 
-	.navbar-side {
+	.navbar-sidebar {
 		z-index:  99;
 		flex-wrap: wrap;
 		margin: 0 0 1.5rem 1.5rem;
@@ -595,26 +595,29 @@ header nav {
 		.navbar-brand {
 
 		}
-	}
 
-	.autonav {
+		.autonav {
 
-		padding-inline-start: 0;
+			padding-inline-start: 0;
 
-		li {
-			list-style: none;
-			border-bottom: 1px solid #ccc;
+			li {
+				list-style: none;
+				border-bottom: 1px solid #ccc;
 
-			a {
-				display: block;
-				padding: 15px 15px 15px 0px;
+				a {
+					display: block;
+					padding: 15px 15px 15px 0px;
 
-				&:hover {
-					
+					&:hover {
+						
+					}
 				}
 			}
 		}
+	
 	}
+
+
 }
 
 .single-person {

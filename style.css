@@ -395,20 +395,20 @@ header nav .dropdown-menu div.submenu-header {
     z-index: 99;
     position: relative;
     overflow: hidden; }
-  #main .navbar-side {
+  #main .navbar-sidebar {
     z-index: 99;
     flex-wrap: wrap;
     margin: 0 0 1.5rem 1.5rem;
     width: 30%;
     float: right; }
-  #main .autonav {
-    padding-inline-start: 0; }
-    #main .autonav li {
-      list-style: none;
-      border-bottom: 1px solid #ccc; }
-      #main .autonav li a {
-        display: block;
-        padding: 15px 15px 15px 0px; }
+    #main .navbar-sidebar .autonav {
+      padding-inline-start: 0; }
+      #main .navbar-sidebar .autonav li {
+        list-style: none;
+        border-bottom: 1px solid #ccc; }
+        #main .navbar-sidebar .autonav li a {
+          display: block;
+          padding: 15px 15px 15px 0px; }
 
 .single-person .return-tp {
   margin-bottom: 25px;
