@@ -12,6 +12,31 @@
  Text Domain:  Colleges-Theme-COM-Child
 */
 
+/* Tab Styles */
+
+.person-content {
+	.nav-tabs {
+		margin-bottom: 1.5rem;
+		border: none;
+
+		.nav-link {
+			margin: 0;
+			padding: 20px 10px;
+			background-color: #fcfcfc;
+
+			&.active {
+				border: none;
+				background-color: #ececec;
+				margin: 0;
+			}
+
+			&:hover {
+				margin: 0;
+			}
+		}
+	}
+}
+
 /* Colors */
 $grey: #cccccc;
 $lightgrey: #ececec;
