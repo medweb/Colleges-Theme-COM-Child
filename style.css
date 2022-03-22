@@ -11,6 +11,9 @@
  Tags:         ucf
  Text Domain:  Colleges-Theme-COM-Child
 */
+.alert {
+  overflow: auto; }
+
 /* Tab Styles */
 .person-content .nav-tabs {
   margin-bottom: 1.5rem;
@@ -494,28 +497,6 @@ header nav .dropdown-menu div.submenu-header {
   #library-search #search-pagination-alternate-top,
   #library-search #search-pagination-alternate-bottom {
     display: none; }
-  #library-search .pagination {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 50px 0;
-    clear: both; }
-    #library-search .pagination li {
-      display: block;
-      float: left;
-      list-style: none;
-      text-indent: 0;
-      margin: 0;
-      padding: 0; }
-      #library-search .pagination li.active a {
-        background: #ffe47c;
-        font-weight: bold; }
-      #library-search .pagination li a {
-        display: block;
-        padding: 5px 15px;
-        margin-bottom: 10px; }
   #library-search .book {
     overflow: hidden;
     margin: 0 0 25px 0;
@@ -537,6 +518,32 @@ header nav .dropdown-menu div.submenu-header {
     background: white;
     position: relative;
     margin-top: 50px; }
+
+.pagination {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px 0;
+  clear: both; }
+  .pagination li,
+  .pagination .page-numbers {
+    display: block;
+    background: #efefef;
+    float: left;
+    list-style: none;
+    text-indent: 0;
+    margin: 0 0 1rem 0;
+    padding: 1rem 2rem; }
+    .pagination li.active, .pagination li.current,
+    .pagination .page-numbers.active,
+    .pagination .page-numbers.current {
+      background: #ffe47c; }
+    .pagination li a,
+    .pagination .page-numbers a {
+      display: block;
+      margin-bottom: 10px; }
 
 @media screen and (max-width: 1199px) {
   #main .navbar-side {
