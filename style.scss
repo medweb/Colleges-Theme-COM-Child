@@ -731,6 +731,7 @@ header nav {
 			width: 120px;
 			background: $yellow;
 			cursor: pointer;
+			border:  none;
 		}
 	}
 
@@ -784,6 +785,38 @@ header nav {
 		position: relative;
 		margin-top: 50px;
 	}
+
+	.pagination {
+
+		li {
+			padding:  0 !important;
+			margin:  0 1rem !important;
+			background: transparent;
+
+			a {
+				border:  none;
+				padding:  1rem;
+				background: $yellow;
+
+				&:hover {
+					background: $yellow-hover;
+				}
+
+			}
+
+			&.active {
+				a {
+					background: $yellow-hover;
+				}
+			}
+
+			&.disabled {
+				a {
+					background:  $grey;
+				}
+			}
+		}
+	}
 }
 
 .pagination {
@@ -808,6 +841,7 @@ header nav {
 		&.active,
 		&.current {
 			background: $yellow-hover;
+			font-weight:  bold;
 		}
 
 		a {
