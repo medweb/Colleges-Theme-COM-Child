@@ -195,11 +195,11 @@ function custom_login_style() {
 
 
 // Force login for dev
-function rl_redirect(){
-	if (!is_user_logged_in()) {
-		auth_redirect();
-	}
-}
+//function rl_redirect(){
+//	if (!is_user_logged_in()) {
+//		auth_redirect();
+//	}
+//}
 
 // Custom sitemap shortcode
 add_shortcode('sitemap', 'wp_sitemap_page');
@@ -282,19 +282,19 @@ add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
 
 
 // Run environment options and functions
-switch ( ENVIRONMENT ):
-	case 'local':
-	case 'dev':
-		add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
-		break;
-	case 'staging':
-		add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
-		break;
-	case 'production':
-		break;
-	default:
-		break;
-endswitch;
+//switch ( ENVIRONMENT ):
+//	case 'local':
+//	case 'dev':
+//		add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
+//		break;
+//	case 'staging':
+//		add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
+//		break;
+//	case 'production':
+//		break;
+//	default:
+//		break;
+//endswitch;
 
 add_filter( "single_template", "get_custom_single_template" ) ;
 
