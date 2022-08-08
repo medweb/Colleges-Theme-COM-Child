@@ -12,6 +12,12 @@
  Text Domain:  Colleges-Theme-COM-Child
 */
 
+/* Fixes For Native WP or UCF Things */
+
+.tabs .wp-block-column:first-child {
+	margin-right: 25px;
+}
+
 .alert {
 	overflow:  auto;
 }
