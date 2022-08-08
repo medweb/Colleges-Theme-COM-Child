@@ -170,6 +170,9 @@ figure figcaption {
 .news article small {
   display: none !important; }
 
+.single-news .btn-news-cats {
+  background-color: #cccccc; }
+
 .single-news article iframe {
   width: 60%;
   height: 350px;

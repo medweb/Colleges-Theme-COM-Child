@@ -132,7 +132,7 @@ function custom_taxonomies_terms_links($taxonomy = null) {
 		$terms = get_the_terms( $post->ID, $taxonomy );
 		if ( !empty( $terms ) ) {
 			foreach ( $terms as $term )
-				$out .= '<span class="btn btn-info btn-sm">'.$term->name.'</span> ';
+				$out .= '<span class="btn btn-sm btn-news-cats">'.$term->name.'</span> ';
 		}
 		$out .= "</li>";
 	$out .= "</ul>";
