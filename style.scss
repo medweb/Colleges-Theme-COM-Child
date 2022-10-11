@@ -14,8 +14,13 @@
 
 /* Fixes For Native WP or UCF Things */
 
-.alert {
+.alert,
+.wp-block-separator {
 	overflow:  auto;
+}
+
+.wp-block-spacer {
+	clear:  none;
 }
 
 /* Tab Styles */
@@ -626,6 +631,9 @@ header nav {
 		margin: 0 0 1.5rem 1.5rem;
 		width:  30%;
 		float:  right;
+		position: relative;
+		overflow:  hidden;
+		clear:  right;
 
 		.navbar-brand {
 
