@@ -14,10 +14,6 @@
 
 /* Fixes For Native WP or UCF Things */
 
-.tabs .wp-block-column:first-child {
-	margin-right: 25px;
-}
-
 .alert {
 	overflow:  auto;
 }
@@ -888,7 +884,7 @@ header nav {
 	.menu-expanded {
 		.tab-content {
 			div {
-				width: 94% !important;
+				/* width: 94% !important; */ /* Removed Aug 22 by Matt for interference with spotlight plugin */
 			}
 		}
 	}
@@ -958,6 +954,11 @@ header nav {
 	}
 }
 @media screen and (min-width: 992px) {
+
+	.tabs .wp-block-column:first-child {
+		margin-right: 25px;
+	}
+
 	/*.navbar-toggleable-md {
 
 		.navbar-nav {
@@ -1094,6 +1095,10 @@ header nav {
 }
 
 @media screen and (max-width: 576px) {
+
+	.tabs .wp-block-column:first-child {
+		margin-bottom: 15px;
+	}
 
 }
 

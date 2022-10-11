@@ -38,7 +38,7 @@ $max_articles_to_show = 15; // number of articles to show
 
 					<?php if ( get_field( 'ucfp_lab_website_url' ) ): ?>
 					<p>
-						<a class="btn btn-complementary" href="<?php echo get_field( 'ucfp_lab_website_url' ); ?>" target="_blank">Lab Website</a>
+						<a class="btn btn-complementary btn-block" href="<?php echo get_field( 'ucfp_lab_website_url' ); ?>" target="_blank">Lab Website</a>
 					</p>
 					<?php endif; ?>
 

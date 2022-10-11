@@ -12,9 +12,6 @@
  Text Domain:  Colleges-Theme-COM-Child
 */
 /* Fixes For Native WP or UCF Things */
-.tabs .wp-block-column:first-child {
-  margin-right: 25px; }
-
 .alert {
   overflow: auto; }
 
@@ -581,7 +578,8 @@ header nav .dropdown-menu div.submenu-header {
 
 @media screen and (max-width: 999px) {
   .menu-expanded .tab-content div {
-    width: 94% !important; }
+    /* width: 94% !important; */
+    /* Removed Aug 22 by Matt for interference with spotlight plugin */ }
   #main .nav {
     width: 100%;
     clear: both;
@@ -609,6 +607,8 @@ header nav .dropdown-menu div.submenu-header {
       font-weight: bold; } }
 
 @media screen and (min-width: 992px) {
+  .tabs .wp-block-column:first-child {
+    margin-right: 25px; }
   /*.navbar-toggleable-md {
 
 		.navbar-nav {
@@ -693,3 +693,7 @@ header nav .dropdown-menu div.submenu-header {
 @media screen and (max-width: 771px) {
   #main .side-nav {
     display: none; } }
+
+@media screen and (max-width: 576px) {
+  .tabs .wp-block-column:first-child {
+    margin-bottom: 15px; } }
