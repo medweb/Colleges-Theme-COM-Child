@@ -606,6 +606,8 @@ header nav .dropdown-menu div.submenu-header {
     clear: both;
     float: none;
     margin: 0; }
+  .single-person #main .person-content .nav {
+    margin: 0 0 2rem 0; }
   .news-archive .single-article {
     width: 100%; }
   .sort-nav .sort-items {
