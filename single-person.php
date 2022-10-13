@@ -1,13 +1,8 @@
-<?php get_header(); the_post(); ?>
+<?php get_header(); the_post(); 
 
-<!-- Add Search Bar here to be floated right of page title -->
+//do_action( 'single_person_before_article'); // allows plugins (ie the directory) to add data (like the search bar)
 
-<?php
-do_action( 'single_person_before_article'); // allows plugins (ie the directory) to add data (like the search bar)
-
-$max_articles_to_show = 15; // number of articles to show
-
-?>
+$max_articles_to_show = 15; // number of articles to show ?>
 
 <article class="<?php echo $post->post_status; ?> post-list-item">
 	<div class="container my-5">
@@ -55,7 +50,7 @@ $max_articles_to_show = 15; // number of articles to show
 
 			</div>
 
-			<div class="col-md-8 col-lg-7 pl-md-5">
+			<div class="col-md-8 pl-md-5">
 
 				<?php if( get_field('ucf_tf_person') ) { ?> <div class="alert alert-warning" role="alert">IF YOU ARE A UCF HEALTH PATIENT OF THIS PHYSICIAN AND WISH TO COMMUNICATE WITH THEM, PLEASE USE THE <a href="https://ucfhealth.com/patient-portal/">PATIENT PORTAL</a>.</div> <?php } ?>
 

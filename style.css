@@ -166,7 +166,10 @@ figure figcaption {
     width: 30%; }
   .searchbar input#searchsubmit {
     background: #f7c100;
-    border-color: #f7c100; }
+    border: solid 2px #f7c100;
+    cursor: pointer;
+    width: 120px;
+    margin: 0 0 0 .5rem; }
 
 .news article small {
   display: none !important; }
@@ -439,6 +442,18 @@ header nav .dropdown-menu div.submenu-header {
           display: block;
           padding: 15px 15px 15px 0px; }
 
+.single-person .site-header > .container {
+  overflow: auto; }
+  .single-person .site-header > .container strong.h1 {
+    float: left; }
+
+.single-person .searchbar {
+  margin-top: 1.5rem;
+  float: right; }
+  .single-person .searchbar .searchbar {
+    float: none;
+    width: 300px; }
+
 .single-person .return-tp {
   margin-bottom: 25px;
   display: block; }
@@ -495,8 +510,7 @@ header nav .dropdown-menu div.submenu-header {
     #library-search input[type="submit"] {
       width: 120px;
       background: #f7c100;
-      cursor: pointer;
-      border: none; }
+      cursor: pointer; }
   #library-search select {
     margin: 10px 10px 10px 0;
     background: #ececec;

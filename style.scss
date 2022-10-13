@@ -248,7 +248,10 @@ figure {
 
 		&#searchsubmit {
 			background: $yellow;
-			border-color: $yellow;
+			border:  solid 2px #f7c100;
+			cursor:  pointer;
+			width:  120px;
+			margin:  0 0 0 .5rem;
 		}
 	}
 }
@@ -665,6 +668,26 @@ header nav {
 
 .single-person {
 
+	.site-header {
+		>.container {
+			overflow:  auto;
+
+			strong.h1 {
+				float:  left;
+			}
+		}
+	}
+
+	.searchbar {
+		margin-top:  1.5rem;
+		float:  right;
+
+		.searchbar {
+			float:  none;
+			width:  300px;
+		}
+	}
+
 	.return-tp {
 		margin-bottom: 25px;
 		display: block;
@@ -745,7 +768,6 @@ header nav {
 			width: 120px;
 			background: $yellow;
 			cursor: pointer;
-			border:  none;
 		}
 	}
 
