@@ -1,4 +1,6 @@
-<?php get_header(); the_post(); 
+<?php
+global $post;
+get_header('person'); the_post();
 
 //do_action( 'single_person_before_article'); // allows plugins (ie the directory) to add data (like the search bar)
 

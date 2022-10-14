@@ -46,7 +46,7 @@ class colleges_theme_com_child_header_functions {
 	/**
 	 * Get the markup for the primary site navbar.
 	 **/
-	function get_nav_markup_com() {
+	static function get_nav_markup_com() {
 		ob_start();
 		?>
 		<?php if ( get_current_blog_id() === 1 ) { ?>
