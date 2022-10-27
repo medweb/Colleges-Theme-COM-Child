@@ -179,8 +179,50 @@ class colleges_theme_com_child_header_functions {
 	    if ( $videos || $images ) {
 		    echo get_header_media_markup( $obj, $videos, $images );
 	    } else {
-		    echo get_header_default_markup( $obj );
+		    echo self::get_header_default_markup_com( $obj );
 	    }
+    }
+
+    /**
+     * Returns the default markup for page headers.
+     *
+     * @param $obj
+     * @return false|string
+     */
+    static function get_header_default_markup_com( $obj ) {
+        $title         = get_header_title( $obj );
+        $subtitle      = get_header_subtitle( $obj );
+        $extra_content = '';
+
+        if ( is_single() || is_page() ) {
+            $extra_content = get_field( 'page_header_extra_content', $obj->ID );
+        }
+
+        ob_start();
+        ?>
+        <div class="container">
+            <?php
+            // Don't print multiple h1's on the page for person templates
+            if ( is_single() && $obj->post_type === 'person' ):
+                ?>
+                <strong class="h1 d-block mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></strong>
+            <?php else: ?>
+                <h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></h1>
+            <?php endif; ?>
+
+            <?php if ( $subtitle ): ?>
+                <p class="lead mb-4 mb-md-5"><?php echo $subtitle; ?></p>
+            <?php endif; ?>
+
+            <?php if ( $extra_content ): ?>
+                <div class="mb-4 mb-md-5"><?php echo $extra_content; ?></div>
+            <?php endif; ?>
+            <?php
+            do_action( 'header_default_markup_container_end'); // allows plugins (ie the directory) to add data (like the search bar)
+            ?>
+        </div>
+        <?php
+        return ob_get_clean();
     }
 }
 add_action( 'init', ['colleges_theme_com_child_header_functions','register_my_menus' ] );
