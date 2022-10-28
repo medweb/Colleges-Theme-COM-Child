@@ -28,15 +28,19 @@ $max_articles_to_show = 15; // number of articles to show ?>
 					<?php endif; ?>
 
 					<?php if ( $cv_url = get_field( 'person_cv' ) ): ?>
-					<p>
-						<a class="btn btn-secondary mt-3" href="<?php echo $cv_url; ?>">Download CV</a>
-					</p>
+					<div class="row mt-3">
+						<div class="col-md offset-md-0 col-8 offset-2 my-1">
+							<a class="btn btn-secondary mt-3" href="<?php echo $cv_url; ?>">Download CV</a>
+						</div>
+					</div>
 					<?php endif; ?>
 
 					<?php if ( get_field( 'ucfp_lab_website_url' ) ): ?>
-					<p>
-						<a class="btn btn-complementary btn-block" href="<?php echo get_field( 'ucfp_lab_website_url' ); ?>" target="_blank">Lab Website</a>
-					</p>
+					<div class="row mt-3">
+						<div class="col-md offset-md-0 col-8 offset-2 my-1">
+							<a class="btn btn-complementary btn-block" href="<?php echo get_field( 'ucfp_lab_website_url' ); ?>" target="_blank">Lab Website</a>
+						</div>
+					</div>
 					<?php endif; ?>
 
 					<?php echo get_person_contact_btns_markup( $post ); ?>

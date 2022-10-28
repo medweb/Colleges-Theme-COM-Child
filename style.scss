@@ -1134,6 +1134,14 @@ header nav {
 			display:  none;
 		}
 	}
+
+	.single-person {
+		.searchbar {
+			float:  none;
+			clear:  both;
+		}
+	
+	}
 }
 
 @media screen and (max-width: 576px) {

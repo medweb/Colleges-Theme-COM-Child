@@ -715,7 +715,10 @@ header nav .dropdown-menu div.submenu-header {
 
 @media screen and (max-width: 771px) {
   #main .side-nav {
-    display: none; } }
+    display: none; }
+  .single-person .searchbar {
+    float: none;
+    clear: both; } }
 
 @media screen and (max-width: 576px) {
   .tabs .wp-block-column:first-child {

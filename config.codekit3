@@ -100,6 +100,14 @@
       "oAP" : "\/header-newsletters.php",
       "oF" : 0
     },
+    "\/header-person.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/header-person.php",
+      "oF" : 0
+    },
     "\/header.php" : {
       "cB" : 0,
       "ft" : 8192,
