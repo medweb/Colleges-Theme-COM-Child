@@ -181,9 +181,9 @@ $articles_per_row = 2;
 														wp_reset_postdata();
 
 														// now grab any ucf health articles
-														add_filter( 'wp_feed_cache_transient_lifetime', create_function('$a', 'return 600;') ); // refresh every 10 minutes
+														add_filter( 'wp_feed_cache_transient_lifetime', function(){return 600;} ); // refresh every 10 minutes
 														$feed = fetch_feed("https://ucfhealth.com/feed/?post_type=news&news_category=crosspost-to-com");
-														remove_filter( 'wp_feed_cache_transient_lifetime' , create_function('$a', 'return 600;') );
+														remove_filter( 'wp_feed_cache_transient_lifetime' , function(){return 600;} );
 
 
 														if ( ! is_wp_error( $feed)) {
