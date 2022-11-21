@@ -198,11 +198,14 @@ $articles_per_row = 2;
 																$htmlDOM = new simple_html_dom();
 																$htmlDOM->load( $item->get_content() );
 																$image     = $htmlDOM->find( 'img', 0 );
-																$image_url = $image->src;
-
-																// remove images for description
-																$image->outertext = '';
-																$htmlDOM->save();
+																if ($image){
+                                                                    $image_url = $image->src;
+                                                                    if ($image->outertext) {
+                                                                        // remove images for description
+                                                                        $image->outertext = '';
+                                                                        $htmlDOM->save();
+                                                                    }
+                                                                }
 
 																$content_minus_image = wp_trim_words( $htmlDOM, new_excerpt_length(), new_excerpt_more() ); // these functions are defined in functions.php
 
