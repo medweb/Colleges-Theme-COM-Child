@@ -90,8 +90,10 @@ class archive_news_shortcode extends com_shortcode {
 			// by passed in parameters.
 			$archive_news_year = get_query_var('years');
 			if (is_array($archive_news_year)){
-				$archive_news_year = $archive_news_year[0]; //with arrays, just take the first one. can't filter multiple categories.
-			}
+				$archive_news_year = intval($archive_news_year[0]); //with arrays, just take the first one. can't filter multiple categories.
+			} else {
+                $archive_news_year = intval($archive_news_year);
+            }
 		}
 		if (($attrs[ self::tinymce_archive_news_per_page]) && (is_numeric( $attrs[ self::tinymce_archive_news_per_page])) && ($attrs[ self::tinymce_archive_news_per_page] > 0)){
 			$news_archive_count = $attrs[ self::tinymce_archive_news_per_page];
