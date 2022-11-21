@@ -129,6 +129,7 @@ if (!class_exists('bs4Navwalker_com')) {
             $atts['target'] = !empty($item->target) ? $item->target : '';
             $atts['rel'] = !empty($item->xfn) ? $item->xfn : '';
             $atts['href'] = !empty($item->url) ? $item->url : '';
+            $atts['class'] = "";
 
             // New
             if ($depth === 0) {
