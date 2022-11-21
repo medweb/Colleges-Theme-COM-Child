@@ -142,8 +142,8 @@ function body_class_for_pages( $classes ) {
 	// convert the string to all lowercase
 	$sitename_clean = strtolower($sitename);
 
-	$classes[] = 'page-' . (!empty($post) && isset($post->post_name)) ? $post->post_name : '';
-	$classes[] = 'site-' . $sitename_clean;
+	$classes[] = 'page-' . $post->post_name ?? '';
+	$classes[] = 'site-' . $sitename_clean ?? '';
 
 	return $classes;
 
