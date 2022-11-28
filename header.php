@@ -2,6 +2,19 @@
 <html lang="en-us">
 	<head>
 		<?php wp_head(); ?>
+
+		<!-- TEMP ADDITION FOR ANALYTICS 4 TESTING -->
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EF3R36YKVE"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-EF3R36YKVE');
+		</script>
+
 	</head>
 	<body ontouchstart <?php body_class(); ?>>
 		<?php do_action( 'after_body_open' ); ?>
