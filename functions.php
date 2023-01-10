@@ -298,6 +298,25 @@ add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
 
 add_filter( "single_template", "get_custom_single_template" ) ;
 
+/**
+ * Allows super admin users to stay logged in for 3 months.
+ * On single sites, that expiration is set for regular admins.
+ * @param $expiration int
+ * @param $user_id
+ * @param $remember
+ * @return int
+ */
+function custom_cookie_lifetime( $expiration, $user_id, $remember ): int
+{    if (is_multisite() && ( is_super_admin( $user_id ) ) ) {
+        return 7776000; // 3 months in seconds (60*60*24*30*3)
+    } elseif (current_user_can('administrator')) {
+        return 7776000; // 3 months in seconds (60*60*24*30*3)
+    } else {
+        return $expiration; // default expiration for regular users
+    }
+}
+add_filter( 'auth_cookie_expiration', 'custom_cookie_lifetime', 10, 3 );
+
 // TERTIARY server detection
 if (defined('TERTIARY_SERVER')){
 	if (TERTIARY_SERVER === true){
