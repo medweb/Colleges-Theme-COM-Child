@@ -208,11 +208,12 @@ class colleges_theme_com_child_header_functions {
                 <strong class="h1 d-block mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></strong>
             <?php else: ?>
                 <h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></h1>
+                <?php if ( $subtitle ): ?>
+                    <p class="lead mb-4 mb-md-5"><?php echo $subtitle; ?></p>
+                <?php endif; ?>
             <?php endif; ?>
 
-            <?php if ( $subtitle ): ?>
-                <p class="lead mb-4 mb-md-5"><?php echo $subtitle; ?></p>
-            <?php endif; ?>
+
 
             <?php if ( $extra_content ): ?>
                 <div class="mb-4 mb-md-5"><?php echo $extra_content; ?></div>
@@ -226,10 +227,3 @@ class colleges_theme_com_child_header_functions {
     }
 }
 add_action( 'init', ['colleges_theme_com_child_header_functions','register_my_menus' ] );
-
-
-
-
-
-
-
