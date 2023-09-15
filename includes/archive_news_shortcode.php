@@ -156,12 +156,12 @@ class archive_news_shortcode extends com_shortcode {
 					'terms'    => 'external-news',
 					'operator' => 'NOT IN',
 				),
-				array(
-					'taxonomy' => 'news_category',
-					'field'    => 'slug',
-					'terms'    => 'health-sciences-campus-news',
-					'operator' => 'NOT IN',
-				),
+//				array(
+//					'taxonomy' => 'news_category',
+//					'field'    => 'slug',
+//					'terms'    => 'health-sciences-campus-news',
+//					'operator' => 'NOT IN',
+//				),
 			);
 		}
 		$args = array(
@@ -211,4 +211,3 @@ class archive_news_shortcode extends com_shortcode {
 	}
 	
 }
-
