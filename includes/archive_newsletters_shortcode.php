@@ -150,13 +150,15 @@ class archive_newsletters_shortcode extends com_shortcode {
 		$args = array(
 			'post_type' => 'newsletters',
 			'paged' => get_query_var('paged'),
-			'tax_query' => $tax_query,
-			'date_query' => array(
-				array(
-					'year'  => $archive_newsletters_year,
-				)
-			)
+			'tax_query' => $tax_query
 		);
+        if ($archive_newsletters_year) {
+            $args['date_query'] = array(
+                array(
+                    'year'  => $archive_newsletters_year,
+                )
+            );
+        }
 
 		$wp_query = new WP_Query( $args );
 		$return = '';
@@ -195,4 +197,3 @@ class archive_newsletters_shortcode extends com_shortcode {
 	}
 	
 }
-
