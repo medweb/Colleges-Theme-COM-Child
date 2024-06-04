@@ -21,7 +21,7 @@ get_template_part( 'includes/permalinks' );
 get_template_part('includes/preload');
 
 // Email log on page changes
-//get_template_part('includes/email-notification');
+get_template_part('includes/email-notification');
 
 // Disable anonymous access to the wordpress rest api
 get_template_part('includes/disable-anonymous-api');
