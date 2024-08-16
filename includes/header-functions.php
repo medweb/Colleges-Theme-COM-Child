@@ -165,7 +165,9 @@ class colleges_theme_com_child_header_functions {
 		return ob_get_clean();
 	}
 
-    static function get_header_markup_com() {
+    static function get_header_markup_com(): string
+    {
+        $return = "";
 	    $videos = $images = null;
 	    $obj    = get_queried_object();
 
@@ -174,13 +176,15 @@ class colleges_theme_com_child_header_functions {
 		    $images = get_header_images( $obj );
 	    }
 
-	    echo self::get_nav_markup_com();
+	    $return .= self::get_nav_markup_com();
 
 	    if ( $videos || $images ) {
-		    echo get_header_media_markup( $obj, $videos, $images );
+            $return .= get_header_media_markup( $obj, $videos, $images );
 	    } else {
-		    echo self::get_header_default_markup_com( $obj );
+            $return .= self::get_header_default_markup_com( $obj );
 	    }
+
+        return $return;
     }
 
     /**
@@ -189,7 +193,8 @@ class colleges_theme_com_child_header_functions {
      * @param $obj
      * @return false|string
      */
-    static function get_header_default_markup_com( $obj ) {
+    static function get_header_default_markup_com( $obj ): bool|string
+    {
         $title         = get_header_title( $obj );
         $subtitle      = get_header_subtitle( $obj );
         $extra_content = '';
