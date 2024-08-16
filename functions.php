@@ -296,34 +296,4 @@ function custom_cookie_lifetime( $expiration, $user_id, $remember ): int
 }
 add_filter( 'auth_cookie_expiration', 'custom_cookie_lifetime', 10, 3 );
 
-// TERTIARY server detection
-if (defined('TERTIARY_SERVER')){
-	if (TERTIARY_SERVER === true){
-		// disable the social board plugin, and any other we need to.
-		add_action( 'init', 'disable_bad_plugins' );
-
-	}
-}
-
-/**
- * Only runs if the server is currently hosted on the tertiary server. Due to firewall rules and
- * odd php versions, some plugins can cause pages to crash and should be disabled during the
- * period that the tertiary server is serving the failover site.
- */
-function disable_bad_plugins(){
-
-	$array_bad_plugins = array(
-		'ax-social-stream/ax-social-stream.php',
-	);
-	$array_bad_shortcodes = array(
-		'social_board',
-	);
-
-	deactivate_plugins( $array_bad_plugins );
-
-	foreach ($array_bad_shortcodes as $bad_shortcode){
-		remove_shortcode($bad_shortcode);
-	}
-}
-
 ?>
