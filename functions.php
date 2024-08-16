@@ -283,22 +283,6 @@ function prefix_remove_background_updates_test( $tests ) {
 }
 add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
 
-
-// Run environment options and functions
-switch ( ENVIRONMENT ):
-	case 'local':
-	case 'dev':
-//		add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
-		break;
-	case 'staging':
-//		add_action('get_header', 'rl_redirect'); // force login for dev. using add_action prevents infinite loops
-		break;
-	case 'production':
-		break;
-	default:
-		break;
-endswitch;
-
 add_filter( "single_template", "get_custom_single_template" ) ;
 
 /**
