@@ -275,14 +275,6 @@ if ( get_current_blog_id() != '1' ) {
 
 }
 
-// suppress site-health.php warning for disabled automatic updates.
-// we disable them on purpose and update wordpress core and plugins manually. no need to have it complain about it.
-function prefix_remove_background_updates_test( $tests ) {
-	unset( $tests['async']['background_updates'] );
-	return $tests;
-}
-add_filter( 'site_status_tests', 'prefix_remove_background_updates_test' );
-
 add_filter( "single_template", "get_custom_single_template" ) ;
 
 /**
