@@ -19,8 +19,14 @@ const status_updated = "updated";
 const status_restored = "restored";
 const status_published = "published";
 const status_deleted = "deleted";
+const hosts_array = array("med.ucf.edu"); // define hosts that activate email notifications (in order to ignore dev/test)
 
-add_action( 'transition_post_status', 'notify_me', 10, 3);
+$host = parse_url( get_site_url(), PHP_URL_HOST );
+if (in_array($host, hosts_array)){
+    // only notify on page changes for the main site. don't send emails when dev pages change.
+    add_action( 'transition_post_status', 'notify_me', 10, 3);
+}
+
 
 /**
  * Notify admins about page changes for specific post types and statuses.
