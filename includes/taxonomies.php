@@ -87,7 +87,7 @@ add_action( 'manage_posts_custom_column', 'govid_custom_column', 10, 2 );
 function govid_custom_column( $column_name, $post_id ) {
 	global $wpdb;
 	if( 'news_category' == $column_name ) {
-		$tags = get_the_terms( $post->ID, 'news_category' );
+		$tags = get_the_terms( $post_id, 'news_category' );
 
 		if ( !empty( $tags ) ) {
 			$out = array();
