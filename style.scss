@@ -347,7 +347,32 @@ figure {
 	}
 }
 
+.site-footer {
+	a {
+		color: #fff;
+		text-decoration: none;
+
+		&:hover {
+			color: #ececec;
+		}
+	}
+}
+
 .social-icons {
+	padding: 0;
+
+	li {
+		list-style-type: none;
+		padding: 0 0 5px 0;
+
+			a {
+				text-decoration: none;
+			}
+	}
+}
+
+
+/* .social-icons {
 	list-style-type: none;
 	padding: 0;
 
@@ -389,7 +414,7 @@ figure {
 			background-position: 0 -165px;
 		}
 	}
-}
+} */
 
 .related-content {
 	display: flex;

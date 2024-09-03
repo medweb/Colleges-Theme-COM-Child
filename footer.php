@@ -46,12 +46,12 @@
 							  	<h2 class="h6 heading-underline letter-spacing-3">Social Media</h2>		
 			
 								<ul class="social-icons">
-								    <li><a href="https://www.facebook.com/ourMedicalSchool" class="facebook" alt="See us on Facebook" title="See us on Facebook" target="_blank">Facebook</a></li>
-								    <li><a href="https://www.instagram.com/ourMedSchool" class="instagram" alt="See us on Instagram" title="See us on Instagram" target="_blank">Instagram</a></li>
-								    <li><a href="https://twitter.com/ourmedschool" class="twitter" alt="Follow us on Twitter" title="Follow us on Twitter" target="_blank">Twitter</a></li>
-								    <li><a href="https://www.flickr.com/photos/ourmedschool/albums" class="flickr" alt="See us on Flickr" title="See us on Flickr" target="_blank">Flickr</a></li>
-								    <li><a href="https://www.youtube.com/ourmedicalschool" class="youtube" alt="See us on YouTube" title="See us on YouTube" target="_blank">YouTube</a></li>
-									<li><a href="https://www.linkedin.com/school/university-of-central-florida-college-of-medicine/" class="linkedin" alt="See us on LinkedIn" title="See us on LinkedIn" target="_blank">LinkedIn</a></li>
+								    <li><a href="https://www.facebook.com/UCFMed" class="facebook" alt="See us on Facebook" title="See us on Facebook" target="_blank"><i class="fa fa-brands fa-facebook mr-2"></i>Facebook</a></li>
+								    <li><a href="https://www.instagram.com/ucfmed" class="instagram" alt="See us on Instagram" title="See us on Instagram" target="_blank"><i class="fa fa-brands fa-instagram mr-2"></i>Instagram</a></li>
+								    <li><a href="https://x.com/UCFMed" class="twitter" alt="Follow us on Twitter" title="Follow us on Twitter" target="_blank"><i class="fa fa-brands fa-twitter mr-2"></i>X</a></li>
+								    <li><a href="https://www.flickr.com/photos/ourmedschool/albums" class="flickr" alt="See us on Flickr" title="See us on Flickr" target="_blank"><i class="fa fa-brands fa-flickr mr-2"></i>Flickr</a></li>
+								    <li><a href="https://www.youtube.com/ourmedicalschool" class="youtube" alt="See us on YouTube" title="See us on YouTube" target="_blank"><i class="fa fa-brands fa-youtube mr-2"></i>YouTube</a></li>
+									<li><a href="https://www.linkedin.com/school/ucfmed/" class="linkedin" alt="See us on LinkedIn" title="See us on LinkedIn" target="_blank"><i class="fa fa-brands fa-linkedin mr-2"></i>LinkedIn</a></li>
 								</ul>
 
 							<?php } ?>
