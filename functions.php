@@ -121,6 +121,14 @@ function com_child_theme_scripts() {
 		);
 	}
 
+	wp_enqueue_script(
+        'ucf-career-page-embed',
+        "https://careers-content.clearcompany.com/js/v1/career-site.js?siteId=a01e8e2d-0f1d-2586-1830-5910e6e7d498",
+        array ( ),
+        null,
+        false
+    );
+
 	// register, but don't enqueue this script. it will be enqueued if a page content has the shortcode.
 	/*wp_register_script(
 		'view-all-events-script',

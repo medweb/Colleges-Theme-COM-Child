@@ -9,7 +9,7 @@ $args = array (
     'depth' => 1,
     'title_li' => '',
     'echo' => 0,
-    'post_status' => 'publish'
+    'post_status' => array ('publish' ),
 );
 
 
