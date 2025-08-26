@@ -145,8 +145,14 @@ figure {
 }
 
 .wp-block-quote {
-	border-left: 6px solid #ccc;
-	padding: 10px;
+	border-bottom: 1px solid #333;
+	border-top: 8px solid #000;
+	width: 30%;
+	margin: 20px 20px 20px -40px;
+	padding: 20px 10px;
+	font-size: 1.6rem;
+	float: left;
+	font-family: "UCF Slab Serif Alt",serif;
 
 	cite {
 		color: #999;

@@ -1,11 +1,11 @@
 /*
- Theme Name:   UCF COM Child - Colleges Master
+ Theme Name:   Colleges master child
  Theme URI:    http://med.ucf.edu/
- Description:  Colleges Master Theme by Main Campus - COM Child Theme Built From Main Repo
+ Description:  Colleges master COM child Theme
  Author:       Matthew Vaccaro, Stephen Schrauger
  Author URI:   http://med.ucf.edu/
  Template:     Colleges-Theme
- Version:      1.1.9
+ Version:      1.0.3
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         ucf
@@ -89,8 +89,14 @@ figure figcaption {
   font-weight: 400; }
 
 .wp-block-quote {
-  border-left: 6px solid #ccc;
-  padding: 10px; }
+  border-bottom: 1px solid #333;
+  border-top: 8px solid #000;
+  width: 30%;
+  margin: 20px 20px 20px -40px;
+  padding: 20px 10px;
+  font-size: 1.6rem;
+  float: left;
+  font-family: "UCF Slab Serif Alt",serif; }
   .wp-block-quote cite {
     color: #999;
     font-size: 80%;

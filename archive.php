@@ -5,17 +5,17 @@ Template Name: Archives
 get_header();
 ?>
  
-<div id="primary" class="site-content archive">
+<div id="primary" class="site-content archive mt-4">
 
-	<div id="content" role="main" class="container">
+	<div id="content" role="main" class="container p-0 mb-4">
 
 	<section class="archive-content">
 	 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<article>
+			<article class="">
 		                 
-				<h2 class="entry-title"><?php the_title(); ?></h2>
+				<h2 class="h5 entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				 
 				<div class="entry-content">
 				 

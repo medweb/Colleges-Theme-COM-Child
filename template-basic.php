@@ -35,10 +35,6 @@ $linkToParent = get_permalink($parentId);
 
 		if ( is_singular( 'news' ) ) { ?>
 
-			<?php  ?>
-
-			<?php echo custom_taxonomies_terms_links('news_category'); ?>
-
 		<?php
             $author = '';
 			if (get_field('author_override')){
@@ -60,9 +56,12 @@ $linkToParent = get_permalink($parentId);
 
 			<?php } ?>
 
-		<h6>Post Tags</h6>
+		<!-- <h6>Post Tags</h6> -->
 
-		<?php echo custom_taxonomies_terms_links('post_tag'); } ?>
+		<?php /*echo custom_taxonomies_terms_links('post_tag');*/ } ?>
+
+		<?php echo custom_taxonomies_terms_links('news_category'); ?>
+
 
 	</article>
 </div>
@@ -130,9 +129,10 @@ function custom_taxonomies_terms_links($taxonomy = null) {
 		$out .= "<li>";
 		// get the terms related to post
 		$terms = get_the_terms( $post->ID, $taxonomy );
+
 		if ( !empty( $terms ) ) {
 			foreach ( $terms as $term )
-				$out .= '<span class="btn btn-sm btn-news-cats">'.$term->name.'</span> ';
+				$out .= '<a href="'.get_term_link($term->slug, $taxonomy).'" class="btn btn-sm btn-news-cats">'.$term->name.'</a> ';
 		}
 		$out .= "</li>";
 	$out .= "</ul>";
