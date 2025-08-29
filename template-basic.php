@@ -126,15 +126,16 @@ function custom_taxonomies_terms_links($taxonomy = null) {
     global $post;
 
 	$out = "<ul class='post-info {$taxonomy}'>";
-		$out .= "<li>";
 		// get the terms related to post
 		$terms = get_the_terms( $post->ID, $taxonomy );
 
 		if ( !empty( $terms ) ) {
-			foreach ( $terms as $term )
+			$out .= "<li>";
+			foreach ( $terms as $term ) {
 				$out .= '<a href="'.get_term_link($term->slug, $taxonomy).'" class="btn btn-sm btn-news-cats">'.$term->name.'</a> ';
+			}
+			$out .= "</li>";
 		}
-		$out .= "</li>";
 	$out .= "</ul>";
 
 	return $out;
