@@ -1164,6 +1164,13 @@ header nav {
 
 @media screen and (max-width: 771px) {
 
+	.wp-block-quote {
+		width: 50%;
+		font-size: 1.2rem;
+		margin-left: 0;
+		padding: .6rem 0;
+	}
+
 	#main {
 		.side-nav {
 			display:  none;
@@ -1173,13 +1180,20 @@ header nav {
 	.single-person {
 		.searchbar {
 			float:  none;
-			clear:  both;
+
 		}
 	
 	}
 }
 
 @media screen and (max-width: 576px) {
+
+	.wp-block-quote {
+		width: 100%;
+		text-align: center;
+		clear:  both;
+		padding: 1.8rem 6rem .5rem 6rem;
+	}
 
 	.tabs .wp-block-column:first-child {
 		margin-bottom: 15px;
