@@ -140,6 +140,20 @@ function com_child_theme_scripts() {
 
 }
 
+add_action( 'admin_enqueue_scripts', 'com_child_theme_scripts_admin');
+
+function com_child_theme_scripts_admin() {
+    $parent_style = 'parent-style';
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' ); // using get_TEMPLATE_directory_uri to force loading parent theme styles
+    wp_enqueue_style(
+        'child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array( $parent_style ),
+        filemtime(get_stylesheet_directory() . '/style.css' )
+    );
+
+}
+
 // Custom body class for page-name and site-name
 add_filter( 'body_class', 'body_class_for_pages' );
 
