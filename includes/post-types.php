@@ -42,7 +42,7 @@ function register_main_site_post_types($is_visible = true) {
                 'add_new_item'  => __( 'Add News Article' ),
                 'edit_item'     => __( 'Edit Article' )
             ),
-            'supports'    => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+            'supports'    => array( 'title', 'editor', 'author', 'thumbnail', 'revisions' ),
             'public'      => true,
             'show_ui'     => $show_ui,
             'show_in_menu' => $show_in_menu,
@@ -69,7 +69,7 @@ function register_main_site_post_types($is_visible = true) {
                 'add_new_item'  => __( 'Add Newsletter' ),
                 'edit_item'     => __( 'Edit Newsletter' )
             ),
-            'supports'    => array( 'title', 'editor', 'revisions' ),
+            'supports'    => array( 'title', 'editor', 'author', 'revisions' ),
             'public'      => true,
             'show_ui'     => $show_ui,
             'show_in_menu' => $show_in_menu,
