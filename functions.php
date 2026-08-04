@@ -26,6 +26,9 @@ get_template_part('includes/email-notification');
 // Disable anonymous access to the wordpress rest api
 get_template_part('includes/disable-anonymous-api');
 
+// Disable Full Size images for non-admins
+get_template_part('includes/disable-image-sizes');
+
 // Custom shortcodes
 if (!class_exists('ucf_com_shortcodes_settings')){
 	get_template_part('includes/shortcodes_settings');
