@@ -35,7 +35,7 @@ add_filter( 'image_size_names_choose', 'com_child_theme_restrict_image_sizes' );
 function com_child_theme_restrict_image_sizes_register_capabilities( $plugin_caps ) {
 
 	$plugin_caps['Colleges Theme COM Child'] = array(
-		COM_USE_FULL_IMAGE_SIZE => 'use "Full Size" image size',
+		COM_USE_FULL_IMAGE_SIZE => 'use Full Size image size',
 	);
 
 	return $plugin_caps;
