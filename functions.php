@@ -157,9 +157,6 @@ function com_child_theme_scripts_admin() {
 
 }
 
-// Custom body class for page-name and site-name
-add_filter( 'body_class', 'body_class_for_pages' );
-
 function body_class_for_pages( $classes ) {
 
 	global $post;
@@ -182,8 +179,8 @@ add_action( 'after_setup_theme', 'com_gutenberg_css' );
 
 function com_gutenberg_css(){
 
-	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
-	add_editor_style( 'editor-style.css' ); // tries to include style-editor.css directly from your theme folder
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'style.css' );
 
 }
 
@@ -321,4 +318,15 @@ function custom_cookie_lifetime( $expiration, $user_id, $remember ): int
 }
 add_filter( 'auth_cookie_expiration', 'custom_cookie_lifetime', 10, 3 );
 
+/**
+ * Disable pingback XML-RPC method.
+ * @param $methods
+ * @return mixed
+ */
+function disable_pingback($methods) {
+    unset($methods['pingback.ping']);
+    return $methods;
+}
+
+add_filter('xmlrpc_methods', 'disable_pingback');
 ?>
