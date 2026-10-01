@@ -157,6 +157,9 @@ function com_child_theme_scripts_admin() {
 
 }
 
+// Custom body class for page-name and site-name
+add_filter( 'body_class', 'body_class_for_pages' );
+
 function body_class_for_pages( $classes ) {
 
 	global $post;
